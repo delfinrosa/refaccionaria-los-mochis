@@ -140,8 +140,6 @@
                 };
                 reader.readAsDataURL(input.files[0]);
 
-                // Mostramos la ruta temporal en un alert
-                console.log(input.files[0]);
             }
         }
             //MOSTRAR DATOS EN LA TABLA
@@ -252,8 +250,7 @@
                     required: true
                 },
                 precio: {
-                    required: true,
-                    preciodecimal: true
+                    required: true
                 },
                 minimo: {
                     required: true,
@@ -267,9 +264,9 @@
             messages: {
                 nombre:"- El campo nombre es obligatorio",
                 descripcion: "- El campo descripcion es obligatorio",
-                precio: { required: "- El campo precio es obligatorio", preciodecimal: "- El formato correcto del precio es ##.##" },
-                minimo: {required: "- El campo stock es obligatorio", preciodecimal: "-Debe de ingresar solo numeros en el campo minimo" },
-                maximo: {required: "- El campo stock es obligatorio", preciodecimal: "-Debe de ingresar solo numeros en el campo minimo" },
+                precio: { required: "- El campo precio es obligatorio", precio: "- El formato correcto del precio es ##.##" },
+                minimo: { required: "- El campo minimo es obligatorio", minimo: "-Debe de ingresar solo numeros en el campo minimo" },
+                maximo: { required: "- El campo maximo es obligatorio", maximo: "-Debe de ingresar solo numeros en el campo maximo" },
             },
             errorElement: "div",
             errorLabelContainer:".alert-danger"
@@ -314,31 +311,6 @@
                 $('#txtminimo').val(json.Minimo);
                 $('#txtmaximo').val(json.Maximo);
 
-                //mostrar imagen en editar
-                @*jQuery.ajax({
-                    url: '@Url.Action("ImagenProducto", "Mantenedor")',
-                    type: "POST",
-                    data: JSON.stringify({ id: json.IdProducto }),
-                    dataType: "json",
-                    contentType: "application/json; chartset=utf-8",
-                    success: function (data) {
-
-                        $("#img_producto").LoadingOverlay("hide");
-                        if (data.conversion) {
-                            $("#img_producto").attr({ "src": "data:imagen/" + data.extension + ";base64," + data.textobase64 });
-                        }
-
-                    },
-                    error: function (error) {
-                        $("#img_producto").LoadingOverlay("hide");
-                        $("#mensajeError").show();
-                        $("#mensajeError").text("Error al mostrar imagen");
-
-                    },
-                    beforeSend: function () {
-                        $("#img_producto").LoadingOverlay("show");
-                    }
-                });*@
 
 
             }

@@ -209,7 +209,7 @@
                 success: function (data) {
                     $('.modal-body').LoadingOverlay("hide");
 
-                    //usuario nuevo
+                    //Marca nuevo
                     if (Marca.IdMarca == 0) {
                         if (data.resultado != 0) {
                             Marca.IdMarca = data.resultado;
@@ -223,7 +223,7 @@
                         }
 
                     }
-                     //usuario editar
+                     //Marca editar
                     else {
                         if (data.resultado) {
                             $("#FormModal").modal("hide");

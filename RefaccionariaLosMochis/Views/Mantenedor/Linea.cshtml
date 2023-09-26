@@ -223,7 +223,7 @@
                 success: function (data) {
                     $('.modal-body').LoadingOverlay("hide");
 
-                    //usuario nuevo
+                    //Linea nuevo
                     if (Linea.IdLinea == 0) {
                         if (data.resultado != 0) {
                             Linea.IdLinea = data.resultado;
@@ -237,7 +237,7 @@
                         }
 
                     }
-                     //usuario editar
+                     //Linea editar
                     else {
                         if (data.resultado) {
                             $("#FormModal").modal("hide");
