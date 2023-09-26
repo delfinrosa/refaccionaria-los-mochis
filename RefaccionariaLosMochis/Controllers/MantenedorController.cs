@@ -126,15 +126,7 @@ namespace RefaccionariaLosMochis.Controllers
 
         public JsonResult GuardarProducto(string objeto ,string archivoImagen)
         {
-    
-            string directorio = Path.GetFullPath(""); // Obtiene el directorio donde se encuentra el archivo
-            string nombreArchivo = Path.GetFileNameWithoutExtension(""); // Obtiene el nombre del archivo sin la extensión
-            string extension = Path.GetExtension(""); // Obtiene la extensión del archivo
 
-            // Juntar todas las partes en un solo string
-            string rutaCompleta = Path.Combine(directorio, nombreArchivo + extension);
-
-            new CN_Producto().imagen(rutaCompleta);
 
 
 
