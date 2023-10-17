@@ -1,31 +1,4 @@
-﻿(function () {
-    var tTime = 100;  // tiempo de transición para transformación desde #register en ms
-    var wTime = 200;  // tiempo de transición para el ancho desde #register en ms
-
-    var inputContainers = document.querySelectorAll('.inputContainer');
-    var inputFields = document.querySelectorAll('.inputField');
-    var inputLabels = document.querySelectorAll('.inputLabel');
-
-    inputFields.forEach(function (inputField, index) {
-        showCurrent(index);  
-        inputField.addEventListener('focus', function () {
-            showCurrent(index);
-        });
-    });
-
-    function showCurrent(index, callback) {
-        inputContainers[index].style.opacity = 1;
-        inputContainers[index].style.transition = 'opacity .3s ease-in-out';
-        inputLabels[index].style.transition = '.2s ease-in-out';
-
-        inputLabels[index].classList.add('active');
-        inputFields[index].classList.add('active');
-
-        if (callback) {
-            setTimeout(callback, wTime);
-        }
-    }
-})();
+﻿
 ///BUSCADOR 
 $('#txtBusqueda').on('input', function () {
     var searchTerm = $(this).val();
