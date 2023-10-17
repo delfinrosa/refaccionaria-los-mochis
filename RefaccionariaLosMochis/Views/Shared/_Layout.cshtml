@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
@@ -16,18 +16,25 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
+
+
                     <li class="nav-item">
                         <a class="nav-link active text-white" href="@Url.Action("Index","Home")">
                             Inicio
                         </a>
                     </li>
-                    <li class="nav-item">
+
+                    <li id="navMarca" hidden class="nav-item">
                         <a class="nav-link text-white" href="@Url.Action("Marca","Mantenedor")">Marcas<i class="fas fa-bookmark mx-2"></i></a>
                     </li>
-                    <li class="nav-item">
+
+
+                    <li id="navLinea" hidden class="nav-item">
                         <a class="nav-link text-white" href="@Url.Action("Linea","Mantenedor")">Lineas<i class="fas fa-table mx-2"></i></a>
                     </li>
-                    <li class="nav-item dropdown">
+
+
+                    <li id="navProductos" hidden class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos<i class="fas fa-boxes mx-2"></i></a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item  text-white" href="@Url.Action("Producto","Mantenedor")">Inventario</a>
@@ -35,6 +42,19 @@
                             <a class="dropdown-item text-white" href="#">Entradas</a>
                         </div>
                     </li>
+
+
+                    <li id="navUsuario" hidden class="nav-item">
+                        <a class="nav-link text-white" href="@Url.Action("Usuario","Mantenedor")">Usuario<i class="fas fa-user mx-2"></i></a>
+                    </li>
+
+                    
+
+
+                    <div class="text-white nav-item align-content-end">@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</div>
+
+
+
                 </ul>
             </div>
         </div>

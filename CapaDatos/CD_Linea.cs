@@ -129,5 +129,41 @@ namespace CapaDatos
             }
             return resultado;
         }
+
+        
+        public Linea BusquedaFiltroLinea(string nombre)
+        {
+
+            Linea lista = new Linea();
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.Descripcion ='"+nombre+"'";
+
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista= new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"])
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new Linea();
+            }
+            return lista;
+        }
     }
 }

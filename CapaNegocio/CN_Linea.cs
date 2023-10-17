@@ -22,12 +22,16 @@ namespace CapaNegocio
             if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
             {
                 Mensaje = "La descripcion de la linea no puede ser vacio";
-            }          
-            if (string.IsNullOrEmpty(obj.Deslc) || string.IsNullOrWhiteSpace(obj.Deslc))
+                return 0;
+
+            }
+            else if (string.IsNullOrEmpty(obj.Deslc) || string.IsNullOrWhiteSpace(obj.Deslc))
             {
                 Mensaje = "La descripcion de caracteristicas de la linea no puede ser vacio";
+                return 0;
+
             }
-            if (string.IsNullOrEmpty(Mensaje))
+            else if (string.IsNullOrEmpty(Mensaje))
             {
                 return ObjCapaDatos.Registrar(obj, out Mensaje);
             }
@@ -36,6 +40,8 @@ namespace CapaNegocio
                 Mensaje = "No se puede editar la linea";
                 return 0;
             }
+            Mensaje = "No se puede editar la linea";
+            return 0;
         }
         public bool Editar(Linea obj, out string Mensaje)
         {
@@ -60,6 +66,10 @@ namespace CapaNegocio
         public bool Eliminar(int id, out string Mensaje)
         {
             return ObjCapaDatos.Eliminar(id, out Mensaje);
+        }
+        public Linea BusquedaFiltroLinea(string nombre)
+        {
+            return ObjCapaDatos.BusquedaFiltroLinea(nombre);
         }
     }
 }

@@ -120,11 +120,13 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccesoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MantenedorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Permisos\PermisosRolAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +150,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\brands.css" />
     <Content Include="Content\brands.min.css" />
+    <Content Include="Content\CssUsuarios\UsuariosRegistros.css" />
     <Content Include="Content\estilo.css" />
     <Content Include="Content\fontawesome.css" />
     <Content Include="Content\fontawesome.min.css" />
@@ -183,6 +186,7 @@
     <Content Include="Scripts\fontawesome\solid.min.js" />
     <Content Include="Scripts\fontawesome\v4-shims.js" />
     <Content Include="Scripts\fontawesome\v4-shims.min.js" />
+    <Content Include="Scripts\Index\PermisosNav.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -192,7 +196,12 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Linea\LineaJS.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Marcas\MarcaJS.js" />
+    <Content Include="Scripts\Producto\ProductoJS.js" />
+    <Content Include="Scripts\Usuario\RegistroUsuarioDiseño.js" />
+    <Content Include="Scripts\Usuario\UsuarioJS.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -225,6 +234,8 @@
     <Content Include="Views\Mantenedor\Marca.cshtml" />
     <Content Include="Views\Mantenedor\Linea.cshtml" />
     <Content Include="Views\Mantenedor\Producto.cshtml" />
+    <Content Include="Views\Mantenedor\Usuario.cshtml" />
+    <Content Include="Views\Acceso\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

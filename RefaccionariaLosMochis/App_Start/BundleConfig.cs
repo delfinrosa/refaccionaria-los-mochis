@@ -19,7 +19,10 @@ namespace RefaccionariaLosMochis
                         "~/Scripts/sweetalert.min.js",
                         "~/Scripts/jquery.validate.min.js",
                         "~/Scripts/jquery-ui.js",
+                        "~/Scripts/Index/PermisosNav.js",
                         "~/Scripts/scripts.js"));
+
+
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información sobre los formularios.  De esta manera estará
             // para la producción, use la herramienta de compilación disponible en https://modernizr.com para seleccionar solo las pruebas que necesite.

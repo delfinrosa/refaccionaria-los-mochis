@@ -9,14 +9,21 @@ using CapaEntidad;
 using CapaNegocio;
 using Newtonsoft.Json;
 using System.Data;
-
+using RefaccionariaLosMochis.Permisos;
+using System.Collections;
 
 namespace RefaccionariaLosMochis.Controllers
 {
+    [Authorize]
+
     public class MantenedorController : Controller
     {
         #region Marca
         //Marca
+
+        [PermisosRol("I")]
+
+        
         public ActionResult Marca()
         {
             return View();
@@ -61,7 +68,9 @@ namespace RefaccionariaLosMochis.Controllers
         #endregion
 
         #region Linea
-        //Marca
+        //Linea
+
+        [PermisosRol("I")]
         public ActionResult Linea()
         {
             return View();
@@ -103,11 +112,27 @@ namespace RefaccionariaLosMochis.Controllers
             respuesta = new CN_Linea().Eliminar(id, out mensaje);
             return Json(new { resultado = respuesta, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
         }
+        //PRUEBA DE EDITAR NUEVO
+        [HttpPost]
+        //Eliminar
+        public JsonResult BusquedaFiltroLinea(string nombre)
+        {
+          
+            Linea oLista = new Linea();
+            if (nombre!=null|| nombre != "")
+            {
+                oLista = new CN_Linea().BusquedaFiltroLinea(nombre);
+            }
+            return Json(new { Activo = oLista.Activo , Descripcion = oLista.Descripcion, IdLinea = oLista.IdLinea, Deslc = oLista.Deslc }, JsonRequestBehavior.AllowGet);
+
+        }
         #endregion
 
 
         #region Producto
-        //Marca
+        //Producto
+        [PermisosRol("I")]
+
         public ActionResult Producto()
         {
             return View();
@@ -170,6 +195,53 @@ namespace RefaccionariaLosMochis.Controllers
             bool respuesta = false;
             string mensaje = string.Empty;
             respuesta = new CN_Producto().Eliminar(id, out mensaje);
+            return Json(new { resultado = respuesta, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
+        }
+        #endregion
+
+        #region Usuario
+        //Usuario
+        [PermisosRol("A")]
+
+        public ActionResult Usuario()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        //Listar
+        public JsonResult ListarUsuario()
+        {
+            List<Usuario> oLista = new List<Usuario>();
+            oLista = new CN_Usuario().Listar();
+            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        //Guardar
+
+        public JsonResult GuardarUsuario(Usuario objeto)
+        {
+            object resultado;
+            string mensaje = string.Empty;
+
+            if (objeto.IdUsuario == 0)
+            {
+                resultado = new CN_Usuario().Registrar(objeto, out mensaje);
+            }
+            else
+            {
+                resultado = new CN_Usuario().Editar(objeto, out mensaje);
+            }
+            return Json(new { resultado = resultado, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
+
+        }
+        [HttpPost]
+        //Eliminar
+        public JsonResult EliminarUsuario(int id)
+        {
+            bool respuesta = false;
+            string mensaje = string.Empty;
+            respuesta = new CN_Usuario().Eliminar(id, out mensaje);
             return Json(new { resultado = respuesta, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
         }
         #endregion
