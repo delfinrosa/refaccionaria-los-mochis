@@ -71,6 +71,10 @@ namespace CapaNegocio
         {
             return ObjCapaDatos.BusquedaFiltroLinea(nombre);
         }
+        public List<string> ListarNombreDeLineas(string linea)
+        {
+            return ObjCapaDatos.ListarNombreDeLineas(linea);
+        }
     }
 }
 

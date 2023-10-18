@@ -114,7 +114,7 @@ namespace RefaccionariaLosMochis.Controllers
         }
         //PRUEBA DE EDITAR NUEVO
         [HttpPost]
-        //Eliminar
+        //BusquedaFiltroLinea
         public JsonResult BusquedaFiltroLinea(string nombre)
         {
           
@@ -126,6 +126,22 @@ namespace RefaccionariaLosMochis.Controllers
             return Json(new { Activo = oLista.Activo , Descripcion = oLista.Descripcion, IdLinea = oLista.IdLinea, Deslc = oLista.Deslc }, JsonRequestBehavior.AllowGet);
 
         }
+        //ListarNombreDeLineas
+        public JsonResult ListarNombreDeLineas(string nombre)
+        {
+
+            List<string> lista = new List<string>();
+            if (nombre!=null|| nombre != "")
+            {
+                lista = new CN_Linea().ListarNombreDeLineas(nombre);
+            }
+            return Json(new { Lista = lista}, JsonRequestBehavior.AllowGet);
+
+        }
+
+
+
+
         #endregion
 
 

@@ -200,7 +200,7 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Marcas\MarcaJS.js" />
     <Content Include="Scripts\Producto\ProductoJS.js" />
-    <Content Include="Scripts\Usuario\RegistroUsuarioDiseño.js" />
+    <Content Include="Scripts\Pruebas\PruebasLineas.js" />
     <Content Include="Scripts\Usuario\UsuarioJS.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

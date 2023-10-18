@@ -11,19 +11,24 @@
 </ol>
 
 
-<div class="card mb-5">
+<div id="cardRegistros" class="card mb-5">
     <div class="card-header">
         <div class="row mx-5 my-3 bg-secondary py-2 rounded-3 barraHerramientas">
             <div class="d-flex justify-content-center col-8 ">
-                <button type="button" class="btn btn-primary btn-sm mx-2"><i class="fas fa-pen"></i> Editar</button>
-                <button type="button" class="btn btn-danger btn-sm mx-2"><i class="fas fa-trash"></i> Eliminar</button>
+                <button id="btn-Nuevo" type="button" class="btn btn-primary btn-sm mx-2"><i class="fas fa-plus"></i> Nuevo</button>
+                <button id="btn-Eliminar" type="button" class="btn btn-danger btn-sm mx-2"><i class="fas fa-trash"></i> Eliminar</button>
                 <button id="btn-Guardar" type="button" class="btn btn-success btn-sm mx-2"><i class="fas fa-play"></i> Guardar</button>
             </div>
 
             <div class="ms-auto col-auto ">
-                <span class="bg-light p-2 rounded-2"> <input id="txtBusqueda" type="text" class="rounded-1" placeholder="Buscar" /> <i class="fas fa-search"></i></span>
+                <span class="bg-light p-2 rounded-2">
+                    <input id="txtBusqueda" type="text">
+                    <div   id="opcionesLista" class="autocomplete-options" style="display: none;"></div>
+
+                </span>
             </div>
         </div>
+
     </div>
 
     <div class="card-body">
@@ -37,7 +42,7 @@
         </div>
         <div class="my-2 w-100" id="">
             <label class="form-label h3 fw-bold">Descripcion</label>
-            <textarea id="txtRegistrodescripcion" class="form-control" type="text"></textarea>
+            <textarea id="txtRegistrodescripcion" class="form-control" type="text" style=" height: 200px;"></textarea>
         </div>
 
         <div class=" w-100" id="">
@@ -48,14 +53,13 @@
                 <option value="O">Oculto</option>
             </select>
         </div>
-        <div class="row mt-2" >
+        <div class="row mt-2">
             <div class="col-12">
-                <div id="mensajeError" class="alert alert-danger" role="alert">
+                <div id="mensajeError" class="alert alert-danger" role="alert" style ="display: none;">
                 </div>
 
             </div>
         </div>
-
 
     </div>
 </div>
@@ -72,10 +76,10 @@
     <div class="card-body">
         <div class="row h3 fw-bolder text-center"><label class="text-center"> Registros de Lineas</label></div>
         @*<div class="row">
-            <div class="col-12">
-                <button type="button" class="btn btn-primary" onclick="abrirModal()">Crear nuevo</button>
-            </div>
-        </div>*@
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary" onclick="abrirModal()">Crear nuevo</button>
+                </div>
+            </div>*@
         <hr />
 
         <table id="tabla" class="display cell-border" style="width:100%">
@@ -123,13 +127,13 @@
                 </div>
                 @*MENSAJE ALERTA*@
                 @*<div class="row mt-2">
-                    <div class="col-12">
-                        <div id="mensajeError" class="alert alert-danger" role="alert">
-                            This is a danger alert—check it out!
-                        </div>
+                        <div class="col-12">
+                            <div id="mensajeError" class="alert alert-danger" role="alert">
+                                This is a danger alert—check it out!
+                            </div>
 
-                    </div>
-                </div>*@
+                        </div>
+                    </div>*@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -138,9 +142,10 @@
         </div>
     </div>
 </div>
+
 @section Scripts {
     <script src="~/Scripts/Linea/LineaJS.js"></script>
-    <script src="~/Scripts/Usuario/RegistroUsuarioDiseño.js"></script>
+    <script src="~/Scripts/Pruebas/PruebasLineas.js"></script>
 
 }
 

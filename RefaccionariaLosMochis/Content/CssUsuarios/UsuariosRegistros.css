@@ -43,6 +43,30 @@
     font-weight: normal;
     color: #9e9e9e;
 }
+
 .barraHerramientas {
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
 }
+/*AUTO COMPLETADO*/
+.autocomplete-options {
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.autocomplete-option {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+    .autocomplete-option:hover {
+        background-color: #f2f2f2;
+    }
+
+    .autocomplete-option.active {
+        background-color: #007bff;
+        color: #fff;
+    }
+

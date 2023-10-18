@@ -165,5 +165,37 @@ namespace CapaDatos
             }
             return lista;
         }
+
+        //NOMBRE DE LAS LINEAS PARA AUTOCOMPLETAR EN BUSCADOR
+        public List<string> ListarNombreDeLineas(string linea)
+        {
+
+            List<string> lista = new List<string>();
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%"+linea+"%';";
+
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(
+                                Convert.ToString(dr["Descripcion"])
+                            );
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new List<string>();
+            }
+            return lista;
+        }
     }
 }
