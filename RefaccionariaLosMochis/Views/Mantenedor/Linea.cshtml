@@ -14,53 +14,94 @@
 <div id="cardRegistros" class="card mb-5">
     <div class="card-header">
         <div class="row mx-5 my-3 bg-secondary py-2 rounded-3 barraHerramientas">
-            <div class="d-flex justify-content-center col-8 ">
-                <button id="btn-Nuevo" type="button" class="btn btn-primary btn-sm mx-2"><i class="fas fa-plus"></i> Nuevo</button>
-                <button id="btn-Eliminar" type="button" class="btn btn-danger btn-sm mx-2"><i class="fas fa-trash"></i> Eliminar</button>
-                <button id="btn-Guardar" type="button" class="btn btn-success btn-sm mx-2"><i class="fas fa-play"></i> Guardar</button>
+
+            <div class="container my-3 col-auto">
+                <div class="row justify-content-between">
+                    <div class="col-auto d-flex align-items-baseline ">
+                        <div class="input-group rounded-2 bg-light">
+                            <input id="txtBusqueda" type="text" class="form-control" placeholder="Buscar...">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <label for="txtBusqueda"><i class="fas fa-search"></i></label>
+                            </button>
+                        </div>
+                        <br />
+                        <div id="opcionesLista" class="autocomplete-options" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="ms-auto col-auto ">
-                <span class="bg-light p-2 rounded-2">
-                    <input id="txtBusqueda" type="text">
-                    <div   id="opcionesLista" class="autocomplete-options" style="display: none;"></div>
+            <div class="d-flex justify-content-center align-items-center col-8">
+                <div class="bg-light rounded-2 m-2 h-50">
+                    <button id="btn-Nuevo" type="button" class="btn btn-primary btn-custom w-100 h-100"><i class="fas fa-plus"></i> Nuevo</button>
+                </div>
+                <div class="bg-light rounded-2 m-2 h-50">
+                    <button id="btn-Eliminar" type="button" class="btn btn-danger btn-custom w-100 h-100"><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
 
-                </span>
             </div>
+
+
         </div>
 
     </div>
 
-    <div class="card-body">
+    <div class="card-body container">
 
 
-        <input id="txtRegistroid" type="hidden" value="0">
 
-        <div class=" w-100" id="">
-            <label class="form-label h3 fw-bold">Nombre</label>
-            <input id="txtRegistroNombre" class="form-control" type="text" />
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class=" form-label h3 fw-bold">Identificador</label>
+            </div>
+            <div class="col-6">
+                <input id="txtRegistroid" class="form-control" type="number" value="0" placeholder="AutoNumerico" disabled>
+            </div>
         </div>
-        <div class="my-2 w-100" id="">
-            <label class="form-label h3 fw-bold">Descripcion</label>
-            <textarea id="txtRegistrodescripcion" class="form-control" type="text" style=" height: 200px;"></textarea>
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class="form-label h3 fw-bold">Nombre</label>
+            </div>
+            <div class="col-7">
+                <input id="txtRegistroNombre" class="form-control" type="text" />
+            </div>
         </div>
 
-        <div class=" w-100" id="">
-            <label class="form-label h3 fw-bold">Activo</label>
-            <select class="form-select" id="cboRegistroActivo">
-                <option value="A">Activo</option>
-                <option value="D">Desactivo</option>
-                <option value="O">Oculto</option>
-            </select>
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class="form-label h3 fw-bold">Descripcion</label>
+            </div>
+            <div class="col-6">
+                <textarea id="txtRegistrodescripcion" class="form-control" type="text" style=" height: 200px;"></textarea>
+            </div>
         </div>
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class="form-label h3 fw-bold">Activo</label>
+            </div>
+            <div class="col-7">
+                <select class="form-select" id="cboRegistroActivo">
+                    <option value="A">Activo</option>
+                    <option value="D">Desactivo</option>
+                    <option value="O">Oculto</option>
+                </select>
+            </div>
+        </div>
+
         <div class="row mt-2">
             <div class="col-12">
-                <div id="mensajeError" class="alert alert-danger" role="alert" style ="display: none;">
+                <div id="mensajeError" class="alert alert-danger" role="alert" style="display: none;">
                 </div>
 
             </div>
         </div>
-
+        <hr />
+        <div class=" d-flex justify-content-end">
+            <button disabled id="btn-Guardar" type="button" class="btn btn-success btn-sm  mx-2"><i class="fas fa-play"></i> Guardar</button>
+            <button id="btn-Cancelar" type="button" class="btn btn-success btn-sm btn-custom mx-2 "><i class="fas fa-times"></i> Cancelar</button>
+        </div>
     </div>
 </div>
 
@@ -84,11 +125,10 @@
 
         <table id="tabla" class="display cell-border" style="width:100%">
             <thead>
-                <tr>
+                <tr id="trowTabla">
                     <th>Descripcion</th>
                     <th>Activo</th>
                     <th>Descripcion de la Linea</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody></tbody>

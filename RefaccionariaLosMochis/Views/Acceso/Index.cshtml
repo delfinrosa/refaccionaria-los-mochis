@@ -9,38 +9,44 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/login")
 </head>
-<body>
-    <div class="container">
+<body class="bg-login ">
+    <div class="container-fluid h-100">
 
-        <div class="row ">
-
-            <center>
-
-                <div class="col-sm-4 col-sm-offset-4  mt-5">
-
-
-                    <form action="@Url.Action("Index","Acceso")" class="bg-info" style="padding:10px" method="post">
-
-                        <div class="form-group">
-                            <label>Nombre:</label>
-                            <input class="form-control" type="text" name="correo" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Contraseña:</label>
-                            <input class="form-control" type="password" name="clave" />
-                        </div>
-
-
-
-                        <button type="submit" class="btn btn-success">Ingresar</button>
-                    </form>
-
-
+        <div id="logo-login" class="container w-multiservicios pl-5 ">
+            <div class="row align-items-center rounded-lg">
+                <div class="col-12 p-3">
+                    <img class="w-40 mx-auto d-block" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" alt="Foto de un pajaro">
                 </div>
-            </center>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center align-items-center  ">
+
+
+            <div class="col-6  mt-3 mb-5 ">
+
+
+                @*<form action="" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">*@
+                <form action="@Url.Action("Index","Acceso")" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">
+
+                    <div class="form-group">
+                        <label class="text-white fw-medium my-3 text-shadow">Nombre:</label>
+                        <input class="form-control mb-1" type="text" name="correo" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-white fw-medium my-3 text-shadow">Contraseña:</label>
+                        <input class="form-control mb-1" type="password" name="clave" />
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary my-3 col-12 fw-medium">Ingresar</button>
+                </form>
+
+
+            </div>
 
         </div>
     </div>

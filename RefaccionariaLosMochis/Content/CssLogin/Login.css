@@ -1,0 +1,33 @@
+﻿/*LOGIN*/
+
+.bg-login {
+    background: linear-gradient(180deg,#384B42 40%,#306A45 60%,#568E53 100%);
+}
+.w-40 {
+width:40%;
+
+}
+
+
+#logo-login {
+    position: relative;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+#logo-login img {
+    position: relative;
+}
+
+.bg-formulario {
+    background-color: #607999;
+}
+.w-multiservicios {
+    width: 50% !important;
+}
+
+@media (max-width: 576px) {
+    .w-multiservicios {
+        width: 65% !important;
+    }
+}

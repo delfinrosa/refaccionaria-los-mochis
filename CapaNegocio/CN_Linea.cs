@@ -16,36 +16,42 @@ namespace CapaNegocio
         {
             return ObjCapaDatos.Listar();
         }
-        public int Registrar(Linea obj, out string Mensaje)
+        public int Registrar(Linea obj, out string Mensaje, out Linea objDevolucion)
         {
             Mensaje = string.Empty;
+            objDevolucion = null;
             if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
             {
                 Mensaje = "La descripcion de la linea no puede ser vacio";
+                objDevolucion = null;
                 return 0;
 
             }
             else if (string.IsNullOrEmpty(obj.Deslc) || string.IsNullOrWhiteSpace(obj.Deslc))
             {
                 Mensaje = "La descripcion de caracteristicas de la linea no puede ser vacio";
+                objDevolucion = null;
+
                 return 0;
 
             }
             else if (string.IsNullOrEmpty(Mensaje))
             {
-                return ObjCapaDatos.Registrar(obj, out Mensaje);
+                return ObjCapaDatos.Registrar(obj, out Mensaje, out objDevolucion);
             }
             else
             {
                 Mensaje = "No se puede editar la linea";
+                objDevolucion = null;
                 return 0;
             }
             Mensaje = "No se puede editar la linea";
             return 0;
         }
-        public bool Editar(Linea obj, out string Mensaje)
+        public bool Editar(Linea obj, out string Mensaje ,out Linea objDevolucion)
         {
             Mensaje = string.Empty;
+            objDevolucion = null;
             if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
             {
                 Mensaje = "La descripcion de la linea no puede ser vacio";
@@ -56,10 +62,12 @@ namespace CapaNegocio
             }
             if (string.IsNullOrEmpty(Mensaje))
             {
-                return ObjCapaDatos.Editar(obj, out Mensaje);
+                return ObjCapaDatos.Editar(obj, out Mensaje, out objDevolucion);
             }
             else
             {
+                objDevolucion = null;
+
                 return false;
             }
         }

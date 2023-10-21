@@ -19,7 +19,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea";
+                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  ,l.FechaCreacion ,l.PersonaUltimoCambio ,l.FechaUltimoCambio from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -33,7 +33,10 @@ namespace CapaDatos
                                 IdLinea = Convert.ToInt32(dr["IdLinea"]),
                                 Descripcion = Convert.ToString(dr["Descripcion"]),
                                 Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"])
+                                Deslc = Convert.ToString(dr["Deslc"]),
+                                fechaCreaccion = Convert.ToString(dr["FechaCreacion"]),
+                                fechaActualizacion = Convert.ToString(dr["FechaUltimoCambio"]),
+                                IdUsuario = Convert.ToInt32(dr["PersonaUltimoCambio"])
                             });
                         }
                     }
@@ -45,10 +48,11 @@ namespace CapaDatos
             }
             return lista;
         }
-        public int Registrar(Linea obj, out string Mensaje)
+        public int Registrar(Linea obj, out string Mensaje,out Linea objDevolucion)
         {
             int idautogenerado = 0;
             Mensaje = string.Empty;
+            objDevolucion = obj;
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
@@ -57,14 +61,21 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
                     cmd.Parameters.AddWithValue("Deslc", obj.Deslc);
                     cmd.Parameters.AddWithValue("Activo", obj.Activo);
+                    cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("ResFechaCreacion", SqlDbType.DateTime).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("ResFechaUltimoCambio", SqlDbType.DateTime).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
                     idautogenerado = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+                    objDevolucion.fechaCreaccion = cmd.Parameters["ResFechaCreacion"].Value.ToString();
+                    objDevolucion.fechaActualizacion = cmd.Parameters["ResFechaUltimoCambio"].Value.ToString();
+
                 }
+                objDevolucion.IdLinea = idautogenerado;
             }
             catch (Exception ex)
             {
@@ -74,10 +85,11 @@ namespace CapaDatos
             return idautogenerado;
         }
 
-        public bool Editar(Linea obj, out string Mensaje)
+        public bool Editar(Linea obj, out string Mensaje, out Linea objDevolucion)
         {
             bool resultado = false;
             Mensaje = string.Empty;
+            objDevolucion = obj;
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
@@ -87,13 +99,19 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
                     cmd.Parameters.AddWithValue("Deslc", obj.Deslc);
                     cmd.Parameters.AddWithValue("Activo", obj.Activo);
+                    cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("ResFechaCreacion", SqlDbType.DateTime).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("ResFechaUltimoCambio", SqlDbType.DateTime).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     oconexion.Open();
                     cmd.ExecuteNonQuery();
                     resultado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+
+                    objDevolucion.fechaCreaccion = cmd.Parameters["ResFechaCreacion"].Value.ToString();
+                    objDevolucion.fechaActualizacion = cmd.Parameters["ResFechaUltimoCambio"].Value.ToString();
                 }
             }
             catch (Exception ex)

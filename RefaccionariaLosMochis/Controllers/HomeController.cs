@@ -18,6 +18,9 @@ namespace RefaccionariaLosMochis.Controllers
             // Crear una nueva cookie y asignarle el valor de ViewBag.tipo
             HttpCookie tipoCookie = new HttpCookie("tipo", ViewBag.tipo);
             Response.Cookies.Add(tipoCookie);
+
+            HttpCookie idUsuarioCookie = new HttpCookie("idUsuario", usuario.IdUsuario.ToString());
+            Response.Cookies.Add(idUsuarioCookie);
             return View();
         }
 

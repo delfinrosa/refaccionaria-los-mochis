@@ -1,45 +1,108 @@
 ﻿/// <reference path="../jquery-3.4.1.js" />
+/// <reference path="../index/permisosnav.js" />
 
+var rol = getCookie("tipo");
 
 var tabladata;
 var filaSeleccionada;
+
+var TextNombre = false;
+var TextDescripcion = false;
+
 //MOSTRAR DATOS EN LA TABLA
-tabladata = $("#tabla").DataTable({
-    responsive: true,
-    ordering: false,
-    ajax: {
-        url: '/Mantenedor/ListarLinea',
-        type: "GET",
-        dataType: "json"
-    },
-    columns: [
-        { data: "Descripcion" },
-        {
-            data: "Activo", render: function (valor) {
-                if (valor == "A") {
-                    return '<h5 class="m-auto"><span class="badge rounded-pill bg-success">Activo</span></h5>'
-                } else if (valor == "O") {
-                    return '<h5 class="m-auto"><span class="badge rounded-pill bg-secondary ">Oculto</span></h5>'
-                } else {
-                    return '<h5 class="m-auto"><span class="badge rounded-pill bg-danger">Desacticvado</span></h5>';
-                }
-            }
+if (rol == "A") {
+
+    $("#trowTabla").append('<th>Persona que modifico</th>')
+    $("#trowTabla").append('<th>Fecha de Registro</th>')
+    $("#trowTabla").append('<th>Persona que modificoFecha de Actualizacion</th>')
+    $("#trowTabla").append('<th></th>')
+
+    tabladata = $("#tabla").DataTable({
+        responsive: true,
+        ordering: false,
+        ajax: {
+            url: '/Mantenedor/ListarLinea',
+            type: "GET",
+            dataType: "json"
         },
-        { data: "Deslc" },
+        columns: [
+            { data: "Descripcion" },
+            {
+                data: "Activo", render: function (valor) {
+                    if (valor == "A") {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-success">Activo</span></h5>'
+                    } else if (valor == "O") {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-secondary ">Oculto</span></h5>'
+                    } else {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-danger">Desacticvado</span></h5>';
+                    }
+                }
+            },
+            { data: "Deslc" },
+            { data: "IdUsuario" },
+            { data: "fechaCreaccion" },
+            { data: "fechaActualizacion" },
+            {
 
-        {
-
-            "defaultContent": '<a href="#cardRegistros"><button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button></a>' +
-                '<button type="button" class="btn-eliminar btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button>',
-            "orderable": false,
-            "searchable": false,
-            "width": "90px"
+                "defaultContent": '<a href="#cardRegistros"><button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button></a>' +
+                    '<button type="button" class="btn-eliminar btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button>',
+                "orderable": false,
+                "searchable": false,
+                "width": "90px"
+            }
+        ],
+        "language": {
+            url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
         }
-    ],
-    "language": {
-        url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
-    }
-});
+        // Verificar el rol y mostrar las columnas adicionales si es "A" (administrador)
+
+
+    });
+} else {
+    debugger;
+    $("#trowTabla").append('<th></th>')
+
+    tabladata = $("#tabla").DataTable({
+        responsive: true,
+        ordering: false,
+        ajax: {
+            url: '/Mantenedor/ListarLinea',
+            type: "GET",
+            dataType: "json"
+        },
+        columns: [
+            { data: "Descripcion" },
+            {
+                data: "Activo", render: function (valor) {
+                    if (valor == "A") {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-success">Activo</span></h5>'
+                    } else if (valor == "O") {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-secondary ">Oculto</span></h5>'
+                    } else {
+                        return '<h5 class="m-auto"><span class="badge rounded-pill bg-danger">Desacticvado</span></h5>';
+                    }
+                }
+            },
+            { data: "Deslc" },
+            {
+
+                "defaultContent": '<a href="#cardRegistros"><button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button></a>' +
+                    '<button type="button" class="btn-eliminar btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button>',
+                "orderable": false,
+                "searchable": false,
+                "width": "90px"
+            }
+        ],
+        "language": {
+            url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
+        }
+        // Verificar el rol y mostrar las columnas adicionales si es "A" (administrador)
+
+
+    });
+}
+
+
 //ABRIR MODAL
 function abrirModal(json) {
     $('#txtid').val(0);
@@ -111,6 +174,7 @@ $("#tabla tbody").on("click", '.btn-eliminar', function () {
 })
 //BOTON GUARDAR (MODAL)
 function Guardar() {
+    debugger;
     var textActivo;
     var comp = $('#cboRegistroActivo').val();
 
@@ -122,13 +186,13 @@ function Guardar() {
         textActivo = "D";
     }
 
-    var Linea = {
+   var Linea = {
         IdLinea: $('#txtRegistroid').val(),
         Descripcion: $('#txtRegistroNombre').val(),
         Activo: textActivo,
         Deslc: $('#txtRegistrodescripcion').val()
 
-    }
+    } 
 
     jQuery.ajax({
         url: '/Mantenedor/GuardarLinea',
@@ -143,8 +207,7 @@ function Guardar() {
             if (Linea.IdLinea == 0) {
                 if (data.resultado != 0) {
                     Linea.IdLinea = data.resultado;
-                    tabladata.row.add(Linea).draw(false);
-                    $("#FormModal").modal("hide");
+                    tabladata.row.add(data.objDevolucion).draw(false);
                     $('#txtRegistroid').val(data.resultado);
 
                     limpiar();
@@ -162,7 +225,7 @@ function Guardar() {
             else {
                 if (data.resultado) {
                     $("#FormModal").modal("hide");
-                    tabladata.row(filaSeleccionada).data(Linea).draw(false);
+                    tabladata.row(filaSeleccionada).data(data.objDevolucion).draw(false);
                     filaSeleccionada = null;
                     $('#mensajeError').hide();
                     limpiar();
@@ -341,137 +404,72 @@ input.on('input', function () {
 
 
 
+$("#btn-Guardar").click(function () {
+    if (VerificacionLleno()) {
+        $('#btn-Eliminar').prop('disabled', false);
+        Guardar();
 
-
-//METODO DE GUARDAR
-//function Guardar() {
-//    var textActivo;
-//    var comp = $('#cboRegistroActivo').val();
-
-//    if (comp == "A") {
-//        textActivo = "A";
-//    } else if (comp == "O") {
-//        textActivo = "O";
-//    } else {
-//        textActivo = "D";
-//    }
-
-//    var Linea = {
-//        IdLinea: $('#txtRegistroid').val(),
-//        Descripcion: $('#txtRegistroNombre').val(),
-//        Activo: textActivo,
-//        Deslc: $('#txtRegistrodescripcion').val()
-
-//    }
-
-//    jQuery.ajax({
-//        url: '/Mantenedor/GuardarLinea',
-//        type: "POST",
-//        data: JSON.stringify({ objeto: Linea }),
-//        dataType: "json",
-//        contentType: "application/json; chartset=utf-8",
-//        success: function (data) {
-
-//            //Linea nuevo
-//            if (Linea.IdLinea == 0) {
-//                if (data.resultado != 0) {
-//                    Linea.IdLinea = data.resultado;
-//                    tabladata.row.add(Linea).draw(false);
-//                    $('#txtRegistroid').val(data.resultado);
-
-//                    limpiar();
-//                    $('#mensajeError').hide();
-//                    swal("Registro Guardado", "Se guardo el registro de " + $('#txtRegistroNombre').val(), "success")
-
-
-//                }
-//                else {
-//                    swal("Error en el Registro", data.mensaje, "warning")
-
-//                    $('#mensajeError').text(data.mensaje);
-//                    $('#mensajeError').show();
-
-//                }
-
-//            }
-//            //Linea editar
-//            else {
-//                if (data.resultado) {
-//                    $("#FormModal").modal("hide");
-//                    tabladata.row(data.resultado).data(Linea).draw(false);
-//                    filaSeleccionada = null;
-//                    $('#mensajeError').hide();
-//                    limpiar();
-//                    swal("Cambios Guardados", "Se guardaron los cambios de " + $('#txtRegistroNombre').val(), "success")
-
-//                }
-//                else {
-//                    swal("Error en el Registro", data.mensaje, "warning")
-
-
-//                    $('#mensajeError').text(data.mensaje);
-//                    $('#mensajeError').show();
-
-//                }
-
-//            }
-
-
-
-//        },
-//        error: function (data) {
-//            $('.modal-body').LoadingOverlay("hide");
-//            $('#mensajeError').text("Error AJAX");
-//            $('#mensajeError').show();
-//        }
-//    });
-//}
-$("#btn-Guardar").click(Guardar);
+    }
+});
 
 $("#btn-Eliminar").click(function () {
+    debugger;
+    
     var idBorrar = $("#txtRegistroid").val();
-    console.log(idBorrar)
-    if (idBorrar != 0) {
+    console.log(idBorrar);
 
+
+    var rowIndex = tabladata.rows().indexes().filter(function (value, index) {
+        return tabladata.cell(value, 0).data() == idBorrar;
+    });
+
+    console.log("Índice de fila a borrar:", rowIndex);
+
+    // Obtén la posición específica del índice en el DataTable
+    var position = rowIndex[0]; 
+
+
+    if (idBorrar != 0) {
         swal({
-            title: "¿Esta Seguro?",
-            text: "¿Desea eliminar la Linea?",
+            title: "¿Está seguro?",
+            text: "¿Desea eliminar la línea?",
             type: "warning",
             showCancelButton: true,
             confirmButtonClass: "btn-primary",
-            confirmButtonText: "Si",
+            confirmButtonText: "Sí",
             cancelButtonText: "No",
             closeOnConfirm: true
-            },
-            function() {
+        }, function () {
+            jQuery.ajax({
+                url: '/Mantenedor/EliminarLinea',
+                type: "POST",
+                data: JSON.stringify({ id: idBorrar }),
+                dataType: "json",
+                contentType: "application/json; chartset=utf-8",
+                success: function (data) {
+                    if (data.resultado) {
+                        // Busca el índice de fila correspondiente al Id en el DataTable
+                        var rowIndex = tabladata.rows().indexes().filter(function (value, index) {
+                            return tabladata.cell(value, 0).data() == idBorrar;
+                        });
 
-                jQuery.ajax({
-                    url: '/Mantenedor/EliminarLinea',
-                    type: "POST",
-                    data: JSON.stringify({ id: idBorrar }),
-                    dataType: "json",
-                    contentType: "application/json; chartset=utf-8",
-                    success: function (data) {
-
-                        if (data.resultado) {
-                            tabladata.row(idBorrar).remove().draw()
-                        } else {
-                            swal("No se pudo eliminar", data.mensaje, "error");
-
+                        // Si se encontró el índice, elimina la fila del DataTable
+                        if (rowIndex.length > 0) {
+                            tabladata.row(rowIndex).remove().draw();
                         }
-                    },
-                    error: function (error) {
-                        console.log(error)
+                    } else {
+                        swal("No se pudo eliminar", data.mensaje, "error");
                     }
-                });
-
-
-
-            
-
-        })
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
     }
-})
+});
+
+
 
     $("#txtBusqueda").on('input', FiltroPorLinea);
 
@@ -485,15 +483,50 @@ $("#btn-Eliminar").click(function () {
 
     //Evento de el boton 'Nuevo' 
     //Limpia los campos
-    $("#btn-Nuevo").click(limpiar);
-    $("#btn-Nuevo").click(function () {
-        swal("Crea un Nuevo Registro", "Introduce los datos del registro llena todo los campos ")
+$("#btn-Nuevo").click(function () {
+    limpiar();
+    TextNombre = false;
+    TextDescripcion = false;
+    $('#btn-Guardar').prop('disabled', true);
+    $('#btn-Eliminar').prop('disabled', true);
+
+    swal("Crea un Nuevo Registro", "Introduce los datos del registro llena todo los campos ")
     });
 
 
-    function limpiar() {
-        $('#txtRegistroid').val("");
-        $('#txtRegistroNombre').val("");
-        $('#cboRegistroActivo').val("A");
-        $('#txtRegistrodescripcion').val("");
+function limpiar() {
+    $('#txtRegistroid').val("");
+    $('#txtRegistroNombre').val("");
+    $('#cboRegistroActivo').val("A");
+    $('#txtRegistrodescripcion').val("");
+}
+
+function VerificacionLleno() {
+    if ($('#txtRegistroNombre').val().trim() == "") {
+        swal("Campo Vacio", " el campo de Nombre se encuentra vacio ", "error");
+        return false
+    } else if ($('#cboRegistroActivo').val().trim() == "") {
+        swal("Campo Vacio", " el campo de Activo se encuentra vacio ", "error");
+        return false
+    } else if ($('#txtRegistrodescripcion').val().trim() == "") {
+        swal("Campo Vacio", " el campo de Descripcion se encuentra vacio ", "error");
+        return false
     }
+    return true
+
+}
+
+$("#txtRegistroNombre").on('input', function () {
+    TextNombre = true;
+    if (TextNombre && TextDescripcion) {
+        $('#btn-Guardar').prop('disabled', false);
+
+    }
+});
+$("#txtRegistrodescripcion").on('input', function () {
+    TextDescripcion = true;
+    if (TextNombre && TextDescripcion) {
+        $('#btn-Guardar').prop('disabled', false);
+
+    }
+});

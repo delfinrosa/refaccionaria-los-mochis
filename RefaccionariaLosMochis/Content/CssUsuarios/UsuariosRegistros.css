@@ -61,12 +61,33 @@
     cursor: pointer;
 }
 
-    .autocomplete-option:hover {
-        background-color: #f2f2f2;
-    }
+.autocomplete-option:hover {
+    background-color: #f2f2f2;
+}
 
-    .autocomplete-option.active {
-        background-color: #007bff;
-        color: #fff;
-    }
+.autocomplete-option.active {
+    background-color: #007bff;
+    color: #fff;
+}
+/***********************/
+/*PRUEBA DE BOTONES CON OPACIODAD*/
+/* Aplicar filtro de brillo para hacer los botones más blancos */
+
+
+.btn-custom {
+    opacity: 0.5; /* Puedes ajustar el valor de la opacidad según tus preferencias */
+    transition: background-color 0.5s ease; /* Transición de color de fondo con duración de 0.5 segundos */
+}
+#btn-Nuevo:focus {
+    opacity: 1; /* Puedes ajustar el valor de la opacidad según tus preferencias */
+}
+
+#btn-Eliminar:focus {
+    opacity: 1; /* Puedes ajustar el valor de la opacidad según tus preferencias */
+}
+#btn-Guardar:focus {
+    opacity: 1; /* Puedes ajustar el valor de la opacidad según tus preferencias */
+}
+
+
 

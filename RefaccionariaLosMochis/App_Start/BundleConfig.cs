@@ -38,6 +38,11 @@ namespace RefaccionariaLosMochis
                 "~/Content/bootstrap.min.css",
                 "~/Content/estilo.css",
                 "~/Content/DataTables/css/responsive.dataTables.css"
+                ));            
+
+            bundles.Add(new StyleBundle("~/Content/login").Include(
+                "~/Content/bootstrap.min.css",
+                "~/Content/CssLogin/Login.css"
                 ));
         }
     }

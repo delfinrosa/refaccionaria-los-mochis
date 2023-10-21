@@ -91,16 +91,18 @@ namespace RefaccionariaLosMochis.Controllers
         {
             object resultado;
             string mensaje = string.Empty;
+            objeto.IdUsuario= Convert.ToInt32( Request.Cookies["idUsuario"]?.Value);
+            Linea objDevolucion = null;
 
             if (objeto.IdLinea == 0)
             {
-                resultado = new CN_Linea().Registrar(objeto, out mensaje);
+                resultado = new CN_Linea().Registrar(objeto, out mensaje, out objDevolucion);
             }
             else
             {
-                resultado = new CN_Linea().Editar(objeto, out mensaje);
+                resultado = new CN_Linea().Editar(objeto, out mensaje, out objDevolucion);
             }
-            return Json(new { resultado = resultado, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
+            return Json(new { resultado = resultado, mensaje = mensaje , objDevolucion = objDevolucion }, JsonRequestBehavior.AllowGet); ;
 
         }
         [HttpPost]
