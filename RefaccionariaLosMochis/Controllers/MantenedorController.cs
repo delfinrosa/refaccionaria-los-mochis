@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System.Data;
 using RefaccionariaLosMochis.Permisos;
 using System.Collections;
+using System.Web.UI.WebControls;
 
 namespace RefaccionariaLosMochis.Controllers
 {
@@ -23,7 +24,7 @@ namespace RefaccionariaLosMochis.Controllers
 
         [PermisosRol("I")]
 
-        
+
         public ActionResult Marca()
         {
             return View();
@@ -76,22 +77,26 @@ namespace RefaccionariaLosMochis.Controllers
             return View();
         }
 
+
+
         [HttpGet]
-        //Listar
+        //Listar General (TABLA)
         public JsonResult ListarLinea()
         {
             List<Linea> oLista = new List<Linea>();
             oLista = new CN_Linea().Listar();
             return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
         }
+
+
+
         [HttpPost]
         //Guardar
-
         public JsonResult GuardarLinea(Linea objeto)
         {
             object resultado;
             string mensaje = string.Empty;
-            objeto.IdUsuario= Convert.ToInt32( Request.Cookies["idUsuario"]?.Value);
+            objeto.IdUsuario = Convert.ToInt32(Request.Cookies["idUsuario"]?.Value);
             Linea objDevolucion = null;
 
             if (objeto.IdLinea == 0)
@@ -102,9 +107,11 @@ namespace RefaccionariaLosMochis.Controllers
             {
                 resultado = new CN_Linea().Editar(objeto, out mensaje, out objDevolucion);
             }
-            return Json(new { resultado = resultado, mensaje = mensaje , objDevolucion = objDevolucion }, JsonRequestBehavior.AllowGet); ;
+            return Json(new { resultado = resultado, mensaje = mensaje, objDevolucion = objDevolucion }, JsonRequestBehavior.AllowGet); ;
 
         }
+
+
         [HttpPost]
         //Eliminar
         public JsonResult EliminarLinea(int id)
@@ -114,34 +121,134 @@ namespace RefaccionariaLosMochis.Controllers
             respuesta = new CN_Linea().Eliminar(id, out mensaje);
             return Json(new { resultado = respuesta, mensaje = mensaje }, JsonRequestBehavior.AllowGet); ;
         }
+
         //PRUEBA DE EDITAR NUEVO
         [HttpPost]
-        //BusquedaFiltroLinea
+        //Busqueda Filtro Linea Por Nombre  
+        //Resultado un solo objeto
         public JsonResult BusquedaFiltroLinea(string nombre)
         {
-          
+
             Linea oLista = new Linea();
-            if (nombre!=null|| nombre != "")
+            if (nombre != null || nombre != "")
             {
                 oLista = new CN_Linea().BusquedaFiltroLinea(nombre);
             }
-            return Json(new { Activo = oLista.Activo , Descripcion = oLista.Descripcion, IdLinea = oLista.IdLinea, Deslc = oLista.Deslc }, JsonRequestBehavior.AllowGet);
+            return Json(new { Activo = oLista.Activo, Descripcion = oLista.Descripcion, IdLinea = oLista.IdLinea, Deslc = oLista.Deslc }, JsonRequestBehavior.AllowGet);
 
         }
+
         //ListarNombreDeLineas
+        [HttpPost]
+        //Busqueda Filtro Linea Por Nombre  
+        //Resultado un List<objeto>
         public JsonResult ListarNombreDeLineas(string nombre)
         {
 
             List<string> lista = new List<string>();
-            if (nombre!=null|| nombre != "")
+            if (nombre != null || nombre != "")
             {
                 lista = new CN_Linea().ListarNombreDeLineas(nombre);
             }
-            return Json(new { Lista = lista}, JsonRequestBehavior.AllowGet);
+            return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
 
         }
 
+        //ListarLineas
+        [HttpPost]
+        //Busqueda Filtro Linea Por ID  
+        //Resultado un objeto
+        public JsonResult ListarPorIdLineas(int Id)
+        {
 
+            Linea oLinea = new Linea();
+            if (Id != null)
+            {
+                oLinea = new CN_Linea().ListarPorIdLineas(Id);
+            }
+            return Json(new { Lista = oLinea }, JsonRequestBehavior.AllowGet);
+
+        }
+
+        //UltimoRegistro
+        [HttpPost]
+        //Busqueda el ultimo modificado 
+        //Resultado un objeto
+        public JsonResult UltimoRegistro()
+        {
+            Linea oLinea = new Linea();
+            oLinea = new CN_Linea().UltimoRegistro();
+            return Json(new { Lista = oLinea }, JsonRequestBehavior.AllowGet);
+
+        }
+
+        //PruebaAutocompletado
+        public JsonResult PruebaAutocompletado()
+        {
+            List<Linea> oLista = new List<Linea>();
+            oLista = new CN_Linea().PruebasAutoCompletado();
+
+            // Número de la página actual (puedes obtener esto de alguna manera en tu lógica)
+            int intPaginaActual = 1;
+
+            // Crear un objeto anidado con la lista de resultados y el número de página
+            var respuesta = new
+            {
+                intPaginaActual = intPaginaActual,
+                lstItems = oLista
+            };
+
+            return Json(new { intPaginaActual = intPaginaActual, lstItems = oLista }, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        //Busqueda el ultimo modificado 
+        //Resultado un objeto
+        public JsonResult COUNT_PruebasAutoCompletado(string nombre)
+        {
+            int registros = 0;
+            registros = new CN_Linea().COUNT_PruebasAutoCompletado(nombre);
+            return Json(new { registros = registros }, JsonRequestBehavior.AllowGet);
+
+        }
+        //Paginado
+        public JsonResult PaginacionPRUEBA(string nombre,int pagina)
+        {
+
+            List<string> lista = new List<string>();
+            if (nombre != null || nombre != "")
+            {
+                lista = new CN_Linea().PaginacionPRUEBA(nombre,pagina);
+            }
+            return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
+
+        }
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA
+        /////////////////
+        [HttpPost]
+
+        public JsonResult COUNT_Tabla()
+        {
+            int registros = 0;
+            registros = new CN_Linea().COUNT_Tabla();
+            return Json(new { registros = registros }, JsonRequestBehavior.AllowGet);
+
+        }
+        [HttpPost]
+
+        public JsonResult ListarPrueba(string strpagina)
+        {
+            int pagina = Convert.ToInt32(strpagina);
+            List<Linea> oLista = new List<Linea>();
+            oLista = new CN_Linea().ListarPrueba(pagina);
+            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
+        }
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA FIN
+        /////////////////
 
 
         #endregion
@@ -167,7 +274,7 @@ namespace RefaccionariaLosMochis.Controllers
         [HttpPost]
         //Guardar
 
-        public JsonResult GuardarProducto(string objeto ,string archivoImagen)
+        public JsonResult GuardarProducto(string objeto, string archivoImagen)
         {
 
 
@@ -203,7 +310,7 @@ namespace RefaccionariaLosMochis.Controllers
             {
                 resultado = new CN_Producto().Editar(oproducto, out mensaje);
             }
-                return Json(new { operacionExitosa = operacion_exitosa, IdGenerado = oproducto.IdProducto, mensaje = mensaje }, JsonRequestBehavior.AllowGet);
+            return Json(new { operacionExitosa = operacion_exitosa, IdGenerado = oproducto.IdProducto, mensaje = mensaje }, JsonRequestBehavior.AllowGet);
         }
 
         [HttpPost]

@@ -18,17 +18,27 @@
             <div class="container my-3 col-auto">
                 <div class="row justify-content-between">
                     <div class="col-auto d-flex align-items-baseline ">
-                        <div class="input-group rounded-2 bg-light">
-                            <input id="txtBusqueda" type="text" class="form-control" placeholder="Buscar...">
-                            <button class="btn btn-outline-secondary" type="button">
-                                <label for="txtBusqueda"><i class="fas fa-search"></i></label>
-                            </button>
+
+                        <div id="buscador">
+                            <div class="input-group rounded-2 bg-primary">
+                                <input id="txtBusquedaNuevo" type="text" class="form-control" placeholder="Buscar...">
+                                <button id="botonBuscar" class="btn btn-outline-secondary"  type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div id="opcionesListaAbajo" class="autocomplete-options" style="display: none;">
+                            </div>
+                            <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                            </div>
                         </div>
+
                         <br />
-                        <div id="opcionesLista" class="autocomplete-options" style="display: none;"></div>
+
                     </div>
                 </div>
             </div>
+
+
 
             <div class="d-flex justify-content-center align-items-center col-8">
                 <div class="bg-light rounded-2 m-2 h-50">
@@ -100,7 +110,7 @@
         <hr />
         <div class=" d-flex justify-content-end">
             <button disabled id="btn-Guardar" type="button" class="btn btn-success btn-sm  mx-2"><i class="fas fa-play"></i> Guardar</button>
-            <button id="btn-Cancelar" type="button" class="btn btn-success btn-sm btn-custom mx-2 "><i class="fas fa-times"></i> Cancelar</button>
+            <button id="btn-Cancelar" type="button" class="btn btn-secondary btn-sm btn-custom mx-2 "><i class="fas fa-times"></i> Cancelar</button>
         </div>
     </div>
 </div>
@@ -111,21 +121,29 @@
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table me-1"></i>Lista de Lineas
+
     </div>
 
 
     <div class="card-body">
-        <div class="row h3 fw-bolder text-center"><label class="text-center"> Registros de Lineas</label></div>
-        @*<div class="row">
-                <div class="col-12">
-                    <button type="button" class="btn btn-primary" onclick="abrirModal()">Crear nuevo</button>
+        <div class="row h3 fw-bolder text-center">
+            <label class="text-center col-11"> Registros de Lineas</label>
+            <div class="d-flex justify-content-end">
+                <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm  mx-2 "><i class="fas fa-sync"></i> </button>
+            </div>
+            <div class="row justify-content-center">
+                <div id="paginadoTabla">
+
                 </div>
-            </div>*@
+
+            </div>
+        </div>
         <hr />
 
         <table id="tabla" class="display cell-border" style="width:100%">
             <thead>
                 <tr id="trowTabla">
+                    <th>ID</th>
                     <th>Descripcion</th>
                     <th>Activo</th>
                     <th>Descripcion de la Linea</th>
@@ -184,8 +202,8 @@
 </div>
 
 @section Scripts {
+    <script src="~/Scripts/Pruebas/jquery.bootstrap.autocomplete.js"></script>
     <script src="~/Scripts/Linea/LineaJS.js"></script>
-    <script src="~/Scripts/Pruebas/PruebasLineas.js"></script>
 
 }
 

@@ -49,11 +49,9 @@
 }
 /*AUTO COMPLETADO*/
 .autocomplete-options {
-    position: absolute;
-    width: 100%;
     border: 1px solid #ccc;
     background-color: #fff;
-    z-index: 1;
+
 }
 
 .autocomplete-option {
@@ -69,11 +67,14 @@
     background-color: #007bff;
     color: #fff;
 }
+#buscador {
+    width: 300px;
+    z-index: 1;
+    position: absolute;
+}
 /***********************/
 /*PRUEBA DE BOTONES CON OPACIODAD*/
 /* Aplicar filtro de brillo para hacer los botones más blancos */
-
-
 .btn-custom {
     opacity: 0.5; /* Puedes ajustar el valor de la opacidad según tus preferencias */
     transition: background-color 0.5s ease; /* Transición de color de fondo con duración de 0.5 segundos */

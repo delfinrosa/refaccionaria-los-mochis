@@ -71,18 +71,70 @@ namespace CapaNegocio
                 return false;
             }
         }
+        //Elimina
         public bool Eliminar(int id, out string Mensaje)
         {
             return ObjCapaDatos.Eliminar(id, out Mensaje);
         }
+        // Buscar Una Linea por el nombre (Devuelve un objeto)
         public Linea BusquedaFiltroLinea(string nombre)
         {
             return ObjCapaDatos.BusquedaFiltroLinea(nombre);
         }
+        // Buscar Una Linea por el nombre (Devuelve una List<objeto>)
+
         public List<string> ListarNombreDeLineas(string linea)
         {
             return ObjCapaDatos.ListarNombreDeLineas(linea);
         }
+        // Buscar Una Linea por el ID (Devuelve un objeto)
+        public Linea ListarPorIdLineas(int Id)
+        {
+            return ObjCapaDatos.BusquedaIDLinea(Id);
+        }        
+
+
+        // Buscar la ultimo modificacion de la linea
+        public Linea UltimoRegistro()
+        {
+            return ObjCapaDatos.UltimoRegistro();
+        }
+        //PRUEBAS AUTOCOMPLETADO
+        public List<Linea> PruebasAutoCompletado()
+        {
+            return ObjCapaDatos.PruebasAutoCompletado();
+        }        
+        
+        /// <summary>
+        /// COUNT Registros
+        /// </summary>
+        /// <returns> Total de registros </returns>
+        public int COUNT_PruebasAutoCompletado(string linea)
+        {
+            return ObjCapaDatos.COUNT_PruebasAutoCompletado(linea);
+        }
+
+        public List<string> PaginacionPRUEBA(string linea, int pagina)
+        {
+            return ObjCapaDatos.PaginacionPRUEBA(linea,pagina);
+        }
+        ////////////////
+        /////PRUEBA PAGINADO TABLA
+        /////////////////
+
+        public int COUNT_Tabla()
+        {
+            return ObjCapaDatos.COUNT_Tabla();
+        }
+        public List<Linea> ListarPrueba(int pagina)
+        {
+            return ObjCapaDatos.ListarPrueba(pagina);
+        }
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA FIN
+        /////////////////
+
     }
 }
 
