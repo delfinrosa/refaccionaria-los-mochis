@@ -20,7 +20,8 @@ namespace RefaccionariaLosMochis
                         "~/Scripts/jquery.validate.min.js",
                         "~/Scripts/jquery-ui.js",
                         "~/Scripts/Index/PermisosNav.js",
-                        "~/Scripts/scripts.js"));
+                        "~/Scripts/scripts.js",                  
+                        "~/Scripts/General/JQueryAjax.js"));
 
 
 

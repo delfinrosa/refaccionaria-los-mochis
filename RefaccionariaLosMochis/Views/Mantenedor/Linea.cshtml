@@ -153,53 +153,7 @@
         </table>
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="FormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-dark text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Linea</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body g-1">
 
-                <input id="txtid" type="hidden" value="0">
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label for="txtdescripcion" class="form-label">Descripcion</label>
-                        <input type="text" class="form-control" id="txtdescripcion" autocomplete="off">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="cboactivo" class="form-label">Activo</label>
-                        <select class="form-select" id="cboactivo">
-                            <option value="A">Activo</option>
-                            <option value="D">Desactivo</option>
-                            <option value="O">Oculto</option>
-                        </select>
-                    </div>
-                    <div class="my-3">
-                        <label class="form-label" for="txtdescripcion">Descripcion de la Linea</label>
-                        <textarea class="form-control" type="text" id="textareadescripcion" name="descripcion" style="height:125px ;resize:none" autocomplete="off"></textarea>
-                    </div>
-                </div>
-                @*MENSAJE ALERTA*@
-                @*<div class="row mt-2">
-                        <div class="col-12">
-                            <div id="mensajeError" class="alert alert-danger" role="alert">
-                                This is a danger alert—check it out!
-                            </div>
-
-                        </div>
-                    </div>*@
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" onClick="Guardar()">Guardar</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 @section Scripts {
     <script src="~/Scripts/Pruebas/jquery.bootstrap.autocomplete.js"></script>
