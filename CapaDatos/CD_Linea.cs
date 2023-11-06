@@ -51,15 +51,33 @@ namespace CapaDatos
         ////////////////
         /////PRUEBA PAGINADO TABLA
         /////////////////
-        public List<Linea> ListarPrueba(int pagina)
+        public List<Linea> ListarPrueba(int pagina,string tipoOrden)
         {
-
+            string orden="";
+            switch (tipoOrden)
+            {
+                case "I_A":
+                    orden = "l.IdLinea ";
+                    break;
+                case "I_D":
+                    orden = "l.IdLinea DESC";
+                    break;
+                case "D_A":
+                    orden = "l.Descripcion ";
+                    break;
+                case "D_D":
+                    orden = "l.Descripcion DESC";
+                    break;
+                default:
+                    orden = "l.IdLinea ";
+                    break;
+            }
             List<Linea> lista = new List<Linea>();
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY l.IdLinea OFFSET "+pagina*10+" ROWS FETCH NEXT 10 ROWS ONLY;";
+                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY "+orden+" OFFSET "+pagina*10+" ROWS FETCH NEXT 10 ROWS ONLY;";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;

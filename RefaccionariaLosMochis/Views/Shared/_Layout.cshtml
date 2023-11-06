@@ -45,13 +45,14 @@
 
 
                     <li id="navUsuario" hidden class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Usuario","Mantenedor")">Usuario<i class="fas fa-user mx-2"></i></a>
+                        <a class="nav-link text-white" href="@Url.Action("Usuario","Mantenedor")">Usuario<i class="fas fa-user-edit mx-2"></i></a>
                     </li>
 
-                    
 
+                    <li id="CerrarSesion" class="nav-item ">
+                        @Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")
+                        <i class="fas fa-lock-open mx-2" style="color: #ffffff;"></i>                    </li>
 
-                    <div class="text-white nav-item align-content-end">@Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")</div>
 
 
 
@@ -65,7 +66,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year - Refaccionaria Los Mochis</p>
         </footer>
     </div>
 

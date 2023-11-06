@@ -3,19 +3,124 @@
     ViewBag.Title = "Marca";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link href="~/Content/CssUsuarios/UsuariosRegistros.css" rel="stylesheet" />
+
 <ol class="breadcrumb mb-4 mt-4">
     <li class="breadcrumb-item"><a href="index.html">Mantenimiento</a></li>
     <li class="breadcrumb-item active">Marca</li>
 </ol>
+
+
+<div id="cardRegistros" class="card mb-5">
+    <div class="card-header">
+        <div class="row mx-5 my-3 bg-secondary py-2 rounded-3 barraHerramientas">
+
+            <div class="container my-3 col-auto">
+                <div class="row justify-content-between">
+                    <div class="col-auto d-flex align-items-baseline ">
+
+                        <div id="buscador">
+                            <div class="input-group rounded-2 bg-primary">
+                                <input id="txtBusquedaNuevo" type="text" class="form-control" placeholder="Buscar...">
+                                <button id="botonBuscar" class="btn btn-outline-secondary" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                            <div id="opcionesListaAbajo" class="autocomplete-options" style="display: none;">
+                            </div>
+                            <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                            </div>
+                        </div>
+
+                        <br />
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="d-flex justify-content-center align-items-center col-8">
+                <div class="bg-light rounded-2 m-2 h-50">
+                    <button id="btn-Nuevo" type="button" class="btn btn-primary btn-custom w-100 h-100"><i class="fas fa-plus"></i> Nuevo</button>
+                </div>
+                <div class="bg-light rounded-2 m-2 h-50">
+                    <button id="btn-Eliminar" type="button" class="btn btn-danger btn-custom w-100 h-100"><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="card-body container">
+
+
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class=" form-label h3 fw-bold">Identificador</label>
+            </div>
+            <div class="col-6">
+                <input id="txtRegistroid" class="form-control" type="number" value="0" placeholder="AutoNumerico" disabled>
+            </div>
+        </div>
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class="form-label h3 fw-bold">Nombre</label>
+            </div>
+            <div class="col-7">
+                <input id="txtRegistroNombre" class="form-control" type="text" />
+            </div>
+        </div>
+
+        <div class="row  w-100 my-3" id="">
+            <div class="col-auto">
+                <label class="form-label h3 fw-bold">Activo</label>
+            </div>
+            <div class="col-7">
+                <select class="form-select" id="cboRegistroActivo">
+                    <option value="A">Activo</option>
+                    <option value="D">Desactivo</option>
+                    <option value="O">Oculto</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-12">
+                <div id="mensajeError" class="alert alert-danger" role="alert" style="display: none;">
+                </div>
+
+            </div>
+        </div>
+        <hr />
+        <div class=" d-flex justify-content-end">
+            <button disabled id="btn-Guardar" type="button" class="btn btn-success btn-sm  mx-2"><i class="fas fa-play"></i> Guardar</button>
+            <button id="btn-Cancelar" type="button" class="btn btn-secondary btn-sm btn-custom mx-2 "><i class="fas fa-times"></i> Cancelar</button>
+        </div>
+    </div>
+</div>
+
 
 <div class="card">
     <div class="card-header">
         <i class="fas fa-bookmark me-1"></i>Lista de Marcas
     </div>
     <div class="card-body">
-        <div class="row">
-            <div class="col-12">
-                <button type="button" class="btn btn-primary" onclick="abrirModal()">Crear nuevo</button>
+        <div class="row h3 fw-bolder text-center">
+            <label class="text-center col-11"> Registros de Marcas</label>
+            <div class="d-flex justify-content-end">
+                <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm  mx-2 "><i class="fas fa-sync"></i> </button>
+            </div>
+            <div class="row justify-content-center">
+                <div id="paginadoTabla">
+
+                </div>
+
             </div>
         </div>
         <hr />
@@ -32,49 +137,7 @@
         </table>
     </div>
 </div>
-<!-- Modal -->
-<div class="modal fade" id="FormModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header bg-dark text-white">
-                <h5 class="modal-title" id="exampleModalLabel">Marca</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body g-1">
 
-                <input id="txtid" type="hidden" value="0">
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label for="txtdescripcion" class="form-label">Descripcion</label>
-                        <input type="text" class="form-control" id="txtdescripcion" autocomplete="off">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="cboactivo" class="form-label">Activo</label>
-                        <select class="form-select" id="cboactivo">
-                            <option value="A">Activo</option>
-                            <option value="D">Desactivo</option>
-                            <option value="O">Oculto</option>
-                        </select>
-                    </div>
-                </div>
-                @*MENSAJE ALERTA*@
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <div id="mensajeError" class="alert alert-danger" role="alert">
-                            This is a danger alert—check it out!
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" onClick="Guardar()">Guardar</button>
-            </div>
-        </div>
-    </div>
-</div>
 @section Scripts {
     <script src="~/Scripts/Marcas/MarcaJS.js"></script>
 }

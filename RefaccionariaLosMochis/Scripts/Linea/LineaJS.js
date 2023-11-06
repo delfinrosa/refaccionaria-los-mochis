@@ -14,31 +14,30 @@ var TextDescripcion = true;
 var UltimoID;
 
 var pagina = 0;
-var paginaTabla;
+var paginaTabla = 0;
 
+var query = 'I_A';
 
 var opcionesLista = $('#opcionesLista');
 var input = $('#txtBusqueda');
 
 //MOSTRAR DATOS EN LA TABLA
-function datosTablaPaginado() {
+function datosTablaPaginado(paginaActual) {
     $('#tabla').DataTable().clear().destroy();
+    paginaTabla = paginaActual
+
     // Limpiar el encabezado
     var dataTabla; // Variable para almacenar los datos devueltos por la llamada AJAX
 
-    JQueryAjax_Normal('/Mantenedor/ListarPrueba', { strpagina: paginaTabla }, false, function (data) {
+    JQueryAjax_Normal('/Linea/ListarPrueba', { strpagina: paginaTabla, tipoOrden: query }, false, function (data) {
         dataTabla = data.data;
-       
+
     }, function () { });
 
     var headers = '';
     if (!tablaInicializada) {
-        paginaTabla = 0
-
         // Marcar la tabla como inicializada
         tablaInicializada = true;
-
-        var headers = '';
 
         if (rol == "A") {
             headers = '<th>Persona que modifico</th>' +
@@ -52,14 +51,12 @@ function datosTablaPaginado() {
     }
     $('#tabla').DataTable().clear().destroy();
 
-    // Limpiar el encabezado
     console.log("Carga Tabla")
-    var headers = '';
+
     if (!tablaInicializada) {
 
         // Marcar la tabla como inicializada
         tablaInicializada = true;
-
         var headers = '';
 
         if (rol == "A") {
@@ -75,10 +72,14 @@ function datosTablaPaginado() {
 
     //MOSTRAR DATOS EN LA TABLA
     if (rol == "A") {
-
         tabladata = $("#tabla").DataTable({
             responsive: true,
             ordering: false,
+            ///
+            searching: false,
+            paging: false,
+            info: false,
+            ///
             data: dataTabla,
             columns: [
                 { data: "IdLinea" },
@@ -99,28 +100,23 @@ function datosTablaPaginado() {
                 { data: "fechaCreaccion" },
                 { data: "fechaActualizacion" },
                 {
-
                     "defaultContent": '<a href="#cardRegistros"><button type="button" class="btn btn-primary btn-sm btn-editar"><i class="fas fa-pen"></i></button></a>' +
                         '<button type="button" class="btn-eliminar btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button>',
                     "orderable": false,
                     "searchable": false,
                     "width": "90px"
                 }
-            ],
-            "language": {
-                url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
-            }
-
-            // Verificar el rol y mostrar las columnas adicionales si es "A" (administrador)
-
-
+            ]
         });
     } else {
-
         tabladata = $("#tabla").dataTable({
             responsive: true,
             ordering: false,
-            bServerSide: true,
+            ///
+            searching: false,
+            paging: false,
+            info: false,
+            ///
             data: data,
             columns: [
                 { data: "IdLinea" },
@@ -145,10 +141,7 @@ function datosTablaPaginado() {
                     "searchable": false,
                     "width": "90px"
                 }
-            ],
-            "language": {
-                url: "https://cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json"
-            }
+            ]
 
         });
     }
@@ -178,7 +171,7 @@ function Guardar() {
         Deslc: $('#txtRegistrodescripcion').val()
     }
 
-    JQueryAjax_Normal('/Mantenedor/GuardarLinea', { objeto: Linea }, true, function (data) {
+    JQueryAjax_Normal('/Linea/GuardarLinea', { objeto: Linea }, true, function (data) {
         //Linea guardar
         if (Linea.IdLinea == 0) {
             if (data.resultado != 0) {
@@ -227,28 +220,28 @@ function abrirModal2(json) {
 }
 
 function FiltroPorLinea2(texto) {
-    JQueryAjax_Normal('/Mantenedor/BusquedaFiltroLinea', { nombre: texto }, true, function (data) {
-            if (data.Descripcion != "") {
-                $('#txtRegistroNombre').val(data.Descripcion);
-                $('#txtRegistrodescripcion').val(data.Deslc);
-                $('#txtRegistroid').val(data.IdLinea);
-                /*ACTIVO USUARIO*/
-                if (data.Activo == "A") {
-                    $('#cboRegistroActivo').val("A");
-                } else if (data.Activo == "O") {
-                    $('#cboRegistroActivo').val("O");
-                } else {
-                    $('#cboRegistroActivo').val("D");
-                }
-                $('#opcionesLista').hide();
-                $('#opcionesListaAbajo').hide();
-
+    JQueryAjax_Normal('/Linea/BusquedaFiltroLinea', { nombre: texto }, true, function (data) {
+        if (data.Descripcion != "") {
+            $('#txtRegistroNombre').val(data.Descripcion);
+            $('#txtRegistrodescripcion').val(data.Deslc);
+            $('#txtRegistroid').val(data.IdLinea);
+            /*ACTIVO USUARIO*/
+            if (data.Activo == "A") {
+                $('#cboRegistroActivo').val("A");
+            } else if (data.Activo == "O") {
+                $('#cboRegistroActivo').val("O");
             } else {
-                // Si no se encontraron resultados, puedes limpiar los campos o mostrar un mensaje de error
-                $('#txtRegistroNombre').val('');
-                $('#txtRegistrodescripcion').val('');
-                $('#cboRegistroActivo').val('A');
+                $('#cboRegistroActivo').val("D");
             }
+            $('#opcionesLista').hide();
+            $('#opcionesListaAbajo').hide();
+
+        } else {
+            // Si no se encontraron resultados, puedes limpiar los campos o mostrar un mensaje de error
+            $('#txtRegistroNombre').val('');
+            $('#txtRegistrodescripcion').val('');
+            $('#cboRegistroActivo').val('A');
+        }
     }, function () { }
     );
 }
@@ -260,129 +253,65 @@ function limpiar() {
     $('#txtRegistrodescripcion').val("");
 }
 
-function VerificacionLleno() {
-    if ($('#txtRegistroNombre').val().trim() == "") {
-        swal("Campo Vacio", " el campo de Nombre se encuentra vacio ", "error");
-        return false
-    } else if ($('#cboRegistroActivo').val().trim() == "") {
-        swal("Campo Vacio", " el campo de Activo se encuentra vacio ", "error");
-        return false
-    } else if ($('#txtRegistrodescripcion').val().trim() == "") {
-        swal("Campo Vacio", " el campo de Descripcion se encuentra vacio ", "error");
-        return false
-    }
-    return true
+//function VerificacionLleno() {
+//    if ($('#txtRegistroNombre').val().trim() == "") {
+//        swal("Campo Vacio", " el campo de Nombre se encuentra vacio ", "error");
+//        return false
+//    } else if ($('#cboRegistroActivo').val().trim() == "") {
+//        swal("Campo Vacio", " el campo de Activo se encuentra vacio ", "error");
+//        return false
+//    } else if ($('#txtRegistrodescripcion').val().trim() == "") {
+//        swal("Campo Vacio", " el campo de Descripcion se encuentra vacio ", "error");
+//        return false
+//    }
+//    return true
 
-}
+//}
 
 ///////////////
 ///Carga el ultimo
 ///////////////
 
 function CargarUltimo() {
-    JQueryAjax_Normal('/Mantenedor/UltimoRegistro', { }, true, function (data) {
-            UltimoID = data.Lista.IdLinea
-            abrirModal2(data);
+    JQueryAjax_Normal('/Linea/UltimoRegistro', {}, true, function (data) {
+        UltimoID = data.Lista.IdLinea
+        abrirModal2(data);
     }, function () { });
 }
 ////////////////
-///COUNT AUTO COMPLETADO
+/// BUSCADOR
 ///////////////
 
-function desplegarPaginacion(searchTerm, pagina) {
-    JQueryAjax_Normal('/Mantenedor/PaginacionPRUEBA', { nombre: searchTerm, pagina: pagina }, true, function (data) {
-            var lista = data.Lista;
-            opcionesLista.empty();
-            if (lista.length > 0) {
-                lista.forEach(function (item) {
-                    var listItem = $('<div class="autocomplete-option"></div>').text(item);
-                    listItem.on('click', function () {
-                        input.val(item);
-                        FiltroPorLinea2(listItem.text());
-                    });
-                    opcionesLista.append(listItem);
+function desplegarPaginacion(pagina) {
+    var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
+    JQueryAjax_Normal('/Linea/PaginacionPRUEBA', { nombre: searchTerm, pagina: pagina }, true, function (data) {
+        var lista = data.Lista;
+        opcionesLista.empty();
+        if (lista.length > 0) {
+            lista.forEach(function (item) {
+                var listItem = $('<div class="autocomplete-option"></div>').text(item);
+                listItem.on('click', function () {
+                    input.val(item);
+                    FiltroPorLinea2(listItem.text());
                 });
-                opcionesLista.show();
-                $('#opcionesListaAbajo').show();
-            }
-    },function () { });
+                opcionesLista.append(listItem);
+            });
+            opcionesLista.show();
+            $('#opcionesListaAbajo').show();
+        }
+    }, function () { });
 }
 
 
 function obtenerDivision(texto) {
     var division = 0;
-    JQueryAjax_Normal('/Mantenedor/COUNT_PruebasAutoCompletado', { nombre: texto }, false, function (data) {
-            division = Math.ceil(data.registros / 5);
+    JQueryAjax_Normal('/Linea/COUNT_PruebasAutoCompletado', { nombre: texto }, false, function (data) {
+        division = Math.ceil(data.registros / 5);
     }, function () { });
     return division;
 }
 
 
-function cargarOpcionesLista() {
-    $('#opcionesListaAbajo').empty();
-    var texto = $('#txtBusquedaNuevo').val().toLowerCase()
-    var division = obtenerDivision(texto);
-    var listItem = $("<div>");
-    listItem.append($('<span id="numPaginadoBuscador">').text(pagina + 1 + ' de ' + division));
-
-
-    var opcionesLista = $('<div class="d-flex align-items-center">' +
-        '<button id="btn-paginado-anterior" class="btn btn-sm btn-primary mx-1 justify-content-between"><i class="fas fa-angle-left"></i></button>' +
-        '<button id="btn-paginado-primero" class="btn btn-sm btn-primary mx-1 justify-content-between"><i class="fas fa-angle-double-left"></i></button>' +
-        listItem.html() +
-        '<button id="btn-paginado-ultimo" class="btn btn-sm btn-primary mx-1 justify-content-end"><i class="fas fa-angle-double-right"></i></button>' +
-        '<button id="btn-paginado-siguiente" class="btn btn-sm btn-primary mx-1 justify-content-end"><i class="fas fa-angle-right"></i></button><hr /></div>');
-
-    $('#opcionesListaAbajo').append(opcionesLista);
-
-
-
-
-    // Asignar el evento click al botón "Anterior"
-    $('#btn-paginado-anterior').click(function () {
-        if (pagina != 0) {
-            pagina--;
-            var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
-            desplegarPaginacion(searchTerm, pagina);
-            $('#numPaginadoBuscador').text(pagina + 1 + ' de ' + division);
-
-        }
-    });
-
-    // Asignar el evento click al botón "Primero"
-    $('#btn-paginado-primero').click(function () {
-        pagina = 0;
-        var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
-        desplegarPaginacion(searchTerm, pagina);
-        $('#numPaginadoBuscador').text(pagina + 1 + ' de ' + division);
-
-    });
-
-    // Asignar el evento click al botón "Último"
-    $('#btn-paginado-ultimo').click(function () {
-        pagina = division - 1
-        var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
-        desplegarPaginacion(searchTerm, pagina);
-        $('#numPaginadoBuscador').text(pagina + 1 + ' de ' + division);
-
-
-    });
-
-    // Asignar el evento click al botón "Siguiente"
-    $('#btn-paginado-siguiente').click(function () {
-        if (pagina != division - 1) {
-
-            pagina++;
-            var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
-            desplegarPaginacion(searchTerm, pagina);
-            $('#numPaginadoBuscador').text(pagina + 1 + ' de ' + division);
-
-
-
-        }
-    });
-
-}
 
 //////////////
 //Paginado Tabla
@@ -390,75 +319,13 @@ function cargarOpcionesLista() {
 
 function CountPaginadoTabla() {
     var resultado = 0;
-    JQueryAjax_Normal('/Mantenedor/COUNT_Tabla', {}, false, function (data) {
-            resultado = data.registros;
+    JQueryAjax_Normal('/Linea/COUNT_Tabla', {}, false, function (data) {
+        resultado = data.registros;
     }, function () { });
     return resultado;
 }
 
 
-
-function cargarOpcionesTabla() {
-    $('#paginadoTabla').empty();
-    var division = Math.ceil(CountPaginadoTabla() / 10);
-    var listItem = $("<div>");
-
-    listItem.append($('<span id="numPaginadoTabla">').text(paginaTabla + 1 + ' de ' + division));
-
-
-    var opcionesLista = $('<div class="d-flex align-items-center">' +
-        '<button id="btn-paginado-anterior-tabla" class="btn btn-sm btn-primary mx-1 justify-content-between"><i class="fas fa-angle-left"></i></button>' +
-        '<button id="btn-paginado-primero-tabla" class="btn btn-sm btn-primary mx-1 justify-content-between"><i class="fas fa-angle-double-left"></i></button>' +
-        listItem.html() +
-        '<button id="btn-paginado-ultimo-tabla" class="btn btn-sm btn-primary mx-1 justify-content-end"><i class="fas fa-angle-double-right"></i></button>' +
-        '<button id="btn-paginado-siguiente-tabla" class="btn btn-sm btn-primary mx-1 justify-content-end"><i class="fas fa-angle-right"></i></button><hr /></div>');
-
-    $('#paginadoTabla').append(opcionesLista);
-
-
-
-
-    // Asignar el evento click al botón "Anterior"
-    $('#btn-paginado-anterior-tabla').click(function () {
-        if (paginaTabla != 0) {
-            paginaTabla--;
-            datosTablaPaginado();
-            $('#numPaginadoTabla').text(paginaTabla + 1 + ' de ' + division);
-
-        }
-    });
-
-    // Asignar el evento click al botón "Primero"
-    $('#btn-paginado-primero-tabla').click(function () {
-        paginaTabla = 0;
-        datosTablaPaginado();
-        $('#numPaginadoTabla').text(paginaTabla + 1 + ' de ' + division);
-
-    });
-
-    // Asignar el evento click al botón "Último"
-    $('#btn-paginado-ultimo-tabla').click(function () {
-        paginaTabla = division - 1
-        datosTablaPaginado();
-        $('#numPaginadoTabla').text(paginaTabla + 1 + ' de ' + division);
-
-
-    });
-
-    // Asignar el evento click al botón "Siguiente"
-    $('#btn-paginado-siguiente-tabla').click(function () {
-        if (paginaTabla != division - 1) {
-
-            paginaTabla++;
-            datosTablaPaginado();
-            $('#numPaginadoTabla').text(paginaTabla + 1 + ' de ' + division);
-
-
-
-        }
-    });
-
-}
 
 //////////
 //BOTONES
@@ -480,11 +347,39 @@ $("#btn-Cancelar").click(function () {
 });
 
 $("#btn-Guardar").click(function () {
-    if (VerificacionLleno()) {
+    if (validar()) {
         $('#btn-Eliminar').prop('disabled', false);
-        Guardar();
-
+        //Guardar();
     }
+});
+
+$("#tablaId").click(function () {
+    paginaTabla = 0
+    if (query == 'I_A') {
+        query = 'I_D';
+    } else {
+        query = 'I_A';
+    }
+
+    var division = Math.ceil(CountPaginadoTabla() / 10);
+    configurarPaginacion(paginaTabla, division, datosTablaPaginado, "T")
+
+    datosTablaPaginado(paginaTabla);
+
+
+});
+
+$("#tablaDescripcion").click(function () {
+    paginaTabla = 0
+    if (query == 'D_A') {
+        query = 'D_D';
+    } else {
+        query = 'D_A';
+    }
+    var division = Math.ceil(CountPaginadoTabla() / 10);
+    configurarPaginacion(paginaTabla, division, datosTablaPaginado, "T")
+
+    datosTablaPaginado(paginaTabla);
 });
 
 $("#btn-Eliminar").click(function () {
@@ -502,13 +397,13 @@ $("#btn-Eliminar").click(function () {
             cancelButtonText: "No",
             closeOnConfirm: true
         }, function () {
-            JQueryAjax_Normal('/Mantenedor/EliminarLinea', { id: idBorrar }, false, function (data) {
-                    if (data.resultado) {
-                        datosTablaPaginado();
-                        CargarUltimo();
-                    } else {
-                        swal("No se pudo eliminar", data.mensaje, "error");
-                    }
+            JQueryAjax_Normal('/Linea/EliminarLinea', { id: idBorrar }, false, function (data) {
+                if (data.resultado) {
+                    datosTablaPaginado(paginaTabla);
+                    CargarUltimo();
+                } else {
+                    swal("No se pudo eliminar", data.mensaje, "error");
+                }
             }, function () { });
         });
     }
@@ -523,7 +418,7 @@ $('#botonBuscar').click(function () {
 //TABLA
 /////
 $("#btn-Actualizar").click(function () {
-    datosTablaPaginado();
+    datosTablaPaginado(paginaTabla);
 });
 
 //BOTON EDITAR
@@ -531,7 +426,7 @@ $("#tabla tbody").on("click", '.btn-editar', function () {
     // Obtener datos del registro de la tabla
     var data = tabladata.row($(this).closest("tr")).data();
 
-    JQueryAjax_Normal('/Mantenedor/ListarPorIdLineas', { Id: data.IdLinea }, false,
+    JQueryAjax_Normal('/Linea/ListarPorIdLineas', { Id: data.IdLinea }, false,
         function (data) {
             abrirModal2(data);
         }, function () { });
@@ -558,14 +453,14 @@ $("#tabla tbody").on("click", '.btn-eliminar', function () {
         closeOnConfirm: true
     },
         function () {
-            JQueryAjax_Normal('/Mantenedor/EliminarLinea', { id: data.IdLinea }, true, function (data) {
+            JQueryAjax_Normal('/Linea/EliminarLinea', { id: data.IdLinea }, true, function (data) {
 
-                    if (data.resultado) {
-                        datosTablaPaginado();
-                        CargarUltimo();
-                    } else {
-                        swal("No se pudo eliminar", data.mensaje, "error");
-                    }
+                if (data.resultado) {
+                    datosTablaPaginado(paginaTabla);
+                    CargarUltimo();
+                } else {
+                    swal("No se pudo eliminar", data.mensaje, "error");
+                }
             }, function () { });
 
         });
@@ -592,14 +487,12 @@ $("#txtRegistrodescripcion").on('input', function () {
     }
 });
 
-
-
 $('#txtBusquedaNuevo').on('input', function () {
     var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
     pagina = 0;
-    // Realizar el autocompletado y manejar los resultados
-    desplegarPaginacion(searchTerm, pagina);
-    cargarOpcionesLista();
+    desplegarPaginacion(pagina);
+    var division = obtenerDivision(searchTerm);
+    configurarPaginacion(pagina, division, desplegarPaginacion, "B")
 
 
 });
@@ -617,6 +510,31 @@ $(document).on('click', function (event) {
 ///////////
 //AL CARGAR
 ///////////
-datosTablaPaginado();
+datosTablaPaginado(paginaTabla);
 CargarUltimo();
-cargarOpcionesTabla()
+
+
+var divisiona = Math.ceil(CountPaginadoTabla() / 10);
+
+configurarPaginacion(paginaTabla, divisiona, datosTablaPaginado, "T")
+
+
+function validar() {
+
+    $('[data-requerido]').each(function () {
+
+        var tipoInput = $(this).data('requerido');
+
+        if ($(this).val().trim() === '') {
+            swal("Campo Vacio", " el campo de " + tipoInput + " se encuentra vacio ", "error");
+            return false
+        }
+        return true
+    });
+
+
+
+
+
+
+}

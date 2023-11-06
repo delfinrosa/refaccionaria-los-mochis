@@ -138,21 +138,6 @@ namespace RefaccionariaLosMochis.Controllers
 
         }
 
-        //ListarNombreDeLineas
-        [HttpPost]
-        //Busqueda Filtro Linea Por Nombre  
-        //Resultado un List<objeto>
-        public JsonResult ListarNombreDeLineas(string nombre)
-        {
-
-            List<string> lista = new List<string>();
-            if (nombre != null || nombre != "")
-            {
-                lista = new CN_Linea().ListarNombreDeLineas(nombre);
-            }
-            return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
-
-        }
 
         //ListarLineas
         [HttpPost]
@@ -182,24 +167,6 @@ namespace RefaccionariaLosMochis.Controllers
 
         }
 
-        //PruebaAutocompletado
-        public JsonResult PruebaAutocompletado()
-        {
-            List<Linea> oLista = new List<Linea>();
-            oLista = new CN_Linea().PruebasAutoCompletado();
-
-            // Número de la página actual (puedes obtener esto de alguna manera en tu lógica)
-            int intPaginaActual = 1;
-
-            // Crear un objeto anidado con la lista de resultados y el número de página
-            var respuesta = new
-            {
-                intPaginaActual = intPaginaActual,
-                lstItems = oLista
-            };
-
-            return Json(new { intPaginaActual = intPaginaActual, lstItems = oLista }, JsonRequestBehavior.AllowGet);
-        }
 
         [HttpPost]
         //Busqueda el ultimo modificado 
@@ -238,13 +205,7 @@ namespace RefaccionariaLosMochis.Controllers
         }
         [HttpPost]
 
-        public JsonResult ListarPrueba(string strpagina)
-        {
-            int pagina = Convert.ToInt32(strpagina);
-            List<Linea> oLista = new List<Linea>();
-            oLista = new CN_Linea().ListarPrueba(pagina);
-            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
-        }
+   
 
         ////////////////
         /////PRUEBA PAGINADO TABLA FIN

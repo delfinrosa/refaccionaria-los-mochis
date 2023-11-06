@@ -20,56 +20,14 @@ namespace CapaNegocio
         {
             Mensaje = string.Empty;
             objDevolucion = null;
-            if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
-            {
-                Mensaje = "La descripcion de la linea no puede ser vacio";
-                objDevolucion = null;
-                return 0;
-
-            }
-            else if (string.IsNullOrEmpty(obj.Deslc) || string.IsNullOrWhiteSpace(obj.Deslc))
-            {
-                Mensaje = "La descripcion de caracteristicas de la linea no puede ser vacio";
-                objDevolucion = null;
-
-                return 0;
-
-            }
-            else if (string.IsNullOrEmpty(Mensaje))
-            {
-                return ObjCapaDatos.Registrar(obj, out Mensaje, out objDevolucion);
-            }
-            else
-            {
-                Mensaje = "No se puede editar la linea";
-                objDevolucion = null;
-                return 0;
-            }
-            Mensaje = "No se puede editar la linea";
-            return 0;
+            return ObjCapaDatos.Registrar(obj, out Mensaje, out objDevolucion);
         }
-        public bool Editar(Linea obj, out string Mensaje ,out Linea objDevolucion)
+        public bool Editar(Linea obj, out string Mensaje, out Linea objDevolucion)
         {
             Mensaje = string.Empty;
             objDevolucion = null;
-            if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
-            {
-                Mensaje = "La descripcion de la linea no puede ser vacio";
-            }
-            if (string.IsNullOrEmpty(obj.Deslc) || string.IsNullOrWhiteSpace(obj.Deslc))
-            {
-                Mensaje = "La descripcion de caracteristicas de la linea no puede ser vacio";
-            }
-            if (string.IsNullOrEmpty(Mensaje))
-            {
-                return ObjCapaDatos.Editar(obj, out Mensaje, out objDevolucion);
-            }
-            else
-            {
-                objDevolucion = null;
+            return ObjCapaDatos.Editar(obj, out Mensaje, out objDevolucion);
 
-                return false;
-            }
         }
         //Elimina
         public bool Eliminar(int id, out string Mensaje)
@@ -91,7 +49,7 @@ namespace CapaNegocio
         public Linea ListarPorIdLineas(int Id)
         {
             return ObjCapaDatos.BusquedaIDLinea(Id);
-        }        
+        }
 
 
         // Buscar la ultimo modificacion de la linea
@@ -103,8 +61,8 @@ namespace CapaNegocio
         public List<Linea> PruebasAutoCompletado()
         {
             return ObjCapaDatos.PruebasAutoCompletado();
-        }        
-        
+        }
+
         /// <summary>
         /// COUNT Registros
         /// </summary>
@@ -116,7 +74,7 @@ namespace CapaNegocio
 
         public List<string> PaginacionPRUEBA(string linea, int pagina)
         {
-            return ObjCapaDatos.PaginacionPRUEBA(linea,pagina);
+            return ObjCapaDatos.PaginacionPRUEBA(linea, pagina);
         }
         ////////////////
         /////PRUEBA PAGINADO TABLA
@@ -126,9 +84,9 @@ namespace CapaNegocio
         {
             return ObjCapaDatos.COUNT_Tabla();
         }
-        public List<Linea> ListarPrueba(int pagina)
+        public List<Linea> ListarPrueba(int pagina,string tipoOrden)
         {
-            return ObjCapaDatos.ListarPrueba(pagina);
+            return ObjCapaDatos.ListarPrueba(pagina, tipoOrden);
         }
 
         ////////////////

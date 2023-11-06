@@ -19,39 +19,62 @@ namespace CapaNegocio
         public int Registrar(Marca obj, out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
-            {
-                Mensaje = "La descripcion de la marca no puede ser vacio";
-            }
-            if (string.IsNullOrEmpty(Mensaje))
-            {
-                return ObjCapaDatos.Registrar(obj, out Mensaje);
-            }
-            else
-            {
-                Mensaje = "No se puede editar la marca";
-                return 0;
-            }
+            return ObjCapaDatos.Registrar(obj, out Mensaje);
         }
         public bool Editar(Marca obj, out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (string.IsNullOrEmpty(obj.Descripcion) || string.IsNullOrWhiteSpace(obj.Descripcion))
-            {
-                Mensaje = "La descripcion de la marca no puede ser vacio";
-            }
-            if (string.IsNullOrEmpty(Mensaje))
-            {
-                return ObjCapaDatos.Editar(obj, out Mensaje);
-            }
-            else
-            {
-                return false;
-            }
+            return ObjCapaDatos.Editar(obj, out Mensaje);
         }
         public bool Eliminar(int id, out string Mensaje)
         {
             return ObjCapaDatos.Eliminar(id, out Mensaje);
         }
+        ////pruebas
+        public Marca BusquedaFiltroMarca(string nombre)
+        {
+            return ObjCapaDatos.BuscarPorNombre(nombre);
+        }
+
+        public List<string> ListarNombresDeMarcas(string nombre)
+        {
+            return ObjCapaDatos.ListarNombresDeMarcas(nombre);
+        }
+
+        public Marca BuscarPorId(int id)
+        {
+            return ObjCapaDatos.BuscarPorId(id);
+        }
+
+        public Marca UltimoRegistroMarca()
+        {
+            return ObjCapaDatos.UltimoRegistro();
+        }
+
+        public List<Marca> PruebasAutoCompletado()
+        {
+            return ObjCapaDatos.PruebasAutoCompletado();
+        }
+
+        public int COUNT_PruebasAutoCompletadoMarca(string nombre)
+        {
+            return ObjCapaDatos.ContarPruebasAutoCompletado(nombre);
+        }
+
+        public List<string> PaginacionPRUEBAMarca(string nombre, int pagina)
+        {
+            return ObjCapaDatos.PaginacionPruebasAutoCompletado(nombre, pagina);
+        }
+
+        public int COUNT_TablaMarca()
+        {
+            return ObjCapaDatos.ContarMarcas();
+        }
+
+        public List<Marca> ListarPruebaMarca(int pagina)
+        {
+            return ObjCapaDatos.ListarMarcas(pagina);
+        }
+
     }
 }

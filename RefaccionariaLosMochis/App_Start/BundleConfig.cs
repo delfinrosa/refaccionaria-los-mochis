@@ -21,6 +21,7 @@ namespace RefaccionariaLosMochis
                         "~/Scripts/jquery-ui.js",
                         "~/Scripts/Index/PermisosNav.js",
                         "~/Scripts/scripts.js",                  
+                        "~/Scripts/General/Paginacion.js",                  
                         "~/Scripts/General/JQueryAjax.js"));
 
 

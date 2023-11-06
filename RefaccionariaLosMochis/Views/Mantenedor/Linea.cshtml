@@ -11,8 +11,8 @@
 </ol>
 
 
-<div id="cardRegistros" class="card mb-5">
-    <div class="card-header">
+<div id="cardRegistros" class=" mb-5">
+    <div class="container">
         <div class="row mx-5 my-3 bg-secondary py-2 rounded-3 barraHerramientas">
 
             <div class="container my-3 col-auto">
@@ -22,7 +22,7 @@
                         <div id="buscador">
                             <div class="input-group rounded-2 bg-primary">
                                 <input id="txtBusquedaNuevo" type="text" class="form-control" placeholder="Buscar...">
-                                <button id="botonBuscar" class="btn btn-outline-secondary"  type="button">
+                                <button id="botonBuscar" class="btn btn-outline-secondary" type="button">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
@@ -55,50 +55,55 @@
 
     </div>
 
-    <div class="card-body container">
-
-
-
-        <div class="row  w-100 my-3" id="">
-            <div class="col-auto">
-                <label class=" form-label h3 fw-bold">Identificador</label>
-            </div>
+    <div class="container-fluid ">
+        <div class=" row">
             <div class="col-6">
-                <input id="txtRegistroid" class="form-control" type="number" value="0" placeholder="AutoNumerico" disabled>
+                <div class="row  w-100 my-3" id="">
+                    <div class="col-auto">
+                        <label class=" form-label h3 fw-bold">Identificador</label>
+                    </div>
+                    <div class="col-6">
+                        <input id="txtRegistroid" class="form-control" type="number" value="0" placeholder="AutoNumerico" disabled>
+                    </div>
+                </div>
+
+            <div class="row  w-100 my-3" id="">
+                <div class="col-auto">
+                    <label class="form-label h3 fw-bold ">Nombre</label>
+                </div>
+                <div class="col-7">
+                    <input id="txtRegistroNombre" class="form-control" type="text" data-requerido="Nombre" />
+                </div>
+            </div>
+
+
+
+            <div class="row  w-100 my-3" id="">
+                <div class="col-auto">
+                    <label class="form-label h3 fw-bold">Activo</label>
+                </div>
+                <div class="col-7">
+                    <select class="form-select" id="cboRegistroActivo">
+                        <option value="A">Activo</option>
+                        <option value="D">Desactivo</option>
+                        <option value="O">Oculto</option>
+                    </select>
+                </div>
             </div>
         </div>
 
-        <div class="row  w-100 my-3" id="">
-            <div class="col-auto">
-                <label class="form-label h3 fw-bold">Nombre</label>
+        <div class="col-6">
+
+            <div class="row  w-100 my-3" id="">
+                    <label class="form-label h3 fw-bold">Descripcion</label>
+
+                    <textarea id="txtRegistrodescripcion" class="form-control" type="text" style=" height: 200px; " data-requerido="Descripcion"></textarea>
             </div>
-            <div class="col-7">
-                <input id="txtRegistroNombre" class="form-control" type="text" />
-            </div>
+
         </div>
+    </div>
 
 
-        <div class="row  w-100 my-3" id="">
-            <div class="col-auto">
-                <label class="form-label h3 fw-bold">Descripcion</label>
-            </div>
-            <div class="col-6">
-                <textarea id="txtRegistrodescripcion" class="form-control" type="text" style=" height: 200px;"></textarea>
-            </div>
-        </div>
-
-        <div class="row  w-100 my-3" id="">
-            <div class="col-auto">
-                <label class="form-label h3 fw-bold">Activo</label>
-            </div>
-            <div class="col-7">
-                <select class="form-select" id="cboRegistroActivo">
-                    <option value="A">Activo</option>
-                    <option value="D">Desactivo</option>
-                    <option value="O">Oculto</option>
-                </select>
-            </div>
-        </div>
 
         <div class="row mt-2">
             <div class="col-12">
@@ -125,7 +130,7 @@
     </div>
 
 
-    <div class="card-body">
+    <div class="card-body ">
         <div class="row h3 fw-bolder text-center">
             <label class="text-center col-11"> Registros de Lineas</label>
             <div class="d-flex justify-content-end">
@@ -143,8 +148,8 @@
         <table id="tabla" class="display cell-border" style="width:100%">
             <thead>
                 <tr id="trowTabla">
-                    <th>ID</th>
-                    <th>Descripcion</th>
+                    <th id="tablaId">ID</th>
+                    <th id="tablaDescripcion">Descripcion</th>
                     <th>Activo</th>
                     <th>Descripcion de la Linea</th>
                 </tr>
