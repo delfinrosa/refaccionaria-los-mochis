@@ -185,7 +185,7 @@ namespace RefaccionariaLosMochis.Controllers
             List<string> lista = new List<string>();
             if (nombre != null || nombre != "")
             {
-                lista = new CN_Linea().PaginacionPRUEBA(nombre,pagina);
+                //lista = new CN_Linea().PaginacionPRUEBA(nombre,pagina);
             }
             return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
 

@@ -22,17 +22,23 @@ var opcionesLista = $('#opcionesLista');
 var input = $('#txtBusqueda');
 
 //MOSTRAR DATOS EN LA TABLA
-function datosTablaPaginado(paginaActual) {
+function datosTablaPaginado(paginaActual, num) {
     $('#tabla').DataTable().clear().destroy();
     paginaTabla = paginaActual
 
-    // Limpiar el encabezado
     var dataTabla; // Variable para almacenar los datos devueltos por la llamada AJAX
+    if ($("#checkFiltros").is(':checked')) {
+        var where = whereQuery();
+        var preguntawhere = $("#txtFiltroWhere").val();
+        JQueryAjax_Normal('/Linea/ListarPruebaWhere', { strpagina: paginaTabla, tipoOrden: query, siguientes: num, where: where, preguntawhere: preguntawhere }, false, function (data) {
+            dataTabla = data.data;
+        }, function () { });
+    } else {
+        JQueryAjax_Normal('/Linea/ListarPrueba', { strpagina: paginaTabla, tipoOrden: query, siguientes: num }, false, function (data) {
+            dataTabla = data.data;
+        }, function () { });
+    }
 
-    JQueryAjax_Normal('/Linea/ListarPrueba', { strpagina: paginaTabla, tipoOrden: query }, false, function (data) {
-        dataTabla = data.data;
-
-    }, function () { });
 
     var headers = '';
     if (!tablaInicializada) {
@@ -49,26 +55,8 @@ function datosTablaPaginado(paginaActual) {
         }
         $("#trowTabla").append(headers);
     }
-    $('#tabla').DataTable().clear().destroy();
 
-    console.log("Carga Tabla")
 
-    if (!tablaInicializada) {
-
-        // Marcar la tabla como inicializada
-        tablaInicializada = true;
-        var headers = '';
-
-        if (rol == "A") {
-            headers = '<th>Persona que modifico</th>' +
-                '<th>Fecha de Registro</th>' +
-                '<th>Fecha de Actualizacion</th>' +
-                '<th></th>';
-        } else {
-            headers = '<th></th>';
-        }
-        $("#trowTabla").append(headers);
-    }
 
     //MOSTRAR DATOS EN LA TABLA
     if (rol == "A") {
@@ -108,6 +96,7 @@ function datosTablaPaginado(paginaActual) {
                 }
             ]
         });
+
     } else {
         tabladata = $("#tabla").dataTable({
             responsive: true,
@@ -117,7 +106,7 @@ function datosTablaPaginado(paginaActual) {
             paging: false,
             info: false,
             ///
-            data: data,
+            data: dataTabla,
             columns: [
                 { data: "IdLinea" },
                 { data: "Descripcion" },
@@ -144,7 +133,11 @@ function datosTablaPaginado(paginaActual) {
             ]
 
         });
+
     }
+    if ($("#checkFiltros").is(':checked')) {
+        MarcadorTabla()
+    } 
 
 }
 
@@ -253,21 +246,6 @@ function limpiar() {
     $('#txtRegistrodescripcion').val("");
 }
 
-//function VerificacionLleno() {
-//    if ($('#txtRegistroNombre').val().trim() == "") {
-//        swal("Campo Vacio", " el campo de Nombre se encuentra vacio ", "error");
-//        return false
-//    } else if ($('#cboRegistroActivo').val().trim() == "") {
-//        swal("Campo Vacio", " el campo de Activo se encuentra vacio ", "error");
-//        return false
-//    } else if ($('#txtRegistrodescripcion').val().trim() == "") {
-//        swal("Campo Vacio", " el campo de Descripcion se encuentra vacio ", "error");
-//        return false
-//    }
-//    return true
-
-//}
-
 ///////////////
 ///Carga el ultimo
 ///////////////
@@ -282,9 +260,9 @@ function CargarUltimo() {
 /// BUSCADOR
 ///////////////
 
-function desplegarPaginacion(pagina) {
+function desplegarPaginacion(pagina, NumeroDivisiones) {
     var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
-    JQueryAjax_Normal('/Linea/PaginacionPRUEBA', { nombre: searchTerm, pagina: pagina }, true, function (data) {
+    JQueryAjax_Normal('/Linea/PaginacionPRUEBA', { nombre: searchTerm, pagina: pagina, siguientes: NumeroDivisiones }, true, function (data) {
         var lista = data.Lista;
         opcionesLista.empty();
         if (lista.length > 0) {
@@ -303,10 +281,10 @@ function desplegarPaginacion(pagina) {
 }
 
 
-function obtenerDivision(texto) {
+function obtenerDivision(texto, num) {
     var division = 0;
     JQueryAjax_Normal('/Linea/COUNT_PruebasAutoCompletado', { nombre: texto }, false, function (data) {
-        division = Math.ceil(data.registros / 5);
+        division = Math.ceil(data.registros / num);
     }, function () { });
     return division;
 }
@@ -319,10 +297,22 @@ function obtenerDivision(texto) {
 
 function CountPaginadoTabla() {
     var resultado = 0;
-    JQueryAjax_Normal('/Linea/COUNT_Tabla', {}, false, function (data) {
-        resultado = data.registros;
-    }, function () { });
+    if ($("#checkFiltros").is(':checked')) {
+        var where = whereQuery();
+        var preguntawhere = $("#txtFiltroWhere").val();
+        JQueryAjax_Normal('/Linea/COUNT_TablaWhere', { where: where, preguntawhere: preguntawhere }, false, function (data) {
+            resultado = data.registros;
+        }, function () { });
+    } else {
+        JQueryAjax_Normal('/Linea/COUNT_Tabla', {}, false, function (data) {
+            resultado = data.registros;
+        }, function () { });
+    }
     return resultado;
+
+
+
+
 }
 
 
@@ -347,9 +337,9 @@ $("#btn-Cancelar").click(function () {
 });
 
 $("#btn-Guardar").click(function () {
-    if (validar()) {
+    if (ValidarCampoVacio($('[data-requerido]'))) {
         $('#btn-Eliminar').prop('disabled', false);
-        //Guardar();
+        Guardar();
     }
 });
 
@@ -360,12 +350,7 @@ $("#tablaId").click(function () {
     } else {
         query = 'I_A';
     }
-
-    var division = Math.ceil(CountPaginadoTabla() / 10);
-    configurarPaginacion(paginaTabla, division, datosTablaPaginado, "T")
-
-    datosTablaPaginado(paginaTabla);
-
+    ActualizarTabla()
 
 });
 
@@ -376,10 +361,8 @@ $("#tablaDescripcion").click(function () {
     } else {
         query = 'D_A';
     }
-    var division = Math.ceil(CountPaginadoTabla() / 10);
-    configurarPaginacion(paginaTabla, division, datosTablaPaginado, "T")
+    ActualizarTabla()
 
-    datosTablaPaginado(paginaTabla);
 });
 
 $("#btn-Eliminar").click(function () {
@@ -399,7 +382,7 @@ $("#btn-Eliminar").click(function () {
         }, function () {
             JQueryAjax_Normal('/Linea/EliminarLinea', { id: idBorrar }, false, function (data) {
                 if (data.resultado) {
-                    datosTablaPaginado(paginaTabla);
+                    datosTablaPaginado(paginaTabla, $("#cboDivicion-tabla").val());
                     CargarUltimo();
                 } else {
                     swal("No se pudo eliminar", data.mensaje, "error");
@@ -418,7 +401,7 @@ $('#botonBuscar').click(function () {
 //TABLA
 /////
 $("#btn-Actualizar").click(function () {
-    datosTablaPaginado(paginaTabla);
+    ActualizarTabla()
 });
 
 //BOTON EDITAR
@@ -456,7 +439,7 @@ $("#tabla tbody").on("click", '.btn-eliminar', function () {
             JQueryAjax_Normal('/Linea/EliminarLinea', { id: data.IdLinea }, true, function (data) {
 
                 if (data.resultado) {
-                    datosTablaPaginado(paginaTabla);
+                    datosTablaPaginado(paginaTabla, $("#cboDivicion-tabla").val());
                     CargarUltimo();
                 } else {
                     swal("No se pudo eliminar", data.mensaje, "error");
@@ -488,12 +471,18 @@ $("#txtRegistrodescripcion").on('input', function () {
 });
 
 $('#txtBusquedaNuevo').on('input', function () {
+    var NumeroDivisiones = 5;
+
+    if ($('#opcionesListaAbajo').html().trim().length === 0) {
+        NumeroDivisiones = 5
+    } else {
+        NumeroDivisiones = $("#cboDivicion-buscador").val()
+    }
     var searchTerm = $('#txtBusquedaNuevo').val().toLowerCase();
     pagina = 0;
-    desplegarPaginacion(pagina);
-    var division = obtenerDivision(searchTerm);
-    configurarPaginacion(pagina, division, desplegarPaginacion, "B")
-
+    desplegarPaginacion(pagina, NumeroDivisiones);
+    var division = obtenerDivision(searchTerm, NumeroDivisiones);
+    configurarPaginacion(pagina, division, desplegarPaginacion, "B", NumeroDivisiones)
 
 });
 
@@ -510,31 +499,58 @@ $(document).on('click', function (event) {
 ///////////
 //AL CARGAR
 ///////////
-datosTablaPaginado(paginaTabla);
 CargarUltimo();
 
+function cargartabla() {
+    datosTablaPaginado(paginaTabla, 10);
+    var divisiona = Math.ceil(CountPaginadoTabla() / 10);
+    configurarPaginacion(paginaTabla, divisiona, datosTablaPaginado, "T", 10)
 
-var divisiona = Math.ceil(CountPaginadoTabla() / 10);
+}
 
-configurarPaginacion(paginaTabla, divisiona, datosTablaPaginado, "T")
+cargartabla()
 
+$("#checkFiltros").click(function () {
+    if ($("#checkFiltros").is(':checked')) {
+        $('#filtroslinea').removeAttr('hidden');
+    } else {
+        $("#txtFiltroWhere").val("")
+        $('#filtroslinea').attr('hidden', true);
+        ActualizarTabla()
+    }
+})
 
-function validar() {
+$('input[name=grupoFiltros]').change(function () {
+    $("#buscadorFiltroTabla").html($(this).val());
+});
 
-    $('[data-requerido]').each(function () {
+function whereQuery() {
+    switch ($('input[name=grupoFiltros]:checked').val()) {
+        case "ID":
+            return "l.IdLinea";
+        case "Descripcion":
+            return "l.Descripcion ";
+        case "Descripcion Linea":
+            return "lc.Descripcion ";
+    }
+}
 
-        var tipoInput = $(this).data('requerido');
+$("#btn-buscarTabla").click(function () {
+    ActualizarTabla()
+});
 
-        if ($(this).val().trim() === '') {
-            swal("Campo Vacio", " el campo de " + tipoInput + " se encuentra vacio ", "error");
-            return false
+function ActualizarTabla() {
+    datosTablaPaginado(0, $("#cboDivicion-tabla").val());
+    var division = Math.ceil(CountPaginadoTabla() / $("#cboDivicion-tabla").val());
+    configurarPaginacion(0, division, datosTablaPaginado, "T", $("#cboDivicion-tabla").val())
+}
+
+function MarcadorTabla() {
+    $('#tabla tbody td').each(function () {
+        var textoCelda = $(this).text().trim();
+        if (textoCelda.includes($("#txtFiltroWhere").val())) {
+            var spanResaltado = $('<span>').html(textoCelda.replace(new RegExp($("#txtFiltroWhere").val(), 'gi'), match => `<span style="background-color: yellow;">${match}</span>`));
+            $(this).html(spanResaltado);
         }
-        return true
     });
-
-
-
-
-
-
 }

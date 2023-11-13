@@ -72,9 +72,9 @@ namespace CapaNegocio
             return ObjCapaDatos.COUNT_PruebasAutoCompletado(linea);
         }
 
-        public List<string> PaginacionPRUEBA(string linea, int pagina)
+        public List<string> PaginacionPRUEBA(string linea, int pagina, int siguientes)
         {
-            return ObjCapaDatos.PaginacionPRUEBA(linea, pagina);
+            return ObjCapaDatos.PaginacionPRUEBA(linea, pagina,  siguientes);
         }
         ////////////////
         /////PRUEBA PAGINADO TABLA
@@ -84,9 +84,18 @@ namespace CapaNegocio
         {
             return ObjCapaDatos.COUNT_Tabla();
         }
-        public List<Linea> ListarPrueba(int pagina,string tipoOrden)
+        public List<Linea> ListarPrueba(int pagina,string tipoOrden, int siguientes)
         {
-            return ObjCapaDatos.ListarPrueba(pagina, tipoOrden);
+            return ObjCapaDatos.ListarPrueba(pagina, tipoOrden,  siguientes);
+        }
+
+        public List<Linea> ListarPruebaWhere(int pagina, string tipoOrden, int siguientes, string where, string preguntaWhere) {
+            return ObjCapaDatos.ListarPruebaWhere(pagina, tipoOrden, siguientes,  where,  preguntaWhere);
+
+        }
+        public int COUNT_TablaWhere(string where, string preguntaWhere)
+        {
+            return ObjCapaDatos.COUNT_TablaWhere(where, preguntaWhere);
         }
 
         ////////////////

@@ -124,13 +124,13 @@ namespace RefaccionariaLosMochis.Controllers
 
         }
         //Paginado
-        public JsonResult PaginacionPRUEBA(string nombre, int pagina)
+        public JsonResult PaginacionPRUEBA(string nombre, int pagina, int siguientes)
         {
 
             List<string> lista = new List<string>();
             if (nombre != null || nombre != "")
             {
-                lista = new CN_Linea().PaginacionPRUEBA(nombre, pagina);
+                lista = new CN_Linea().PaginacionPRUEBA(nombre, pagina, siguientes);
             }
             return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
 
@@ -150,16 +150,39 @@ namespace RefaccionariaLosMochis.Controllers
         }
         [HttpPost]
 
-        public JsonResult ListarPrueba(string strpagina,string tipoOrden)
+        public JsonResult ListarPrueba(string strpagina,string tipoOrden, int siguientes)
         {
             int pagina = Convert.ToInt32(strpagina);
             List<Linea> oLista = new List<Linea>();
-            oLista = new CN_Linea().ListarPrueba(pagina, tipoOrden);
+            oLista = new CN_Linea().ListarPrueba(pagina, tipoOrden, siguientes);
             return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
         }
 
         ////////////////
         /////PRUEBA PAGINADO TABLA FIN
+        /////////////////
+
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA WHERE INICIO
+        /////////////////
+
+        public JsonResult ListarPruebaWhere(string strpagina, string tipoOrden, int siguientes, string where, string preguntawhere)
+        {
+            int pagina = Convert.ToInt32(strpagina);
+            List<Linea> oLista = new List<Linea>();
+            oLista = new CN_Linea().ListarPruebaWhere(pagina, tipoOrden, siguientes,  where,  preguntawhere);
+            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
+        }
+        public JsonResult COUNT_TablaWhere(string where, string preguntaWhere)
+        {
+            int registros = 0;
+            registros = new CN_Linea().COUNT_TablaWhere(where,  preguntaWhere);
+            return Json(new { registros = registros }, JsonRequestBehavior.AllowGet);
+
+        }
+        ////////////////
+        /////PRUEBA PAGINADO TABLA WHERE FIN
         /////////////////
 
 

@@ -51,33 +51,34 @@ namespace CapaDatos
         ////////////////
         /////PRUEBA PAGINADO TABLA
         /////////////////
-        public List<Linea> ListarPrueba(int pagina,string tipoOrden)
+        public List<Linea> ListarPrueba(int pagina, string tipoOrden, int siguientes)
         {
-            string orden="";
-            switch (tipoOrden)
-            {
-                case "I_A":
-                    orden = "l.IdLinea ";
-                    break;
-                case "I_D":
-                    orden = "l.IdLinea DESC";
-                    break;
-                case "D_A":
-                    orden = "l.Descripcion ";
-                    break;
-                case "D_D":
-                    orden = "l.Descripcion DESC";
-                    break;
-                default:
-                    orden = "l.IdLinea ";
-                    break;
-            }
             List<Linea> lista = new List<Linea>();
             try
             {
+                string orden = "";
+                switch (tipoOrden)
+                {
+                    case "I_A":
+                        orden = "l.IdLinea ";
+                        break;
+                    case "I_D":
+                        orden = "l.IdLinea DESC";
+                        break;
+                    case "D_A":
+                        orden = "l.Descripcion ";
+                        break;
+                    case "D_D":
+                        orden = "l.Descripcion DESC";
+                        break;
+                    default:
+                        orden = "l.IdLinea ";
+                        break;
+                }
+
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY "+orden+" OFFSET "+pagina*10+" ROWS FETCH NEXT 10 ROWS ONLY;";
+                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -106,6 +107,7 @@ namespace CapaDatos
             }
             return lista;
         }
+
 
         //COUNT
         public int COUNT_Tabla()
@@ -143,7 +145,103 @@ namespace CapaDatos
         /////////////////
 
 
-        public int Registrar(Linea obj, out string Mensaje,out Linea objDevolucion)
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA WHERE INICIO
+        /////////////////
+        public List<Linea> ListarPruebaWhere(int pagina, string tipoOrden, int siguientes, string where,string preguntaWhere)
+        {
+            List<Linea> lista = new List<Linea>();
+            try
+            {
+                string orden = "";
+                switch (tipoOrden)
+                {
+                    case "I_A":
+                        orden = "l.IdLinea ";
+                        break;
+                    case "I_D":
+                        orden = "l.IdLinea DESC";
+                        break;
+                    case "D_A":
+                        orden = "l.Descripcion ";
+                        break;
+                    case "D_D":
+                        orden = "l.Descripcion DESC";
+                        break;
+                    default:
+                        orden = "l.IdLinea ";
+                        break;
+                }
+
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE "+where+" LIKE '%" + preguntaWhere+ "%'  ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
+
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"]),
+                                fechaCreaccion = Convert.ToString(dr["FechaCreacion"]),
+                                fechaActualizacion = Convert.ToString(dr["FechaUltimoCambio"]),
+                                IdUsuario = Convert.ToInt32(dr["PersonaUltimoCambio"])
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new List<Linea>();
+            }
+            return lista;
+        }
+
+        //COUNT
+        public int COUNT_TablaWhere( string where, string preguntaWhere)
+        {
+            int resultado = 0;
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT COUNT(*) AS TotalRegistros FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE "+where+" LIKE '%" + preguntaWhere+ "%' ;";
+
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            resultado = Convert.ToInt32(dr["TotalRegistros"]);
+
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                resultado = 0;
+            }
+            return resultado;
+        }
+
+        ////////////////
+        /////PRUEBA PAGINADO TABLA WHERE FIN
+        /////////////////
+
+
+        public int Registrar(Linea obj, out string Mensaje, out Linea objDevolucion)
         {
             int idautogenerado = 0;
             Mensaje = string.Empty;
@@ -243,7 +341,7 @@ namespace CapaDatos
             return resultado;
         }
 
-        
+
         public Linea BusquedaFiltroLinea(string nombre)
         {
 
@@ -252,7 +350,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.Descripcion ='"+nombre+"'";
+                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.Descripcion ='" + nombre + "'";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -261,7 +359,7 @@ namespace CapaDatos
                     {
                         while (dr.Read())
                         {
-                            lista= new Linea
+                            lista = new Linea
                             {
                                 IdLinea = Convert.ToInt32(dr["IdLinea"]),
                                 Descripcion = Convert.ToString(dr["Descripcion"]),
@@ -288,7 +386,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%"+linea+"%';";
+                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%';";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -435,7 +533,7 @@ namespace CapaDatos
                         while (dr.Read())
                         {
                             resultado = Convert.ToInt32(dr["TotalRegistros"]);
-                            
+
                         }
                     }
                 }
@@ -449,15 +547,15 @@ namespace CapaDatos
 
 
         //NOMBRE DE LAS LINEAS PARA AUTOCOMPLETAR EN BUSCADOR
-        public List<string> PaginacionPRUEBA(string linea,int pagina )
+        public List<string> PaginacionPRUEBA(string linea, int pagina, int siguientes)
         {
-            pagina = pagina * 5;
+            pagina = pagina * siguientes;
             List<string> lista = new List<string>();
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%' ORDER BY FechaUltimoCambio DESC OFFSET "+pagina+" ROWS FETCH NEXT 5 ROWS ONLY";
+                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%' ORDER BY FechaUltimoCambio DESC OFFSET " + pagina + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;

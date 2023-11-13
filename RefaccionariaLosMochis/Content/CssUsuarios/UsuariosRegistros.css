@@ -90,5 +90,8 @@
     opacity: 1; /* Puedes ajustar el valor de la opacidad según tus preferencias */
 }
 
-
+.resaltado {
+    background-color: yellow; /* Puedes cambiar el color de fondo a tu preferencia */
+    font-weight: bold; /* Puedes aplicar otros estilos, como hacer el texto en negrita */
+}
 

@@ -428,6 +428,7 @@
     <Content Include="Scripts\fontawesome\v4-shims.min.js" />
     <Content Include="Scripts\General\JQueryAjax.js" />
     <Content Include="Scripts\General\Paginacion.js" />
+    <Content Include="Scripts\General\ValidarVacio.js" />
     <Content Include="Scripts\Index\PermisosNav.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
