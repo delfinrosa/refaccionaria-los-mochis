@@ -1,0 +1,15 @@
+﻿.bg-principal {
+    background-color :#124734;
+}
+#CerrarSesion {
+margin:auto;
+}
+#CerrarSesion a{
+text-decoration:none !important; 
+color:aliceblue;
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+    background: #BBD666 !important;
+}

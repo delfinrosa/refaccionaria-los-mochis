@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "Administracion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card-header" style="margin-top:15px;">
+    <div>
+        <h2 class="display-6">
+            Lista de compras
+        </h2>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="display-8" style="display:inline-block">Estatus</h5>
+        <div class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+            <select id="estatusSelect">
+                <option value="AB">Abierta</option>
+                <option value="CA">Cancelada</option>
+                <option value="CE">Cerrado</option>
+                <option value="AP">Aprobado</option>
+            </select>
+        </div>
+        <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm mx-1"><i class="fas fa-sync"></i></button>
+
+    </div>
+    <div class="card-body p-0">
+
+        <div class="container-fluid">
+            <table id="tabla" class="table table-sm table-striped display cell-border" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Fecha
+                        </th>
+                        <th>Cantidad Productos</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>
+                            <div class="row justify-content-center">
+                                <div id="paginadoTabla">
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/Compras/ComprasAdminitradorJS.js"></script>
+}

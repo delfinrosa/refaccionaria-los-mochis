@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Productos Vendidos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/CssGeneral/ScanerDevolucion.css" rel="stylesheet" />
+<br />
+<h2 class="m-1 mb-3 text-center">Información de Ventas</h2>
+<div class="row">
+    <div class="col-6">
+        <button class="btn btn-primary text-white me-1 w-100" id="btn-BuscarCodigoBarras" type="button" ">
+            <i class="fas fa-barcode fa-5x"></i>
+        </button>
+        <input type="text" id="BuscarCodigoBarras" class="col-12 my-3" />
+    </div>
+    <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+        <button type="button" class="btn btn-primary mt-3" id="btnAgregarProducto">
+            Buscar Producto
+        </button>
+        <div id="carrito-items"></div>
+
+    </div>
+</div>
+<div class="container mt-4">
+    <div id="ventas-container"></div>
+</div>
+<div id="contenedorTicket"></div>
+
+        @section Scripts {
+
+    <script src="/js/Venta/ProductosVendidos.js"></script>
+        }

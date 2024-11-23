@@ -9,12 +9,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-    @Styles.Render("~/Content/login")
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/sweetalert.css" />
+    <link rel="stylesheet" href="~/css/jquery-ui.css" />
+    <link rel="stylesheet" href="~/css/estilo.css" />
+    <link rel="stylesheet" href="~/css/CssLogin/Login.css" />
 </head>
 <body class="bg-login ">
     <div class="container-fluid">
 
-        <div id="logo-login" class="container w-multiservicios pl-5 ">
+        <div id="logo-login" class="container w-50 pl-5 ">
             <div class="row align-items-center rounded-lg">
                 <div class="col-12 p-3">
                     <img class="w-40 mx-auto d-block" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" alt="Foto de un pajaro">
@@ -26,45 +30,63 @@
 
             <div class="col-6  mt-3 mb-5 ">
 
+                @if (ViewBag.SuccessMessage != null)
+                {
+                    <div class="alert alert-success m-1">
+                        @ViewBag.SuccessMessage
+                    </div>
+                }
+
 
                 @*<form action="" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">*@
                 <form action="@Url.Action("Index","Acceso")" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">
 
                     <div class="form-group">
-                        <label class="text-white fw-medium my-3 text-shadow">Nombre:</label>
+                        <label class="text-white fw-bold my-3 h5">Nombre:</label>
                         <input class="form-control mb-1" type="text" name="correo" />
                     </div>
 
                     <div class="form-group">
-                        <label class="text-white fw-medium my-3 text-shadow">Contraseña:</label>
+                        <label class="text-white fw-bold my-3 h5">Contraseña:</label>
                         <input class="form-control mb-1" type="password" name="clave" />
                     </div>
 
 
 
                     <button type="submit" class="btn btn-primary my-3 col-12 fw-medium">Ingresar</button>
+                    <div class="d-flex justify-content-center">
+                        <a href="@Url.Action("OlvideMiContraseña","Acceso")" class="text-center text-decoration-none" style="color: rgb(76, 255, 0);">Olvidé mi contraseña</a>
+                    </div>
+
                 </form>
 
 
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.ErrorMessage
+                    </div>
+                }
             </div>
 
-        </div>
-            <div class="">
-        <div class="backgroundclass="h-100"">
-            <svg version="1.1"
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 10;">
+                <span class="badge bg-secondary">V0.541</span>
+            </div>
+        
+
+            <svg class="w-100 position-fixed bottom-0 end-0 " style="z-index: -1";
+                 version="1.1"
                  xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink"
                  x="0px"
-                 y="0px"
-                 width="100%"
-                 height="100%"
-                 viewBox="0 0 1600 900">
+                 y="-300px" 
+                 viewBox="0 0 600 900">
                 <defs>
-                    <linearGradient id="bg" x2="0%" y2="100%">
+                    <linearGradient id="bg" x2="0%" y2="50%">
                         <stop offset="0%"
                               style="stop-color: rgba(76, 255, 0, 0.6) "></stop>
                         <stop offset="100%"
-                              style="stop-color: rgba(76, 5, 90, 0.06); "></stop>
+                              style="stop-color: rgba(76, 55, 90, 0.06); "></stop>
                     </linearGradient>
                     <path id="wave"
                           fill="url(#bg)"
@@ -72,6 +94,16 @@
       s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
                 </defs>
                 <g>
+                    <use xlink:href="#wave" opacity=".09">
+                        <animateTransform attributeName="transform"
+                                          attributeType="XML"
+                                          type="translate"
+                                          dur="30s"
+                                          calcMode="spline"
+                                          values="270 0; -304 180"
+                                          keyTimes="0; .5; 1" />
+                    </use>
+
                     <use xlink:href="#wave" opacity=".4">
                         <animateTransform attributeName="transform"
                                           attributeType="XML"
@@ -105,15 +137,22 @@
                                           keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
                                           repeatCount="indefinite" />
                     </use>
+                    <use xlink:href="#wave" opacty="1">
+                        <animateTransform attributeName="transform"
+                                          attributeType="XML"
+                                          type="translate"
+                                          dur="40s"
+                                          calcMode="spline"
+                                          values="0 230;-140 200;0 230"
+                                          keyTimes="0; .4; 1"
+                                          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+                                          repeatCount="indefinite" />
+                    </use>
                 </g>
             </svg>
         </div>
     </div>
 
-    </div>
 
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
 </body>
 </html>

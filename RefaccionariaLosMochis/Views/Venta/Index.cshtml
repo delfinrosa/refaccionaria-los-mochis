@@ -1,0 +1,261 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .full-height {
+        height: 100vh; /* 100% de la altura de la ventana */
+    }
+
+    .bordered-div {
+        border: 2px solid black;
+    }
+</style>
+<style>
+    .d-none {
+        display: none;
+    }
+
+    #DivTicket {
+        font-family: Arial, sans-serif;
+        font-size: 1.5rem; /* Ajuste global del tamaño de fuente */
+        max-width: 8cm; /* Tamaño máximo del ticket */
+        margin: 0 auto; /* Centrar en la pantalla */
+    }
+
+    #detalle-productos {
+        width: 100%; /* Ajuste del ancho de la tabla */
+        font-size: 0.8rem;
+    }
+
+    table {
+        
+        border-collapse: collapse;
+        font-size: 0.6rem;
+    }
+
+    th, td {
+        text-align: center; 
+        justify-content:center;
+        padding: 0.5px;
+        border-left: 2px solid black; /* Borde izquierdo */
+        border-right: 2px solid black; /* Borde derecho */
+    }
+
+    th {
+        border-bottom: 2px solid black;
+    }
+
+    td {
+        border-bottom: 2px solid black; /* Borde inferior */
+    }
+
+    hr {
+        border: none;
+        border-top: 2px solid black;
+        margin: 2px 0;
+    }
+
+    p {
+        margin: 2px 0;
+    }
+
+    #CodigoBarras {
+        width: 100%; /* El div ocupará el 100% de su contenedor padre */
+        height: auto; /* El alto será dinámico según el contenido */
+        text-align: center; /* Centrar la imagen horizontalmente */
+        margin:-5px;
+    }
+
+        #CodigoBarras img {
+            width: 100%; /* La imagen ocupará el 100% del ancho del div */
+            height: auto; /* Mantener la proporción de la imagen */
+            max-width: 100%; /* Asegurarse de que no se desborde más allá del div */
+        }
+
+
+</style>
+<link href="~/css/CssGeneral/ScanerDevolucion.css" rel="stylesheet" />
+
+<h1 class="text-center mt-3">Mostrador</h1>
+<div class="container-fluid">
+    <div class="row my-5">
+        <div class="col-4">
+            <div class="row justify-content-center">
+
+                <div class="row w-50">
+
+                    <button class="btn btn-primary text-white me-2 p-0" id="btn-BuscarCodigoBarras" type="button" ">
+                        <i class="fas fa-barcode fa-5x"></i>
+                    </button>
+
+
+                    <input type="text" id="BuscarCodigoBarras" class="col-12 my-3" />
+
+                    <hr class="m-3 col-12" />
+
+                    <div class="input-group col-12 d-flex mb-3">
+                        <button class="btn btn-primary text-white" id="btn-Buscar" type="button" style="height: 100%;">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input type="text" class="form-control" placeholder="Buscar..." id="txtBuscar" />
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div id="resultados" class="mt-3">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-6">
+                    <h3>Carrito <i class="fas fa-shopping-cart"></i> </h3>
+                </div>
+                <div class="col-6">
+                    <h3 class="text-center">
+                        Facturación <i id="iconoEstado" class="fas fa-clipboard-check text-danger"></i>
+                        <span class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+                            <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" />
+                        </span>
+                    </h3>
+                </div>
+            </div>
+            <div id="carrito-items">
+            </div>
+
+            <button type="button" class="btn btn-primary" id="btnAgregarProducto">
+                Agregar Producto
+            </button>
+
+            <button type="button" class="btn btn-success" id="btnEnviar">
+                Enviar
+            </button>
+            <div class="text-end">
+                <h4>Total: <span id="total-precio">$0.00</span></h4>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Imagenes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div id="galeriaIMG">
+
+                    <div id="mostrarGrande">
+                        <div id="SeleccionarImagen" class="w-auto rounded-3 d-flex justify-content-center align-items-center">
+                            <span class="h3 text-white">
+                                Seleccione una imagen
+                                <i class="fas fa-images fa-1x m-1"></i>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="contenedor-imagenes" class="row">
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contenedorTicket"></div>
+
+@* <<div class="d-flex justify-content-center align-items-center d-none" id="DivTicket">
+    <div class="bordered-div p-4" style="max-width: 8cm; width: 100%;">
+        <div id="ticket-content">
+            <h1 style="text-align: center;">Refaccionaria Los Mochis</h1>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="/Imagenes/LOGO-Musculoso-Circular-PNG.png" alt="Logo" style="width: 10rem; height: 10rem;">
+            </div>
+            <p style="text-align: center;">CESAR MANUEL RAMIREZ PLACENCIA</p>
+            <p style="text-align: center;">NATACION 106 NOGALES SONORA 84066</p>
+            <p style="text-align: center;">RFC: RAPC890331J72</p>
+            <p style="text-align: center;">Fecha: <span id="fecha"></span></p>
+            <p style="text-align: center;">Nombre del Cliente: <span id="nombreCliente"></span></p>
+            <hr>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="col-4">No.Parte</th>
+                        <th class="col-3">Marca</th>
+                        <th class="col-1">Cant</th>
+                        <th class="col-2">Subtotal</th>
+                        <th class="col-2">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="detalle-productos"></tbody>
+            </table>
+            <hr>
+            <p style="text-align: right;">Monto: <span id="total"></span></p>
+            <p>Vendedor: <span id="vendedor"></span></p>
+            <div id="CodigoBarras">
+                <img id="barcodeImage" src="" alt="Código de Barras" />
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<button type="button" class="btn btn-primary d-none" id="print-button">
+    Imprimir Ticket
+</button> *@
+@* 
+
+<script>
+    function printTicket() {
+        var printContent = document.getElementById('ticket-content').innerHTML;
+        var originalContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = originalContent;
+    }
+
+    // Aquí puedes cargar los datos dinámicamente
+    document.getElementById('idVenta').innerText = '12345';
+    document.getElementById('fecha').innerText = new Date().toLocaleDateString();
+    document.getElementById('nombreCliente').innerText = 'Juan Perez';
+    document.getElementById('total').innerText = '$200.00';
+    document.getElementById('vendedor').innerText = 'Carlos Sánchez';
+
+    // Agrega productos de ejemplo a la tabla
+    const productos = [
+        { descripcion: 'Producto 1', noParte: 'A123', cantidad: 2, precio: 50 },
+        { descripcion: 'Producto 2', noParte: 'B456', cantidad: 1, precio: 100 }
+    ];
+
+    const detalleProductos = document.getElementById('detalle-productos');
+    productos.forEach(producto => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                    <td>${producto.descripcion}</td>
+                    <td>${producto.noParte}</td>
+                    <td>${producto.cantidad}</td>
+                    <td>${producto.precio.toFixed(2)}</td>
+                `;
+        detalleProductos.appendChild(row);
+    });
+</script> *@
+
+
+                    @section Scripts {
+
+    <script src="/js/Venta/VentaJS.js"></script>
+                    }
+
+

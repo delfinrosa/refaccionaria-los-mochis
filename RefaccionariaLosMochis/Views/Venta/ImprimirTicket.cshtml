@@ -1,0 +1,89 @@
+﻿@model IEnumerable<CapaEntidad.Ticket>
+@{
+    Layout = null; // No usar un layout para evitar el padding
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        width: 6in; /* Ancho de 6 pulgadas para tickets */
+        margin: 0; /* Sin margen para evitar espacio extra */
+        padding: 0; /* Sin padding para evitar espacio extra */
+        text-align: center; /* Centra el contenido */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0 auto; /* Centra la tabla */
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: center; /* Centra el texto en las celdas */
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+
+    #logo {
+        width: 200px; /* Ajusta el tamaño del logo según sea necesario */
+        height: auto; /* Mantiene la proporción del logo */
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #000;
+        margin: 10px 0;
+    }
+</style>
+
+<body>
+    <div class="info">
+        <h1>Refaccionaria Los Mochis</h1>
+        <img id="logo" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" />
+        <p><strong>CESAR MANUEL RAMIREZ PLACENCIA</strong></p>
+        <p><strong>NATACION 106 NOGALES SONORA 84066</strong></p>
+        <p><strong>RFC:</strong> RAPC890331J72</p>
+
+        <hr />
+        <p><strong>ID Venta:</strong> @ViewBag.ID</p>
+        <p><strong>Fecha:</strong> @ViewBag.FECHA</p>
+        <p><strong>Nombre del Cliente:</strong> @ViewBag.NombreCliente</p>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>No Parte</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Descripcion</td>
+                    <td>@item.NoParte</td>
+                    <td>@item.MarcaDescripcion</td>
+                    <td>@item.Cantidad</td>
+                    <td>@item.Precio.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p><strong>Vendedor:</strong> @ViewBag.USER</p>
+</body>

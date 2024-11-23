@@ -1,0 +1,59 @@
+﻿@model List<CapaEntidad.CompraDtl>
+
+@{
+    ViewBag.Title = "Recibir Mercancía";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+<input type="hidden" id="idCompra" value="@ViewBag.IdCompra" />
+
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>No. Parte</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Actualizar Precio</th>
+            <th>Actualizar Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            var detalle = Model[i];
+            <tr>
+                <td>@detalle.oProductoProveedor.oProducto.NoParte</td>
+                <td>
+                    <span>@detalle.Cantidad</span>
+                </td>
+                <td>
+                    <span>@detalle.Precio.ToString("F2")</span>
+                </td>
+                <td>
+                    <input type="checkbox" class="precio-checkbox" />
+                </td>
+                <td>
+                    <input type="checkbox" class="cantidad-checkbox" />
+                </td>
+                <td>
+                    @Html.Hidden($"estadoProductos[{i}].CompraDtlId", detalle.CompraDtlId, new { @class = "compraDtlId" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<input type="submit" id="Actualizar" class="btn btn-primary" />
+
+@section Scripts {
+    <script src="~/js/Compras/RecibirMarcanciaJS.js"></script>
+}

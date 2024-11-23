@@ -1,0 +1,176 @@
+﻿@{
+    ViewBag.Title = "MetodoPago";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/CssGeneral/General.css" rel="stylesheet" />
+<div class="card-header" style="margin-top:15px;">
+    <h2 class="display-4">Método de Pago</h2>
+</div>
+<div class="card" style="margin-bottom:10px;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-auto">
+                <div id="buscador">
+                    <div class="input-group rounded-2 bg-primary">
+                        <input id="txtBusqueda" type="text" class="form-control form-control-sm" placeholder="Buscar método de pago" autocomplete="off">
+                        <button id="btn-BuscarBuscador" class="btn btn-sm" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div style="position:absolute">
+                        <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+                        </div>
+                        <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-auto ">
+                <div>
+                    <button id="btn-Nuevo" type="button" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nuevo</button>
+                    <button id="btn-Eliminar" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Eliminar</button>
+                    <span id="modo" class="animacion-editar rounded-2 fw-bold" style="display: none;"> Editando <i id="icono-modo" class="fas fa-edit"></i> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tabDatosGenerales-tab" data-bs-toggle="tab" data-bs-target="#tabDatosGenerales" type="button" role="tab" aria-controls="tabDatosGenerales" aria-selected="true">
+            Datos Generales
+            <span id="SpantabDatosGenerales" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active container-fluid" id="tabDatosGenerales" role="tabpanel" aria-labelledby="home-tab">
+        <form>
+            <fieldset>
+                <div class="row">
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <label for="txtCFDIMetodoPagoId" class="col-sm-2 col-form-label col-form-label-sm">CFDI Método Pago ID</label>
+                            <div class="col-sm-10">
+                                <input id="txtCFDIMetodoPagoId" class="form-control form-control-sm" type="text" name="CFDIMetodoPagoId" data-requerido="CFDI Método Pago ID" />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <label for="cboEstatus" class="col-sm-2 col-form-label col-form-label-sm">Estatus</label>
+                            <div class="col-sm-10">
+                                <select class="form-select form-select-sm" id="cboEstatus" data-requerido="Estatus">
+                                    <option value="A">Activo</option>
+                                    <option value="D">Desactivo</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <label for="txtDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripción</label>
+                            <div class="col-sm-10">
+                                <textarea id="txtDescripcion" name="Descripcion" class="form-control form-control-sm" type="text" style="height: 80px; " data-requerido="Descripción"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+<div style="text-align:right; margin-top:10px;">
+    <button disabled id="btn-Guardar" type="button" class="btn btn-success btn-sm x-2"><i class="fas fa-play"></i> Guardar</button>
+    <button disabled id="btn-Cancelar" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-times"></i> Cancelar</button>
+</div>
+<div id="mensajeError" class="alert alert-danger" role="alert" style="display: none;">
+</div>
+<div class="card-header" style="margin-top:15px;">
+    <div>
+        <h2 class="display-6">
+            Listado de métodos de pago
+            <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm mx-1"><i class="fas fa-sync"></i> </button>
+        </h2>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="display-8" style="display:inline-block">Búsqueda</h5>
+        <div class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+            <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" />
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div id="filtroslinea" style="display:none">
+            <form>
+                <fieldset>
+                    <div class="row container-fluid pt-3">
+                        <div class="col-sm-6 ">
+                            <div class="row p-1">
+                                <div class="col-sm-1" style="text-align:right">
+                                    <input value="Filtro ID" class="form-control-sm" name="grupoFiltros" id="checkFiltroId" type="checkbox" />
+                                </div>
+                                <label for="checkFiltroId" class="col-sm-2 col-form-label col-form-label-sm">ID</label>
+                                <div class="col-sm-9">
+                                    <input id="txtFiltroIDWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar ID en la Tabla...." />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="row p-1">
+                                <div class="col-sm-1" style="text-align:right">
+                                    <input value="Filtro Nombre" name="grupoFiltros" id="checkFiltroDescripcion" class="form-control-sm" type="checkbox" />
+                                </div>
+                                <label for="checkFiltroDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripción</label>
+                                <div class="col-sm-9">
+                                    <input id="txtFiltroDescripcionWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar Descripción en la Tabla...." />
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-sm-12" style="text-align:right">
+                                    <button id="btn-buscarTabla" class="btn btn-sm btn-info"><a href="#tabla" class="text-decoration-none text-white"><i class="fas fa-search m-auto me-2"></i>Aplicar</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <table id="tabla" class="table table-sm table-striped display cell-border" style="width:100%">
+        <thead>
+            <tr>
+                <th id="tablaId">
+                    <div class="icono-texto-container">
+                        <i id="iconoID" class="fas fa-sort-numeric-down fa-1x m-1"></i>
+                        ID
+                    </div>
+                </th>
+                <th id="tablaDescripcion">
+                    <div class="icono-texto-container">
+                        <i id="iconoDescripcion" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Descripcion
+                    </div>
+                </th>
+                <th>Activo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+                    <div class="row justify-content-center">
+                        <div id="paginadoTabla">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+@section Scripts {
+    <script src="~/js/MetodoPago/MetodoPago.js"></script>
+}

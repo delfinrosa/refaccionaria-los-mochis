@@ -1,0 +1,55 @@
+﻿@model CapaEntidad.OrdenCompraPDF
+@{
+    ViewBag.Title = "Compras";
+    Layout = "~/Views/Shared/LayoutPDFCompra.cshtml";
+    decimal total = 0;
+
+}
+
+<link href="~/css/CssGeneral/PDFCompra.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+<div class="">
+    <img id="logo" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" />
+    <div class="qr-code w-auto">
+        <img src="data:image/png;base64,@Model.CodigoQRBase64" alt="Código QR" />
+    </div>
+    <h1 class="">Compra: @Model.IdCompra</h1>
+    <div class="">
+        <p class="lead">Pedido por: <b>@Model.Usuario</b></p>
+        <p class="lead">Estatus: <b>@Model.Estatus</b></p>
+        <p class="lead">Fecha: <b>@Model.Fecha</b></p>
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Proveedor</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">NoParte</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var detalle in Model.Detalles)
+            {
+                <tr>
+                    <td>@detalle.Proveedor</td>
+                    <td>@detalle.DescripcionProducto</td>
+                    <td>@detalle.NoParte</td>
+                    <td>@detalle.Cantidad</td>
+                    <td>@detalle.PrecioUnitario</td>
+                    <td>@detalle.Subtotal</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="text-align: right;"><strong>Total</strong></td>
+                <td>@Model.Detalles.Sum(d => d.Subtotal)</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+ 

@@ -1,9 +1,204 @@
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\QRCoder.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\QRCoder.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll.config
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.pdb
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\QRCoder.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
-C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaDatos\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll.config
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.Interfaces.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.System.Drawing.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\QRCoder.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Data.SqlClient.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Text.Json.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ValueTuple.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\zxing.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\zxing.presentation.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\EPPlus.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Configuration.Json.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileProviders.Physical.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Buffers.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Data.SqlClient.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Drawing.Common.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Memory.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Text.Json.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.ValueTuple.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Helpers.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Mvc.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.Razor.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\zxing.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\bin\Debug\zxing.presentation.xml
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.csproj.Up2Date
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaDatos\obj\Debug\CapaDatos.pdb

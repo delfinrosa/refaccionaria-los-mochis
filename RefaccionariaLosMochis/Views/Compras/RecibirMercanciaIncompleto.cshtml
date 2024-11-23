@@ -1,0 +1,40 @@
+﻿@model List<CapaEntidad.CompraDtl>
+
+@{
+    ViewBag.Title = "Recibir Mercancía Incompleto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var productosIncompletos = Model;
+}
+
+<h2>Productos sin cantidad marcada</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>No. Parte</th>
+            <th style="display:none;">CompraDtlId</th> <!-- Campo oculto -->
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var producto in productosIncompletos)
+        {
+            <tr>
+                <td>@producto.oProductoProveedor.oProducto.NoParte</td>
+                <td style="display:none;">
+                    @producto.CompraDtlId
+                </td> <!-- CompraDtlId oculto -->
+                <td>
+                    <input type="number" class="form-control cantidad-input" placeholder="Ingrese cantidad" value="0" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+
+@section Scripts {
+    <script src="~/js/Compras/RecibirMercanciaIncompletoJS.js"></script>
+}

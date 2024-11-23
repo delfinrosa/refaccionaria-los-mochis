@@ -11,347 +11,229 @@ namespace CapaDatos
 {
     public class CD_Linea
     {
-        public List<Linea> Listar()
-        {
-
-            List<Linea> lista = new List<Linea>();
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  ,l.FechaCreacion ,l.PersonaUltimoCambio ,l.FechaUltimoCambio from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista.Add(new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"]),
-                                fechaCreaccion = Convert.ToString(dr["FechaCreacion"]),
-                                fechaActualizacion = Convert.ToString(dr["FechaUltimoCambio"]),
-                                IdUsuario = Convert.ToInt32(dr["PersonaUltimoCambio"])
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new List<Linea>();
-            }
-            return lista;
-        }
-        ////////////////
-        /////PRUEBA PAGINADO TABLA
-        /////////////////
-        public List<Linea> ListarPrueba(int pagina, string tipoOrden, int siguientes)
-        {
-            List<Linea> lista = new List<Linea>();
-            try
-            {
-                string orden = "";
-                switch (tipoOrden)
-                {
-                    case "I_A":
-                        orden = "l.IdLinea ";
-                        break;
-                    case "I_D":
-                        orden = "l.IdLinea DESC";
-                        break;
-                    case "D_A":
-                        orden = "l.Descripcion ";
-                        break;
-                    case "D_D":
-                        orden = "l.Descripcion DESC";
-                        break;
-                    default:
-                        orden = "l.IdLinea ";
-                        break;
-                }
-
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista.Add(new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"]),
-                                fechaCreaccion = Convert.ToString(dr["FechaCreacion"]),
-                                fechaActualizacion = Convert.ToString(dr["FechaUltimoCambio"]),
-                                IdUsuario = Convert.ToInt32(dr["PersonaUltimoCambio"])
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new List<Linea>();
-            }
-            return lista;
-        }
-
-
-        //COUNT
-        public int COUNT_Tabla()
-        {
-            int resultado = 0;
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT COUNT(*) AS TotalRegistros FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea;";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            resultado = Convert.ToInt32(dr["TotalRegistros"]);
-
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                resultado = 0;
-            }
-            return resultado;
-        }
-
-
-        ////////////////
-        /////PRUEBA PAGINADO TABLA     FIN
-        /////////////////
-
-
-
-        ////////////////
-        /////PRUEBA PAGINADO TABLA WHERE INICIO
-        /////////////////
-        public List<Linea> ListarPruebaWhere(int pagina, string tipoOrden, int siguientes, string where,string preguntaWhere)
-        {
-            List<Linea> lista = new List<Linea>();
-            try
-            {
-                string orden = "";
-                switch (tipoOrden)
-                {
-                    case "I_A":
-                        orden = "l.IdLinea ";
-                        break;
-                    case "I_D":
-                        orden = "l.IdLinea DESC";
-                        break;
-                    case "D_A":
-                        orden = "l.Descripcion ";
-                        break;
-                    case "D_D":
-                        orden = "l.Descripcion DESC";
-                        break;
-                    default:
-                        orden = "l.IdLinea ";
-                        break;
-                }
-
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE "+where+" LIKE '%" + preguntaWhere+ "%'  ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista.Add(new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"]),
-                                fechaCreaccion = Convert.ToString(dr["FechaCreacion"]),
-                                fechaActualizacion = Convert.ToString(dr["FechaUltimoCambio"]),
-                                IdUsuario = Convert.ToInt32(dr["PersonaUltimoCambio"])
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new List<Linea>();
-            }
-            return lista;
-        }
-
-        //COUNT
-        public int COUNT_TablaWhere( string where, string preguntaWhere)
-        {
-            int resultado = 0;
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT COUNT(*) AS TotalRegistros FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE "+where+" LIKE '%" + preguntaWhere+ "%' ;";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            resultado = Convert.ToInt32(dr["TotalRegistros"]);
-
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                resultado = 0;
-            }
-            return resultado;
-        }
-
-        ////////////////
-        /////PRUEBA PAGINADO TABLA WHERE FIN
-        /////////////////
-
-
-        public int Registrar(Linea obj, out string Mensaje, out Linea objDevolucion)
+        //GUARDAR
+        public int Registrar(Linea obj, out string Mensaje)
         {
             int idautogenerado = 0;
             Mensaje = string.Empty;
-            objDevolucion = obj;
+
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    SqlCommand cmd = new SqlCommand("sp_RegistrarLinea", oconexion);
-                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
-                    cmd.Parameters.AddWithValue("Deslc", obj.Deslc);
-                    cmd.Parameters.AddWithValue("Activo", obj.Activo);
-                    cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("ResFechaCreacion", SqlDbType.DateTime).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("ResFechaUltimoCambio", SqlDbType.DateTime).Direction = ParameterDirection.Output;
-                    cmd.CommandType = CommandType.StoredProcedure;
                     oconexion.Open();
-                    cmd.ExecuteNonQuery();
-                    idautogenerado = Convert.ToInt32(cmd.Parameters["Resultado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
-                    objDevolucion.fechaCreaccion = cmd.Parameters["ResFechaCreacion"].Value.ToString();
-                    objDevolucion.fechaActualizacion = cmd.Parameters["ResFechaUltimoCambio"].Value.ToString();
 
+                    // Verificar si la línea ya existe
+                    string queryVerificar = @"
+            SELECT COUNT(*) FROM tLineas WHERE Descripcion = @Descripcion";
+
+                    using (SqlCommand cmdVerificar = new SqlCommand(queryVerificar, oconexion))
+                    {
+                        cmdVerificar.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+
+                        int existe = Convert.ToInt32(cmdVerificar.ExecuteScalar());
+
+                        if (existe > 0)
+                        {
+                            Mensaje = "La línea con esa descripción ya existe.";
+                            return 0; // Retorna 0 para indicar que no se creó una nueva línea
+                        }
+                    }
+
+                    // Inserción de la línea si no existe
+                    string queryLinea = @"
+            INSERT INTO tLineas (Descripcion, Activo, PersonaUltimoCambio, FechaCreacion, FechaUltimoCambio)
+            VALUES (@Descripcion, @Activo, @PersonaUltimoCambio, GETDATE(), GETDATE());
+            SELECT SCOPE_IDENTITY();";
+
+                    using (SqlCommand cmdLinea = new SqlCommand(queryLinea, oconexion))
+                    {
+                        cmdLinea.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+                        cmdLinea.Parameters.AddWithValue("@Activo", obj.Activo);
+                        cmdLinea.Parameters.AddWithValue("@PersonaUltimoCambio", obj.oUsuario.IdUsuario);
+
+                        idautogenerado = Convert.ToInt32(cmdLinea.ExecuteScalar()); // ID de la nueva línea insertada
+                    }
+
+                    // Inserción de la característica de la línea
+                    if (!string.IsNullOrEmpty(obj.Deslc))
+                    {
+                        string queryCaracteristica = @"
+                INSERT INTO tLineasCaracteristicas (Descripcion, IdLinea)
+                VALUES (@Descripcion, @IdLinea);";
+
+                        using (SqlCommand cmdCaracteristica = new SqlCommand(queryCaracteristica, oconexion))
+                        {
+                            cmdCaracteristica.Parameters.AddWithValue("@Descripcion", obj.Deslc);
+                            cmdCaracteristica.Parameters.AddWithValue("@IdLinea", idautogenerado);
+
+                            cmdCaracteristica.ExecuteNonQuery();
+                        }
+                    }
                 }
-                objDevolucion.IdLinea = idautogenerado;
             }
             catch (Exception ex)
             {
                 idautogenerado = 0;
                 Mensaje = ex.Message;
             }
+
             return idautogenerado;
         }
 
-        public bool Editar(Linea obj, out string Mensaje, out Linea objDevolucion)
+
+
+
+   
+
+              //EDITAR
+        public bool Editar(Linea obj, out string mensaje)
         {
             bool resultado = false;
-            Mensaje = string.Empty;
-            objDevolucion = obj;
+            mensaje = string.Empty;
+
             try
             {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                using (SqlConnection conexion = new SqlConnection(Conexion.cn))
                 {
-                    SqlCommand cmd = new SqlCommand("sp_EditarLinea", oconexion);
-                    cmd.Parameters.AddWithValue("IdLinea", obj.IdLinea);
-                    cmd.Parameters.AddWithValue("Descripcion", obj.Descripcion);
-                    cmd.Parameters.AddWithValue("Deslc", obj.Deslc);
-                    cmd.Parameters.AddWithValue("Activo", obj.Activo);
-                    cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("ResFechaCreacion", SqlDbType.DateTime).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("ResFechaUltimoCambio", SqlDbType.DateTime).Direction = ParameterDirection.Output;
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    oconexion.Open();
-                    cmd.ExecuteNonQuery();
-                    resultado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+                    conexion.Open();
 
-                    objDevolucion.fechaCreaccion = cmd.Parameters["ResFechaCreacion"].Value.ToString();
-                    objDevolucion.fechaActualizacion = cmd.Parameters["ResFechaUltimoCambio"].Value.ToString();
+                    using (SqlTransaction transaccion = conexion.BeginTransaction())
+                    {
+                        string queryVerificacion = "SELECT COUNT(IdLinea) FROM tLineas " +
+                                                   "WHERE Descripcion = @Descripcion ";
+                        using (SqlCommand cmdVerificacion = new SqlCommand(queryVerificacion, conexion, transaccion))
+                        {
+                            cmdVerificacion.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+                            cmdVerificacion.Parameters.AddWithValue("@IdLinea", obj.IdLinea);
+
+                            int existe = Convert.ToInt32(cmdVerificacion.ExecuteScalar());
+                            if (existe > 1)
+                            {
+                                mensaje = "Ya existe otra línea con el mismo nombre.";
+                                transaccion.Rollback();
+                                return false; // Sale del método sin realizar la actualización
+                            }
+                        }
+
+                        string queryLineas = "UPDATE tLineas " +
+                                             "SET Descripcion = @Descripcion, " +
+                                             "Activo = @Activo, " +
+                                             "PersonaUltimoCambio = @PersonaUltimoCambio, " +
+                                             "FechaUltimoCambio = GETDATE() " +
+                                             "WHERE IdLinea = @IdLinea";
+
+                        using (SqlCommand cmdLineas = new SqlCommand(queryLineas, conexion, transaccion))
+                        {
+                            cmdLineas.Parameters.AddWithValue("@IdLinea", obj.IdLinea);
+                            cmdLineas.Parameters.AddWithValue("@Descripcion", obj.Descripcion);
+                            cmdLineas.Parameters.AddWithValue("@Activo", obj.Activo);
+                            cmdLineas.Parameters.AddWithValue("@PersonaUltimoCambio", obj.oUsuario.IdUsuario);
+
+                            int filasActualizadasLineas = cmdLineas.ExecuteNonQuery();
+                            if (filasActualizadasLineas == 0)
+                            {
+                                mensaje = "No se encontró la línea especificada o no se requirieron cambios.";
+                                transaccion.Rollback();
+                                return false;
+                            }
+                        }
+
+                        // Actualizar la característica asociada
+                        string queryCaracteristicas = @"
+                    UPDATE tLineasCaracteristicas
+                    SET Descripcion = @DescripcionCaracteristica
+                    WHERE IdLinea = @IdLinea";
+
+                        using (SqlCommand cmdCaracteristicas = new SqlCommand(queryCaracteristicas, conexion, transaccion))
+                        {
+                            cmdCaracteristicas.Parameters.AddWithValue("@IdLinea", obj.IdLinea);
+                            cmdCaracteristicas.Parameters.AddWithValue("@DescripcionCaracteristica", obj.Deslc);
+
+                            cmdCaracteristicas.ExecuteNonQuery();
+                        }
+
+                        transaccion.Commit();
+                        resultado = true;
+                    }
                 }
             }
             catch (Exception ex)
             {
+                mensaje = "Error al editar la línea y su característica: " + ex.Message;
                 resultado = false;
-                Mensaje = ex.Message;
             }
+
             return resultado;
         }
-        public bool Eliminar(int id, out string Mensaje)
+
+
+
+
+        //ELIMINAR
+        public bool Eliminar(int IdLinea, out string Mensaje)
         {
-            bool resultado = false;
+            bool Resultado = false;
             Mensaje = string.Empty;
+
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    SqlCommand cmd = new SqlCommand("sp_EliminarLinea", oconexion);
-                    cmd.Parameters.AddWithValue("IdLinea", id);
-                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
-                    cmd.CommandType = CommandType.StoredProcedure;
                     oconexion.Open();
-                    cmd.ExecuteNonQuery();
-                    resultado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
-                    Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
+
+                    // Verificar si la línea está relacionada con algún producto
+                    string queryVerificacion = @"
+            SELECT COUNT(*)
+            FROM tProductos p
+            INNER JOIN tLineas l ON l.IdLinea = p.IdLinea
+            WHERE l.IdLinea = @IdLinea";
+
+                    using (SqlCommand cmdVerificacion = new SqlCommand(queryVerificacion, oconexion))
+                    {
+                        cmdVerificacion.Parameters.AddWithValue("@IdLinea", IdLinea);
+                        int relacionado = (int)cmdVerificacion.ExecuteScalar();
+
+                        if (relacionado == 0)
+                        {
+                            // Si no está relacionada, eliminar características y la línea
+                            string queryEliminarCaracteristicas = "DELETE TOP (1) FROM tLineasCaracteristicas WHERE IdLinea = @IdLinea";
+                            SqlCommand cmdEliminarCaracteristicas = new SqlCommand(queryEliminarCaracteristicas, oconexion);
+                            cmdEliminarCaracteristicas.Parameters.AddWithValue("@IdLinea", IdLinea);
+                            cmdEliminarCaracteristicas.ExecuteNonQuery();
+
+                            string queryEliminarLinea = "DELETE TOP (1) FROM tLineas WHERE IdLinea = @IdLinea";
+                            SqlCommand cmdEliminarLinea = new SqlCommand(queryEliminarLinea, oconexion);
+                            cmdEliminarLinea.Parameters.AddWithValue("@IdLinea", IdLinea);
+                            cmdEliminarLinea.ExecuteNonQuery();
+
+                            Resultado = true;
+                        }
+                        else
+                        {
+                            // Si está relacionada, establecer mensaje de error
+                            Mensaje = "La linea se encuentra relacionada a un producto";
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                resultado = false;
                 Mensaje = ex.Message;
             }
-            return resultado;
+
+            return Resultado;
         }
 
-
-        public Linea BusquedaFiltroLinea(string nombre)
+        // Buscar Una Linea por el nombre 
+        public Linea bucarLineaPorNombre(string nombre)
         {
-
             Linea lista = new Linea();
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
                     string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.Descripcion ='" + nombre + "'";
-
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
                     oconexion.Open();
@@ -376,18 +258,15 @@ namespace CapaDatos
             }
             return lista;
         }
-
-        //NOMBRE DE LAS LINEAS PARA AUTOCOMPLETAR EN BUSCADOR
-        public List<string> ListarNombreDeLineas(string linea)
+        // Buscar Una Linea por el ID 
+        public Linea BusquedaIDLinea(int Id)
         {
-
-            List<string> lista = new List<string>();
+            Linea lista = new Linea();
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%';";
-
+                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.IdLinea ='" + Id + "'";
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
                     oconexion.Open();
@@ -395,9 +274,74 @@ namespace CapaDatos
                     {
                         while (dr.Read())
                         {
-                            lista.Add(
-                                Convert.ToString(dr["Descripcion"])
-                            );
+                            lista = new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"])
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new Linea();
+            }
+            return lista;
+        }
+        //Ultimo Registro
+        public Linea UltimoRegistro()
+        {
+            Linea lista = new Linea();
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT TOP 1 l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY l.FechaUltimoCambio DESC;";
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista = new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"])
+                            };
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new Linea();
+            }
+            return lista;
+        }
+        /************BUSCADOR************/
+        public List<string> elementosPaginacionBuscador(string linea, int pagina, int siguientes)
+        {
+            pagina = pagina * siguientes;
+            List<string> lista = new List<string>();
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%' ORDER BY Descripcion DESC OFFSET " + pagina + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY";
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(Convert.ToString(dr["Descripcion"]));
                         }
                     }
                 }
@@ -408,115 +352,8 @@ namespace CapaDatos
             }
             return lista;
         }
-
-
-
-        public Linea BusquedaIDLinea(int Id)
-        {
-
-            Linea lista = new Linea();
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "select l.IdLinea,l.Descripcion , l.Activo, lc.Descripcion as Deslc  from tLineas l inner join tLineasCaracteristicas lc on lc.IdLinea = l.IdLinea where l.IdLinea ='" + Id + "'";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista = new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"])
-                            };
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new Linea();
-            }
-            return lista;
-        }
-        public Linea UltimoRegistro()
-        {
-
-            Linea lista = new Linea();
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT TOP 1 l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY l.FechaUltimoCambio DESC;\r\n";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista = new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"]),
-                                Deslc = Convert.ToString(dr["Deslc"])
-                            };
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new Linea();
-            }
-            return lista;
-        }
-
-        //PRUEBA AUTOCOMPLETADO
-        public List<Linea> PruebasAutoCompletado()
-        {
-            List<Linea> lista = new List<Linea>();
-            try
-            {
-                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
-                {
-                    string query = "SELECT IdLinea, Descripcion, Activo FROM tLineas ORDER BY FechaUltimoCambio DESC";
-
-                    SqlCommand cmd = new SqlCommand(query, oconexion);
-                    cmd.CommandType = CommandType.Text;
-                    oconexion.Open();
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        while (dr.Read())
-                        {
-                            lista.Add(new Linea
-                            {
-                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
-                                Descripcion = Convert.ToString(dr["Descripcion"]),
-                                Activo = Convert.ToString(dr["Activo"])
-                            });
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                lista = new List<Linea>();
-            }
-            return lista;
-        }
-        //////////////////
-        ///Prueba AutoCompletado PAGINADO
-        //////////////////
-        public int COUNT_PruebasAutoCompletado(string linea)
+        //      COUNT
+        public int countBuscador(string linea)
         {
             int resultado = 0;
             try
@@ -544,18 +381,78 @@ namespace CapaDatos
             }
             return resultado;
         }
-
-
-        //NOMBRE DE LAS LINEAS PARA AUTOCOMPLETAR EN BUSCADOR
-        public List<string> PaginacionPRUEBA(string linea, int pagina, int siguientes)
+        /************TABLA************/
+        public List<Linea> ListarLinea(int pagina, string tipoOrden, int siguientes)
         {
-            pagina = pagina * siguientes;
-            List<string> lista = new List<string>();
+            List<Linea> lista = new List<Linea>();
+            try
+            {
+                string orden = Orden(tipoOrden);
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"])
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new List<Linea>();
+            }
+            return lista;
+        }
+        //      COUNT Tabla
+        public int countTabla()
+        {
+            int resultado = 0;
             try
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
                 {
-                    string query = "SELECT Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%' ORDER BY FechaUltimoCambio DESC OFFSET " + pagina + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY";
+                    string query = "SELECT COUNT(*) AS TotalRegistros FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea;";
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            resultado = Convert.ToInt32(dr["TotalRegistros"]);
+
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                resultado = 0;
+            }
+            return resultado;
+        }
+        /************TABLA CON WHERE************/
+        public List<Linea> ListarLineaWhere(int pagina, string tipoOrden, int siguientes, string where)
+        {
+            List<Linea> lista = new List<Linea>();
+            try
+            {
+                string orden = Orden(tipoOrden);
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT l.IdLinea, l.Descripcion, l.Activo, lc.Descripcion AS Deslc, l.FechaCreacion, l.PersonaUltimoCambio, l.FechaUltimoCambio FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE " + where + " ORDER BY " + orden + " OFFSET " + pagina * siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY;";
 
                     SqlCommand cmd = new SqlCommand(query, oconexion);
                     cmd.CommandType = CommandType.Text;
@@ -564,21 +461,131 @@ namespace CapaDatos
                     {
                         while (dr.Read())
                         {
-                            lista.Add(
-                                Convert.ToString(dr["Descripcion"])
-                            );
+                            lista.Add(new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"]),
+                                Activo = Convert.ToString(dr["Activo"]),
+                                Deslc = Convert.ToString(dr["Deslc"])
+                            });
                         }
                     }
                 }
             }
             catch (Exception)
             {
-                lista = new List<string>();
+                lista = new List<Linea>();
+            }
+            return lista;
+        }
+        //      COUNT Tabla WHERE
+
+        public int countTablaWhere(string where)
+        {
+            int resultado = 0;
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT COUNT(*) AS TotalRegistros FROM tLineas l INNER JOIN tLineasCaracteristicas lc ON lc.IdLinea = l.IdLinea WHERE " + where + " ;";
+
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            resultado = Convert.ToInt32(dr["TotalRegistros"]);
+
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                resultado = 0;
+            }
+            return resultado;
+        }
+        public string Orden(string tipoOrden)
+        {
+            switch (tipoOrden)
+            {
+                case "I_A":
+                    return "l.IdLinea ";
+                case "I_D":
+                    return "l.IdLinea DESC";
+                case "D_A":
+                    return "l.Descripcion ";
+                case "D_D":
+                    return "l.Descripcion DESC";
+                default:
+                    return "l.IdLinea ";
+            }
+        }
+        //Buscador Linea Existente para Productos
+
+        public List<Linea> elementosPaginacionBuscadorDescripcionID(string linea, int pagina, int siguientes)
+        {
+            pagina = pagina * siguientes;
+            List<Linea> lista = new List<Linea>();
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = "SELECT IdLinea , Descripcion FROM tLineas WHERE Descripcion LIKE '%" + linea + "%' ORDER BY FechaUltimoCambio DESC OFFSET " + pagina*siguientes + " ROWS FETCH NEXT " + siguientes + " ROWS ONLY";
+                    SqlCommand cmd = new SqlCommand(query, oconexion);
+                    cmd.CommandType = CommandType.Text;
+                    oconexion.Open();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Linea
+                            {
+                                IdLinea = Convert.ToInt32(dr["IdLinea"]),
+                                Descripcion = Convert.ToString(dr["Descripcion"])
+                            });
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                lista = new List<Linea>();
             }
             return lista;
         }
 
+        //Quizas lo mueva a recursos 
+        public bool ChecarConexion()
+        {
+            bool resultado = false;
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    SqlCommand cmd = new SqlCommand("ChecarConexion", oconexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    oconexion.Open();
+                    cmd.ExecuteNonQuery();
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            resultado = Convert.ToBoolean(dr["respuesta"]);
 
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultado = false;
+            }
+            return resultado;
+        }
 
     }
 }

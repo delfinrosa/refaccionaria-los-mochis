@@ -1,0 +1,1885 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\RefaccionariaLosMochis.bundle.scp.css",
+      "PackagePath": "staticwebassets\\RefaccionariaLosMochis.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\LOGO-Musculoso-Circular-PNG.png",
+      "PackagePath": "staticwebassets\\Imagenes\\LOGO-Musculoso-Circular-PNG.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\user.webp",
+      "PackagePath": "staticwebassets\\Imagenes\\user.webp"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "PackagePath": "staticwebassets\\Rotativa\\wkhtmltopdf.exe"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\CssGeneral\\General.css",
+      "PackagePath": "staticwebassets\\css\\CssGeneral\\General.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\CssGeneral\\PDFCompra.css",
+      "PackagePath": "staticwebassets\\css\\CssGeneral\\PDFCompra.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\CssGeneral\\ScanerDevolucion.css",
+      "PackagePath": "staticwebassets\\css\\CssGeneral\\ScanerDevolucion.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\CssGeneral\\chatBot.css",
+      "PackagePath": "staticwebassets\\css\\CssGeneral\\chatBot.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\CssLogin\\Login.css",
+      "PackagePath": "staticwebassets\\css\\CssLogin\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\autoFill.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\autoFill.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\buttons.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\buttons.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\colReorder.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\colReorder.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\common.scss",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\common.scss"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.material.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.material.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.material.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.material.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.uikit.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.uikit.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\dataTables.uikit.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\dataTables.uikit.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedColumns.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedColumns.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\fixedHeader.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\fixedHeader.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\jquery.dataTables_themeroller.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\jquery.dataTables_themeroller.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\keyTable.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\keyTable.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\mixins.scss",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\responsive.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\responsive.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowGroup.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowGroup.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\rowReorder.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\rowReorder.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\scroller.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\scroller.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.bootstrap4.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.bootstrap4.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.bootstrap4.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.foundation.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.foundation.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.foundation.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.foundation.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.jqueryui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.jqueryui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.jqueryui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.jqueryui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.semanticui.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.semanticui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\select.semanticui.min.css",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\select.semanticui.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\css\\semanticui.scss",
+      "PackagePath": "staticwebassets\\css\\DataTables\\css\\semanticui.scss"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\details_close.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\details_close.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\details_open.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\details_open.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\css\\DataTables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\DataTables\\swf\\flashExport.swf",
+      "PackagePath": "staticwebassets\\css\\DataTables\\swf\\flashExport.swf"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\brands.css",
+      "PackagePath": "staticwebassets\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\css\\jquery.dataTables_themeroller.css",
+      "PackagePath": "staticwebassets\\css\\css\\jquery.dataTables_themeroller.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\estilo.css",
+      "PackagePath": "staticwebassets\\css\\estilo.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\Sorting icons.psd",
+      "PackagePath": "staticwebassets\\css\\images\\Sorting icons.psd"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\back_disabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\back_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\back_enabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\back_enabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\back_enabled_hover.png",
+      "PackagePath": "staticwebassets\\css\\images\\back_enabled_hover.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\css\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\forward_disabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\forward_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\forward_enabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\forward_enabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\forward_enabled_hover.png",
+      "PackagePath": "staticwebassets\\css\\images\\forward_enabled_hover.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\css\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\css\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\css\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\css\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_444444_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_444444_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_555555_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_555555_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_777620_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_777620_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_777777_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_777777_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_cc0000_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_cc0000_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\images\\ui-icons_ffffff_256x240.png",
+      "PackagePath": "staticwebassets\\css\\images\\ui-icons_ffffff_256x240.png"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\jquery-ui.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\jquery-ui.structure.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.structure.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\jquery-ui.theme.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.theme.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\regular.css",
+      "PackagePath": "staticwebassets\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\solid.css",
+      "PackagePath": "staticwebassets\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\sweetalert.css",
+      "PackagePath": "staticwebassets\\css\\sweetalert.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Almacenes\\AlmacenesJS.js",
+      "PackagePath": "staticwebassets\\js\\Almacenes\\AlmacenesJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\CFDIUso\\CFDIUsoJS.js",
+      "PackagePath": "staticwebassets\\js\\CFDIUso\\CFDIUsoJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Cliente\\Cliente.js",
+      "PackagePath": "staticwebassets\\js\\Cliente\\Cliente.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\ComprasAdminitradorJS.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\ComprasAdminitradorJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\ComprasJS.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\ComprasJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\OrdenCompra.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\OrdenCompra.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\ProductosComprados.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\ProductosComprados.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\RecibirMarcanciaJS.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\RecibirMarcanciaJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Compras\\RecibirMercanciaIncompletoJS.js",
+      "PackagePath": "staticwebassets\\js\\Compras\\RecibirMercanciaIncompletoJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.foundation.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.foundation.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.jqueryui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.semanticui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\autoFill.semanticui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\autoFill.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.colVis.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.colVis.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.colVis.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.colVis.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.flash.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.flash.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.flash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.foundation.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.foundation.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.html5.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.html5.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.jqueryui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.print.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.print.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.semanticui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\buttons.semanticui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\buttons.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.autoFill.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.autoFill.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.autoFill.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.autoFill.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.buttons.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.buttons.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.colReorder.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.colReorder.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.colReorder.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.colReorder.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.fixedColumns.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.fixedColumns.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.fixedColumns.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.fixedColumns.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.fixedHeader.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.fixedHeader.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.fixedHeader.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.fixedHeader.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.foundation.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.foundation.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.jqueryui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.keyTable.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.keyTable.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.keyTable.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.keyTable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.material.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.material.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.material.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.material.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.responsive.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.responsive.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.responsive.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.responsive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.rowGroup.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.rowGroup.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.rowGroup.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.rowGroup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.rowReorder.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.rowReorder.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.rowReorder.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.rowReorder.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.scroller.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.scroller.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.scroller.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.scroller.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.select.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.select.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.select.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.semanticui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.semanticui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.uikit.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.uikit.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\dataTables.uikit.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\dataTables.uikit.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.bootstrap4.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.bootstrap4.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.bootstrap4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.foundation.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.foundation.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.foundation.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.foundation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.jqueryui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.jqueryui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.jqueryui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.jqueryui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.semanticui.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.semanticui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\DataTables\\responsive.semanticui.min.js",
+      "PackagePath": "staticwebassets\\js\\DataTables\\responsive.semanticui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\FormaPago\\FormaPago.js",
+      "PackagePath": "staticwebassets\\js\\FormaPago\\FormaPago.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\ExportarExcel.js",
+      "PackagePath": "staticwebassets\\js\\General\\ExportarExcel.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\JQueryAjax.js",
+      "PackagePath": "staticwebassets\\js\\General\\JQueryAjax.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\Paginacion.js",
+      "PackagePath": "staticwebassets\\js\\General\\Paginacion.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\ValidarVacio.js",
+      "PackagePath": "staticwebassets\\js\\General\\ValidarVacio.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\imprimirTicket.js",
+      "PackagePath": "staticwebassets\\js\\General\\imprimirTicket.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\General\\plugin_impresora_termica.js",
+      "PackagePath": "staticwebassets\\js\\General\\plugin_impresora_termica.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Index\\PermisosNav.js",
+      "PackagePath": "staticwebassets\\js\\Index\\PermisosNav.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Linea\\LineaJS.js",
+      "PackagePath": "staticwebassets\\js\\Linea\\LineaJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Marcas\\MarcaJS.js",
+      "PackagePath": "staticwebassets\\js\\Marcas\\MarcaJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\MetodoPago\\MetodoPago.js",
+      "PackagePath": "staticwebassets\\js\\MetodoPago\\MetodoPago.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Producto\\FaltaDescripcionJS.js",
+      "PackagePath": "staticwebassets\\js\\Producto\\FaltaDescripcionJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Producto\\ProductoJS.js",
+      "PackagePath": "staticwebassets\\js\\Producto\\ProductoJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Proveedor\\Proveedor.js",
+      "PackagePath": "staticwebassets\\js\\Proveedor\\Proveedor.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\RegimenFiscal\\RegimenFiscal.js",
+      "PackagePath": "staticwebassets\\js\\RegimenFiscal\\RegimenFiscal.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Reportes\\GraficosJS.js",
+      "PackagePath": "staticwebassets\\js\\Reportes\\GraficosJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Usuario\\UsuarioJS.js",
+      "PackagePath": "staticwebassets\\js\\Usuario\\UsuarioJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\CajaJS.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\CajaJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\CorteCaja.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\CorteCaja.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\Devolucion.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\Devolucion.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\Facturacion.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\Facturacion.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\MostrarCaja.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\MostrarCaja.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\ProductosDevueltos.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\ProductosDevueltos.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\ProductosVendidos.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\ProductosVendidos.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Venta\\VentaJS.js",
+      "PackagePath": "staticwebassets\\js\\Venta\\VentaJS.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\all.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\all.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\all.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\brands.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\brands.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\brands.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\brands.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\conflict-detection.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\conflict-detection.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\fontawesome.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\fontawesome.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\fontawesome.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\regular.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\regular.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\regular.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\regular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\solid.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\solid.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\solid.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\solid.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\v4-shims.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\v4-shims.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\fontawesome\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\js\\fontawesome\\v4-shims.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.intellisense.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.intellisense.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.min.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.slim.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.slim.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.slim.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.slim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-3.4.1.slim.min.map",
+      "PackagePath": "staticwebassets\\js\\jquery-3.4.1.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery-ui.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.dataTables.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.validate-vsdoc.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate-vsdoc.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\loadingoverlay\\loadingoverlay.min.js",
+      "PackagePath": "staticwebassets\\js\\loadingoverlay\\loadingoverlay.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\modernizr-2.8.3.js",
+      "PackagePath": "staticwebassets\\js\\modernizr-2.8.3.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\scripts.js",
+      "PackagePath": "staticwebassets\\js\\scripts.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\sweetalert.min.js",
+      "PackagePath": "staticwebassets\\js\\sweetalert.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\webfonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\webfonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\webfonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\webfonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\webfonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\webfonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.RefaccionariaLosMochis.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.RefaccionariaLosMochis.props",
+      "PackagePath": "build\\RefaccionariaLosMochis.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.RefaccionariaLosMochis.props",
+      "PackagePath": "buildMultiTargeting\\RefaccionariaLosMochis.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.RefaccionariaLosMochis.props",
+      "PackagePath": "buildTransitive\\RefaccionariaLosMochis.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "CorteCaja";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <input type="date" id="dateSelect" class="form-control form-control-sm m-5" style="width: auto;" />
+    </div>
+
+    <div class="row justify-content-end">
+        <div class="col-md-4">
+            <!-- Tarjeta para Efectivo -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Efectivo</h3>
+                    <div class="text-center">
+                        <i class="fas fa-money-bill-wave fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalEfectivo">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerEfectivo" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold ">Información</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Tarjeta para Tarjeta -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Tarjeta</h3>
+                    <div class="text-center">
+                        <i class="far fa-credit-card fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalTarjeta">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerTarjeta" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold">Información</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Tarjeta para Transferencia -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Transferencia</h3>
+                    <div class="text-center">
+                        <i class="fas fa-exchange-alt fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalTranseferencia">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerTransferencia" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold">Información</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="/js/Venta/CorteCaja.js"></script>
+}

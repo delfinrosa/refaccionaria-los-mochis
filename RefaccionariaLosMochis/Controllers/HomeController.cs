@@ -1,53 +1,39 @@
 ﻿using CapaEntidad;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Security;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http; // Asegúrate de tener esto
+using RefaccionariaLosMochis.Permisos;
+using Newtonsoft.Json; // Importar el espacio de nombres de tus extensiones
 
 namespace RefaccionariaLosMochis.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public IActionResult Index()
         {
 
-            Usuario usuario = Session["Usuario"] as Usuario;
-            ViewBag.tipo = usuario.Tipo;
-            // Crear una nueva cookie y asignarle el valor de ViewBag.tipo
-            HttpCookie tipoCookie = new HttpCookie("tipo", ViewBag.tipo);
-            Response.Cookies.Add(tipoCookie);
-
-            HttpCookie idUsuarioCookie = new HttpCookie("idUsuario", usuario.IdUsuario.ToString());
-            Response.Cookies.Add(idUsuarioCookie);
             return View();
         }
 
-        public ActionResult About()
+
+        public IActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public IActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
-        public ActionResult CerrarSesion()
+
+        public async Task<IActionResult> CerrarSesion()
         {
+            // Limpiar la sesión
+            HttpContext.Session.Clear();
 
-            FormsAuthentication.SignOut();
-            Session["Usuario"] = null;
-
-
+            // Redirigir al login
             return RedirectToAction("Index", "Acceso");
-
-
-
         }
     }
 }

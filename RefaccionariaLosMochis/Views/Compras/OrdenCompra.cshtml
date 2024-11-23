@@ -1,0 +1,82 @@
+﻿@model List<CapaEntidad.CompraDtl>
+
+@{
+    ViewBag.Title = "OrdenCompra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal total = 0;
+}
+
+<link href="~/css/CssGeneral/PDFCompra.css" rel="stylesheet" />
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+    <img id="logo" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" />
+    <div class="qr-code  w-auto">
+        <img src="data:image/png;base64,@ViewBag.CodigoQRBase64" alt="Código QR" />
+    </div>
+    <h1 id="ID" data-id="@ViewBag.ID">Compra: @ViewBag.ID</h1>
+    <div class="">
+        <p class="lead">Pedido por: <b>@ViewBag.USER</b></p>
+        <p class="lead">Estatus: <b>@ViewBag.ESTATUS</b></p>
+        <p class="lead">Fecha: <b id="fecha" data-fecha="@ViewBag.FECHA">@ViewBag.FECHA</b></p>
+
+    </div>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">NoParte</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Proveedor</th>
+                <th class="col" scope="col">Cantidad</th>
+                <th scope="col">Precio Unitario</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="tblDatosProductos">
+            @foreach (var detalle in Model)
+            {
+                decimal subtotal = detalle.Cantidad * detalle.oProductoProveedor.Precio;
+                total += subtotal;
+                <tr data-id="@detalle.CompraDtlId">
+                    <td>@detalle.oProductoProveedor.oProducto.NoParte</td>
+                    <td>@detalle.oProductoProveedor.oProducto.Descripcion</td>
+                    <td>@detalle.oProductoProveedor.oProveedor.RazonSocial</td>
+                    <td data-id="@detalle.Cantidad" class="cantidad ">
+                        <input type="text" class="form-control cantidad" value="@detalle.Cantidad" data-id="@detalle.Cantidad" />
+                    </td>
+
+                    <td>@detalle.oProductoProveedor.Precio</td>
+                    <td class="subtotal">@subtotal</td>
+                    <td><button type="button" class="btn-eliminar btn btn-danger btn-sm ms-2"><i class="fas fa-trash"></i></button></td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="text-align: right;"><strong>Total</strong></td>
+                <td id="total">@total</td>
+            </tr>
+            <tr>
+                <td colspan="7" style="text-align: center;">
+                    <button class="btn btn-success m-auto me-5 w-25" id="btn-Guardar"> Guardar <i class="fas fa-play"></i></button>
+                    <button class="btn btn-primary m-auto me-5 w-25" id="btn-Agregar">Agregar <i class="fas fa-plus-circle"></i></button>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <div class="row w-100  m-5">
+        <div class="col-4"><button class="btn btn-warning m-auto w-75" id="btn-Recivir"><b>Recivir</b></button></div>
+    </div>
+    <div class="row w-100  m-5">
+        <div class="col-3"><button class="btn btn-success m-auto w-75" id="btn-Aprobar"><b>Aprobar</b></button></div>
+        <div class="col-3"><button class="btn btn-secondary m-auto w-75" id="btn-Cancelar"><b>Cancelar</b> </button></div>
+        <div class="col-3"><button class="btn btn-primary m-auto w-75" id="btn-Descargar"><b>Descargar</b> </button></div>
+        <div class="col-3"><button class="btn btn-primary m-auto w-75" id="btn-DescargarProveedor"><b>Descargar Proveedor</b> </button></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/Compras/OrdenCompra.js"></script>
+}

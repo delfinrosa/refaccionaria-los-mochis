@@ -1,33 +1,200 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Administrador";
 }
+<style>
+    #resultadosBusqueda {
+        max-height: 300px; /* Ajusta el tamaño máximo según lo necesites */
+        overflow-y: auto;
+        z-index: 9999; /* Asegura que el elemento esté sobre todo */
+        background-color: white; /* Agrega un fondo para separar los resultados */
+        border: 1px solid #ccc;
+        width: 180px;
+        position:absolute;
+        left :80%;
+        top:5px;
+    }
 
-<main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+</style>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <input type="date" id="dateSelect" class="form-control form-control-sm m-5" style="width: auto;" />
     </div>
-</main>
+
+    <div class="row justify-content-end">
+        <div class="col-md-4">
+            <!-- Tarjeta para Efectivo -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Efectivo</h3>
+                    <div class="text-center">
+                        <i class="fas fa-money-bill-wave fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalEfectivo">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerEfectivo" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold ">Información</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Tarjeta para Tarjeta -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Tarjeta</h3>
+                    <div class="text-center">
+                        <i class="far fa-credit-card fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalTarjeta">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerTarjeta" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold">Información</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <!-- Tarjeta para Transferencia -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Transferencia</h3>
+                    <div class="text-center">
+                        <i class="fas fa-exchange-alt fa-3x"></i>
+                    </div>
+                    <div class="text-center mt-3">
+                        <span class="h2" id="totalTranseferencia">$0.00</span>
+                    </div>
+                </div>
+                <div id="footerTransferencia" class="card-footer text-white text-center bg-success">
+                    <h5 class="font-weight-bold">Información</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-chart-line"></i> Ganancia Del Mes</span>
+                <select id="mesSelect" class="form-control form-control-sm" style="width: auto;">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+            <div class="card-body">
+                <canvas id="myAreaChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-money-bill-wave"></i> Ganancia Del Año Por Meses</span>
+                <select id="anioSelect" class="form-control form-control-sm" style="width: auto;">
+                    @for (int year = 2024; year <= DateTime.Now.Year; year++)
+                    {
+                        <option value="@year">@year</option>
+                    }
+                </select>
+            </div>
+            <div class="card-body">
+                <canvas id="myBarChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-calendar-day"></i> Ganancia Por Hora</span>
+                <input type="date" id="dateSelectGananciaPorHora" class="form-control form-control-sm m-2" style="width: auto;" />
+            </div>
+            <div class="card-body">
+                <canvas id="myHourlyChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-cart-shopping"></i> 10 productos mas vendidos</span>
+                <div class="row">
+                    <select id="SelectCase" class="form-control form-control-sm m-2 " style="width: auto;">
+                        <option value="1">Históricos</option>
+                        <option value="2">Por dia</option>
+                        <option value="3">Por Mes</option>
+                        <option value="4">Por Año</option>
+                    </select>
+                    <select id="anioSelectProductosvendidos" class="form-control form-control-sm d-none m-2 " style="width: auto;">
+                        @for (int year = 2024; year <= DateTime.Now.Year; year++)
+                        {
+                            <option value="@year">@year</option>
+                        }
+                    </select>
+                    <select id="mesSelectProductosvendidos" class="form-control form-control-sm d-none m-2 " style="width: auto;">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                    <input type="date" id="dateSelectProductosvendidos" class="form-control form-control-sm d-none m-2 " style="width: auto;" />
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="myBarChartTopProductos" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+                <a class="text-center text-primary text-decoration-none" href="@Url.Action("ProductosVendidos","Venta")">
+                    Otros productos ...
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-xl-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-dollar-sign"></i> Evolución del Precio del Producto</span>
+                <div id="resultadosBusqueda">
+                    <input type="text" id="productIdSelect" class="form-control form-control-sm" placeholder="Ingrese NoParte" autocomplete="off" />
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="myPriceEvolutionChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/chart.js"></script>
+    <script src="~/js/Reportes/GraficosJS.js"></script>
+    <script src="/js/Venta/CorteCaja.js"></script>
+}

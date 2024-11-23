@@ -1,0 +1,191 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RefaccionariaLosMochis
+build_property.RootNamespace = RefaccionariaLosMochis
+build_property.ProjectDir = C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Acceso/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Acceso/OlvideMiContraseña.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXE9sdmlkZU1pQ29udHJhc2XDsWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Almacen/Almacenes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxtYWNlblxBbG1hY2VuZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/CFDIUso/CFDIUso.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ0ZESVVzb1xDRkRJVXNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Cliente/Cliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDbGllbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/Administracion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xBZG1pbmlzdHJhY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/CompraPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFQREYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/CompraPDFProveedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFQREZQcm92ZWVkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/Compras.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xDb21wcmFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/OrdenCompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xPcmRlbkNvbXByYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/ProductosComprados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xQcm9kdWN0b3NDb21wcmFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/RecibirMercancia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xSZWNpYmlyTWVyY2FuY2lhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Compras/RecibirMercanciaIncompleto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xSZWNpYmlyTWVyY2FuY2lhSW5jb21wbGV0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/FormaPago/FormaPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybWFQYWdvXEZvcm1hUGFnby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Linea/Linea.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGluZWFcTGluZWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Marca/Marca.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFyY2FcTWFyY2EuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/MetodoPago/MetodoPago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWV0b2RvUGFnb1xNZXRvZG9QYWdvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Producto/FaltaDescripcion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRmFsdGFEZXNjcmlwY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Producto/Producto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cUHJvZHVjdG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Proveedor/Proveedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yXFByb3ZlZWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/RegimenFiscal/RegimenFiscal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaW1lbkZpc2NhbFxSZWdpbWVuRmlzY2FsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Reportes/Graficos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcR3JhZmljb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Shared/LayoutPDFCompra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXExheW91dFBERkNvbXByYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Shared/_TicketPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UaWNrZXRQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Usuario/Usuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xVc3VhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/Caja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcQ2FqYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/CorteCaja.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcQ29ydGVDYWphLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/Devolucion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcRGV2b2x1Y2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/ImprimirTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcSW1wcmltaXJUaWNrZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/ProductosDevueltos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcUHJvZHVjdG9zRGV2dWVsdG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/ProductosVendidos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcUHJvZHVjdG9zVmVuZGlkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/ScanerDevolucion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcU2NhbmVyRGV2b2x1Y2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Venta/Ticket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFcVGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/delfi/OneDrive/Escritorio/Refaccionaria(LosMochis)/NET CORE/RefaccionariaLosMochis/RefaccionariaLosMochis/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-rjas1ppxl2

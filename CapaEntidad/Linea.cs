@@ -12,10 +12,7 @@ namespace CapaEntidad
         public string Descripcion { get; set; }
         public string Activo { get; set; }
         public string Deslc { get; set; }
-        public int IdUsuario { get; set; }
-
-        public string fechaCreaccion { get; set; }    
-        public string fechaActualizacion{ get; set; }    
+        public Usuario oUsuario { get; set; }
 
     }
 }

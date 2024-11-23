@@ -1,0 +1,213 @@
+﻿﻿.barraHerramientas {
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.3);
+}
+/*AUTO COMPLETADO*/
+.autocomplete-options {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.autocomplete-option:hover {
+    background-color: #f2f2f2;
+}
+
+.autocomplete-option.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#buscador {
+    width: 300px;
+    z-index: 1;
+    display: inline-block;
+/*    position: absolute;*/
+
+}
+
+#btn-Nuevo:focus {
+    opacity: 1;
+}
+
+#btn-Eliminar:focus {
+    opacity: 1;
+}
+
+#btn-Guardar:focus {
+    opacity: 1;
+}
+
+#btn-Cancelar:focus {
+    opacity: 1;
+}
+
+.icono-texto-container {
+    display: flex;
+    align-items: center;
+}
+
+#masInformacion {
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 6px;
+    color: floralwhite;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0px 0px 5px 5px;
+    padding: 10px;
+}
+
+.nav-tabs {
+    margin-bottom: 0;
+}
+
+.m-20 {
+margin-left:20%;
+}
+.bg-edicion {
+    background-color: #d1ebf7;
+    border: 2px solid #007BFF;
+}
+.bg-guardar {
+    background-color: #c7decd;
+    border: 2px solid #28a745;
+}
+.mt--10px {
+margin-top:-10px;
+}
+#modo{
+ margin:5px;
+ padding:5px;
+ margin-left:25px;
+ background-color:white;
+}
+@keyframes brillo-editar {
+    0% {
+        box-shadow: 1px 1px 13px rgba(0, 123, 255 );
+    }
+
+    100% {
+        box-shadow: 1px 1px 1px rgba(0, 123, 255);
+    }
+}
+
+.animacion-editar {
+    color: RGB(0, 123, 255);
+    border: 1px solid RGB(0, 123, 255);
+    animation: brillo-editar 4s linear infinite alternate;
+}
+@keyframes brillo-guardar {
+    0% {
+        box-shadow: 1px 1px 13px RGB(40, 167, 69);
+    }
+
+    100% {
+        box-shadow: 1px 1px 1px RGB(40, 167, 69);
+    }
+}
+
+.animacion-guardar {
+    color: RGB(40, 167, 69);
+    border: 1px solid RGB(40, 167, 69);
+    animation: brillo-guardar 4s linear infinite alternate;
+}
+
+#SeleccionarImagen {
+height:450px;
+background-color:#808080;
+}
+
+
+
+.lista-almacenes, .lista-racks {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-top: none;
+    z-index: 1050; /* Asegúrate que este valor sea superior al de cualquier otro elemento en la página */
+    background: white;
+    overflow-y: auto;
+    max-height: 200px;
+    display: none; /* Oculta la lista por defecto */
+    width: 100%; /* Asegura que la lista tenga el mismo ancho que el input */
+    box-sizing: border-box;
+}
+
+.opcion-almacen, .opcion-rack {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    text-align: left;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+    .opcion-almacen:hover, .opcion-rack:hover {
+        background-color: #f2f2f2;
+    }
+
+/* Asegúrate de que el input y la lista desplegable estén dentro de un contenedor relativo */
+.contenedor-relativo {
+    position: relative;
+}
+
+/* Añade esta clase al contenedor de los inputs para asegurar la posición relativa */
+.col-3 {
+    position: relative;
+}
+.border-img {
+    border: 3px solid #4076FF;
+}
+
+
+
+
+.zoom-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    background-color:red;
+}
+
+    .zoom-img.zoomed {
+        transform: scale(1.8);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: white;
+        z-index: 1000;
+        transition: none; 
+        transform-origin: center center; 
+
+    }
+.zoomed-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    overflow: auto;
+}
+.autocomplete-active {
+    background-color: #d4d4d4;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background: #BBD666 !important;
+}
+
+.w-90 {
+width :90%;
+}

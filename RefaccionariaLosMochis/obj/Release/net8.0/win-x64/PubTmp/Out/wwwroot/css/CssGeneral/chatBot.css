@@ -1,0 +1,47 @@
+﻿#conversacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre mensajes */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+    .message.user {
+        background-color: #d4f8c4;
+        align-self: flex-start;
+        border-radius: 10px 10px 10px 0;
+    }
+
+    .message.bot {
+        background-color: #e6f3ff;
+        align-self: flex-end;
+        border-radius: 10px 10px 0 10px;
+    }
+
+.text-container {
+    margin-top: 5px;
+}
+
+.profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+    .profile-pic.left {
+        order: -1;
+    }
+
+    .profile-pic.right {
+        order: 1;
+        margin-left: 10px;
+        margin-right: 0;
+    }

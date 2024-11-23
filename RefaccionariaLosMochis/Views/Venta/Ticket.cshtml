@@ -1,0 +1,268 @@
+﻿@page "/venta/ticket"
+@{
+    ViewBag.Title = "Ticket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var carrito = ViewBag.Carrito as List<(int IdProducto, string CodigoBarras, string NoParte, string MarcaDescripcion, int Cantidad, decimal Precio, string IdVentasProducto, string Estatus, bool RequiereFactura)>;
+    var idVenta = ViewBag.ID;
+    var Factura = ViewBag.RequiereFactura;
+    decimal total = carrito != null ? carrito.Sum(item => item.Cantidad * item.Precio) : 0;
+
+}
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ticket de Venta @idVenta</title>
+
+
+    
+<style>
+
+        #detalle-productos {
+            width: 80mm; /* Ancho de la impresora de tickets */
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 4px;
+        }
+
+        th {
+            border-bottom: 1px solid black;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid black;
+            margin: 5px 0;
+        }
+    
+</style>
+
+
+    <style>
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+
+            table th, table td {
+                text-align: center; /* Centrar el texto */
+                padding: 12px;
+                border: 1px solid #dee2e6;
+            }
+
+            table thead th {
+                background-color: #f8f9fa;
+                color: #495057;
+                border-bottom: 2px solid #dee2e6;
+            }
+
+            table tbody tr:hover {
+                background-color: #e9ecef; /* Color de fondo al pasar el mouse por encima de las filas */
+            }
+
+        .bg-rojo {
+            background-color: #f8d7da; /* Color de fondo rojo claro */
+            color: #721c24; /* Color de texto rojo oscuro */
+        }
+
+            .bg-rojo:hover {
+                background-color: #f5c6cb; /* Color de fondo rojo más fuerte al pasar el mouse */
+            }
+
+        .bg-verde {
+            background-color: #d4edda; /* Color de fondo verde claro */
+            color: #155724; /* Color de texto verde oscuro */
+        }
+
+            .bg-verde:hover {
+                background-color: #c3e6cb; /* Color de fondo verde más fuerte al pasar el mouse */
+            }
+    </style>
+
+    <link href="~/css/CssGeneral/General.css" rel="stylesheet" />
+
+</head>
+<div class="container-fluid">
+    <div class="header">
+        <h1>Ticket de Venta @idVenta</h1>
+    </div>
+    <input id="ID" data-id="@idVenta" type="hidden" />
+
+    <span class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+        <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" @(Factura ? "checked" : "") />
+    </span>
+
+    @if (Factura)
+    {
+        <div class="d-flex justify-content-center">
+            <div class="card bg-success-subtle m-5 w-90">
+                <div class="card-body">
+                    <h2 class="card-title text-center fw-bold my-2">Factura</h2>
+                    <div class="row m-3">
+                        <div class="col-3" id="DivClienteFactura">
+                            <h5 class="text-center">Cliente</h5>
+                            <input type="text" id="ClienteFactura" class="form-control" placeholder="Buscar Cliente" autocomplete="off" />
+                            <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+                            </div>
+                            <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                            </div>
+                        </div>
+                        <div class="col-3" id="DivMetodoPagoFactura">
+                            <h5 class="text-center">Metodo de Pago</h5>
+                            <input type="text" id="MetodoPagoFactura" class="form-control" placeholder="Buscar Metodo de Pago" autocomplete="off" />
+                        </div>
+                        <div class="col-3" id="DivFormaPagoFactura">
+                            <h5 class="text-center">Forma de Pago</h5>
+                            <input type="text" id="FormaPagoFactura" class="form-control" placeholder="Buscar Forma de Pago" autocomplete="off" />
+                        </div>
+                        <div class="col-3" id="DivUso">
+                            <h5 class="text-center">CFID Uso</h5>
+                            <input type="text" id="UsoFactura" class="form-control" placeholder="Buscar CFID Uso" autocomplete="off" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+<div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary text-white me-1 w-100" id="btn-BuscarCodigoBarras" type="button" ">
+                <i class="fas fa-barcode fa-5x"></i>
+            </button>
+            <input type="text" id="BuscarCodigoBarras" class="col-12 my-3" />
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+            <button type="button" class="btn btn-primary mt-3" id="btnAgregarProducto">
+                Buscar Producto
+            </button>
+            <div id="carrito-items"></div>
+
+        </div>
+
+    </div>
+            @if (carrito != null && carrito.Count > 0)
+            {
+        <table class="">
+            <thead>
+                <tr>
+                    <th>No Parte</th>
+                    <th>Marca</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                        @foreach (var item in carrito)
+                        {
+                    <tr data-Estatus="@item.Estatus" data-ID="@item.IdVentasProducto" data-CodigoBarras="@item.CodigoBarras" data-idproducto="@item.IdProducto">
+                        <td>@item.NoParte</td>
+                        <td>@item.MarcaDescripcion</td>
+                        <td>@item.Cantidad</td>
+                        <td>$@item.Precio.ToString("F2")</td>
+                        <td>$@(item.Cantidad * item.Precio)</td>
+                        <td>
+                            <button class="btn btn-danger btn-eliminar" data-id="@item.IdVentasProducto">
+                                <i class="fas fa-trash-alt"></i>
+
+                            </button>
+                        </td>
+
+                    </tr>
+                        }
+            </tbody>
+        </table>
+            }
+            else
+            {
+        <p>No se encontraron artículos en el carrito.</p>
+            }
+
+            @if (ViewBag.Error != null)
+            {
+        <div class="alert alert-danger mt-3">
+                    @ViewBag.Error
+        </div>
+            }
+
+    <div class="row mt-3 mx-5">
+        <div class="text-end mx-5">
+            <h4>Total: $<span id="total-precio" data-total="@total">@total.ToString("F2")</span></h4>
+        </div>
+    </div>
+
+
+</div>
+<hr />
+<div class="container mt-5">
+    <h2>Metodo de Pago</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center bg-success text-white" id="cartEfectivo">
+                <div class="card-body">
+                    <i class="fas fa-money-bill-alt card-icon"></i>
+                    <h5 class="card-title">Efectivo</h5>
+                    <p class="card-text">Pago en efectivo para tus compras.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center bg-secondary text-white" id="cartMixto">
+                <div class="card-body">
+                    <i class="fas fa-wallet card-icon"></i>
+                    <h5 class="card-title">Mixto</h5>
+                    <p class="card-text">Pago en efectivo y tajeta.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center bg-primary text-white" id="cartTarjeta">
+                <div class="card-body">
+                    <i class="fas fa-credit-card card-icon"></i>
+                    <h5 class="card-title">Tarjeta</h5>
+                    <p class="card-text">Pago con tarjeta de crédito o débito.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mt-3">
+        </div>
+        <div class="col-md-4 mt-3" >
+            <div class="card text-center bg-warning text-white" id="cartTrasferencia">
+                <div class="card-body">
+                    <i class="fas fa-exchange-alt card-icon"></i>
+                    <h5 class="card-title">Transferencia</h5>
+                    <p class="card-text">Pago mediante transferencia bancaria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contenedorTicket"></div>
+
+
+@section Scripts {
+    <script src="/js/Venta/CajaJS.js"></script>
+            }

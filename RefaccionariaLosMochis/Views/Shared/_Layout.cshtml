@@ -1,16 +1,30 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var rol = Context.Request.Cookies["tipo"]; // Recuperar el valor de la cookie "tipo"
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
-    @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/sweetalert.css" />
+    <link rel="stylesheet" href="~/css/jquery-ui.css" />
+    <link rel="stylesheet" href="~/css/estilo.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/css/CssGeneral/chatBot.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-principal" data-bs-theme="dark">
         <div class="container-fluid ">
-            <a class="navbar-brand text-white" href="@Url.Action("Index","Home")">Refaccionaria los Mochis</a>
+            <a class="navbar-brand text-white" href="@Url.Action("Index","Home")">
+                <img class="" src="~/Imagenes/LOGO-Musculoso-Circular-PNG.png" alt="Foto de un pajaro" width="40" height="40"> RM
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,60 +33,267 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="@Url.Action("Index","Home")">
+                        <a class="nav-link active  text-white" href="@Url.Action("Index","Home")">
                             Inicio
                         </a>
                     </li>
 
-                    <li id="navMarca" hidden class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Marca","Mantenedor")">Marcas<i class="fas fa-bookmark mx-2"></i></a>
-                    </li>
+                    @if (rol == "I" || rol == "A")
+                    {
+                        <li id="navProductos" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Registrar</a>
+                            <div class="dropdown-menu ">
+                                <a class="dropdown-item " href="@Url.Action("Marca", "Marca")">Marcas</a>
+                                <a class="dropdown-item  " href="@Url.Action("Linea", "Linea")">Lineas</a>
+                                <a class="dropdown-item   " href="@Url.Action("Producto", "Producto")">Productos</a>
+                                <a class="dropdown-item   " href="@Url.Action("Almacenes", "Almacen")">Almacen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item   " href="@Url.Action("Proveedor", "Proveedor")">Proveedor</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item   " href="@Url.Action("FormaPago", "FormaPago")">Forma de Pago</a>
+                                <a class="dropdown-item   " href="@Url.Action("MetodoPago", "MetodoPago")">Metodo de Pago</a>
+                                <a class="dropdown-item   " href="@Url.Action("RegimenFiscal", "RegimenFiscal")">Regimen Fiscal</a>
+                                <a class="dropdown-item   " href="@Url.Action("CFDIUso", "CFDIUso")">CFDI Uso</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item   " href="@Url.Action("Cliente", "Cliente")">Cliente</a>
+                            </div>
+                        </li>
+                    }
+
+                    @*                     <li id="navProductos" hidden class="nav-item dropdown mx-2">
+                    <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Registrar</a>
+                    <div class="dropdown-menu ">
+                    <a class="dropdown-item " href="@Url.Action("Marca","Marca")">Marcas</a>
+                    <a class="dropdown-item  " href="@Url.Action("Linea","Linea")">Lineas</a>
+                    <a class="dropdown-item   " href="@Url.Action("Producto","Producto")">Productos</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item   " href="@Url.Action("FormaPago","FormaPago")">Forma de Pago</a>
+                    <a class="dropdown-item   " href="@Url.Action("MetodoPago","MetodoPago")">Metodo de Pago</a>
+                    <a class="dropdown-item   " href="@Url.Action("RegimenFiscal","RegimenFiscal")">Regimen Fiscal</a>
+                    <a class="dropdown-item   " href="@Url.Action("CFDIUso","CFDIUso")">CFDI Uso</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item   " href="@Url.Action("Cliente","Cliente")">Cliente</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item   " href="@Url.Action("Proveedor","Proveedor")">Proveedor</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item   " href="@Url.Action("Almacenes","Almacen")">Almacen</a>
+
+                    </div>
+                    </li> *@
+                    @if (rol == "I" || rol == "A")
+                    {
+
+                        <li id="navAdministracion" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Compras</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item   " href="@Url.Action("Compras","Compras")">Compras</a>
+                                <a class="dropdown-item   " href="@Url.Action("Administracion","Compras")">Administracion</a>
+                            </div>
+                        </li>
+                    }
+                    @if (rol == "A")
+                    {
+                        <li id="navAdministracion" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reportes</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item   " href="@Url.Action("Graficos","Reportes")">Graficos</a>
+                            </div>
+                        </li>
+                    }
+                    @if (rol == "A" || rol == "V")
+                    {
+                        <li id="navAdministracion" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ventas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item   " href="@Url.Action("Index","Venta")">Ventas</a>
+                            </div>
+                        </li>
+                    }
+                    @if (rol == "A" || rol == "C")
+                    {
+                        <li id="navAdministracion" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Caja</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item   " href="@Url.Action("Caja","Venta")">Caja</a>
+                                <a class="dropdown-item   " href="@Url.Action("ScanerDevolucion","Venta")">Devolucion</a>
+                            </div>
+                        </li>
+                    }
+
+                    @if (rol == "A")
+                    {
+                        <li id="" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Corte</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item   " href="@Url.Action("CorteCaja","Venta")">Corte Caja</a>
+                            </div>
+                        </li>
+                    }
+
+                    @if (rol == "A")
+                    {
+                        <li id="navAdministracion" class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Administracion</a>
+                            <div class="dropdown-menu">
+                                <a class=" dropdown-item  " href="@Url.Action("Usuario","Usuario")">Usuario</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item  " href="">Configuraciones</a>
+                            </div>
+                        </li>
+                    }
 
 
-                    <li id="navLinea" hidden class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Linea","Mantenedor")">Lineas<i class="fas fa-table mx-2"></i></a>
-                    </li>
-
-
-                    <li id="navProductos" hidden class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos<i class="fas fa-boxes mx-2"></i></a>
+                    <li id="navAdministracion" class="nav-item dropdown mx-2">
+                        <a class="nav-link dropdown-toggle text-white " data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Nuevo</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item  text-white" href="@Url.Action("Producto","Mantenedor")">Inventario</a>
+                            <a class="dropdown-item   " href="@Url.Action("ProductosVendidos","Venta")">ProductosVendidos</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-white" href="#">Entradas</a>
+                            <a class="dropdown-item   " href="@Url.Action("ProductosDevueltos","Venta")">ProductosDevueltos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item   " href="@Url.Action("ProductosComprados","Compras")">ProductosComprados</a>
                         </div>
                     </li>
 
-
-                    <li id="navUsuario" hidden class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Usuario","Mantenedor")">Usuario<i class="fas fa-user-edit mx-2"></i></a>
+                    <li id="CerrarSesion" class="nav-item mx-2">
+                        @Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")
+                        <i class="fas fa-lock mx-2" style="color: #ffffff;"></i>
                     </li>
 
 
-                    <li id="CerrarSesion" class="nav-item ">
-                        @Html.ActionLink("Cerrar Sesion", "CerrarSesion", "Home")
-                        <i class="fas fa-lock-open mx-2" style="color: #ffffff;"></i>                    </li>
+
+
 
 
 
 
                 </ul>
+                <div class="d-flex justify-content-end">
+                    <span class="nav-link text-white">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <span class="text-uppercase fw-bold me-5">@User.Identity.Name</span>
+                        }
+                        else
+                        {
+                            <span class="text-bg-danger">No Autorizado</span>
+                        }
+                    </span>
+                </div>
             </div>
         </div>
     </nav>
 
 
-    <div class="container body-content">
+    <div class="container-fluid">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Refaccionaria Los Mochis</p>
-        </footer>
     </div>
+    <hr />
+    <footer class="m-4">
+        <div id="chat-toggle" class="d-flex justify-content-between align-items-center bg-primary text-white p-2 rounded cursor-pointer my-5" data-bs-toggle="collapse" data-bs-target="#chat-container" aria-expanded="false" aria-controls="chat-container">
+            <span>Chatbot de Soporte</span>
+            <i class="fas fa-chevron-down" id="toggle-icon"></i>
+        </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/complementos")
-    @RenderSection("scripts", required: false)
+        <div id="chat-container" class="collapse mt-2 border rounded">
+            <div id="chat" class="p-3" style="height: 300px; overflow-y: auto;">
+                <div id="conversacion"></div>
+            </div>
+            <div id="input-container" class="input-group p-2 border-top">
+                <input type="text" id="pregunta" class="form-control" placeholder="Haz tu pregunta...">
+                <button id="enviarPregunta" class="btn btn-success input-group-text">Enviar</button>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/bootstrap.bundle.js"></script>
+    <script src="~/js/fontawesome/fontawesome.min.js"></script>
+    <script src="~/js/sweetalert.min.js"></script>
+    <script src="~/js/jquery.validate.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
+    <script src="~/js/index/PermisosNav.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <script src="~/js/General/Paginacion.js"></script>
+    <script src="~/js/General/ValidarVacio.js"></script>
+    <script src="~/js/General/JQueryAjax.js"></script>
+
+    <script>
+            // Cambiar el ícono al expandir/colapsar el contenedor usando el evento de Bootstrap
+            $('#chat-container').on('show.bs.collapse', function () {
+                $('#toggle-icon').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+                $('#pregunta').focus(); // Poner foco en el campo de entrada al expandir
+            }).on('hide.bs.collapse', function () {
+                $('#toggle-icon').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            });
+
+            // Función para dar formato al texto de la respuesta
+            function formatearRespuesta(texto) {
+                var formateado = texto.replace(/(\d+\.\s)/g, '<br>$1');
+                formateado = formateado.replace(/\./g, '.<br>');
+                return formateado;
+            }
+
+            // Enviar pregunta al servidor y mostrar respuesta
+            $('#enviarPregunta').click(function () {
+                var pregunta = $('#pregunta').val();
+                if (pregunta !== '') {
+                    $('#conversacion').append(`
+                            <div class="message user">
+                                <img src="/Imagenes/user.webp" class="profile-pic left" alt="User">
+                                <div class="text-container">
+                                    <strong>Tú:</strong><br> ${pregunta}
+                                </div>
+                            </div>
+                        `);
+                    $('#conversacion').scrollTop($('#conversacion')[0].scrollHeight);
+
+                    $.ajax({
+                        url: '/ChatBot/EnviarPregunta?pregunta=' + pregunta,
+                        type: 'POST',
+                        success: function (response) {
+                            if (response && response.respuesta) {
+                                var respuestaFormateada = formatearRespuesta(response.respuesta);
+                                $('#conversacion').append(`
+                                        <div class="message bot">
+                                            <div class="text-container">
+                                                <strong><img src="/Imagenes/LOGO-Musculoso-Circular-PNG.png" class="profile-pic right" alt="Bot">Chatbot:</strong><br> ${respuestaFormateada}
+                                            </div>
+                                        </div>
+                                    `);
+                            } else {
+                                console.error("Respuesta inesperada:", response);
+                                $('#conversacion').append(`
+                                        <div class="message bot">
+                                            <div class="text-container">
+                                                <strong><img src="/Imagenes/LOGO-Musculoso-Circular-PNG.png" class="profile-pic right" alt="Bot">Chatbot:</strong><br> ${respuestaFormateada}
+                                            </div>
+                                        </div>
+                                    `);
+                            }
+                            $('#conversacion').scrollTop($('#conversacion')[0].scrollHeight);
+                            $('#pregunta').val('');
+                        },
+                        error: function (error) {
+                            console.error("Error: ", error);
+                            $('#conversacion').append(`
+                                    <div class="message bot">
+                                        <div class="text-container">
+                                            <strong><img src="/Imagenes/LOGO-Musculoso-Circular-PNG.png" class="profile-pic right" alt="Bot">Chatbot:</strong><br> ${respuestaFormateada}
+                                        </div>
+                                    </div>
+                                `);
+                        }
+                    });
+                }
+            });
+        
+    </script>
+
+
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

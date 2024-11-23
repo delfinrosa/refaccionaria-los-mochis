@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Gráficos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    #resultadosBusqueda {
+        max-height: 300px; /* Ajusta el tamaño máximo según lo necesites */
+        overflow-y: auto;
+        z-index: 9999; /* Asegura que el elemento esté sobre todo */
+        background-color: white; /* Agrega un fondo para separar los resultados */
+        border: 1px solid #ccc;
+        width: 160px;
+    }
+
+</style>
+<h2>Gráficos</h2>
+
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-chart-line"></i> Ganancia Del Mes</span>
+                <select id="mesSelect" class="form-control form-control-sm" style="width: auto;">
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+            <div class="card-body">
+                <canvas id="myAreaChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-money-bill-wave"></i> Ganancia Del Año Por Meses</span>
+                <select id="anioSelect" class="form-control form-control-sm" style="width: auto;">
+                    @for (int year = 2024; year <= DateTime.Now.Year; year++)
+                    {
+                        <option value="@year">@year</option>
+                    }
+                </select>
+            </div>
+            <div class="card-body">
+                <canvas id="myBarChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="row mt-4">
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-calendar-day"></i> Ganancia Por Hora</span>
+                    <input type="date" id="dateSelectGananciaPorHora" class="form-control form-control-sm" style="width: auto;" />
+                </div>
+                <div class="card-body">
+                    <canvas id="myHourlyChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-xl-6">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span><i class="fas fa-calendar-day"></i> Ganancia Por Hora</span>
+                    <div class="row">
+                        <select id="SelectCase" class="form-control form-control-sm " style="width: auto;">
+                            <option value="1">Históricos</option>
+                            <option value="2">Por dia</option>
+                            <option value="3">Por Mes</option>
+                            <option value="4">Por Año</option>
+                        </select>
+                        <select id="anioSelectProductosvendidos" class="form-control form-control-sm d-none" style="width: auto;">
+                            @for (int year = 2024; year <= DateTime.Now.Year; year++)
+                            {
+                                <option value="@year">@year</option>
+                            }
+                        </select>
+                        <select id="mesSelectProductosvendidos" class="form-control form-control-sm d-none" style="width: auto;">
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                        <input type="date" id="dateSelectProductosvendidos" class="form-control form-control-sm" style="width: auto;" d-none />
+                    </div>
+                </div>
+                <div class="card-body">
+                    <canvas id="myBarChartTopProductos" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row mt-4">
+    <div class="col-xl-12">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-dollar-sign"></i> Evolución del Precio del Producto</span>
+                <div id="resultadosBusqueda">
+                    <input type="text" id="productIdSelect" class="form-control form-control-sm" placeholder="Ingrese NoParte" autocomplete="off" />
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="myPriceEvolutionChart" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/chart.js"></script>
+    <script src="~/js/Reportes/GraficosJS.js"></script>
+}

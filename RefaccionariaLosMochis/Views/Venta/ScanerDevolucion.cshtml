@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Devolucion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/CssGeneral/ScanerDevolucion.css" rel="stylesheet" />
+<div class="d-flex justify-content-center">
+    <div class="row w-75 my-5 justify-content-center text-center">
+        <button class="btn btn-primary text-white me-2 p-0" id="btn-BuscarCodigoBarras" type="button">
+            <i class="fas fa-barcode fa-5x"></i>
+        </button>
+        <input type="text" id="BuscarCodigoBarras" class="col-12 my-3" autocomplete="off" />
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Enfocar automáticamente en el campo de entrada al cargar la página
+        $('#BuscarCodigoBarras').focus();
+
+        // Reemplazo de ' por - en el campo de entrada
+        $('#BuscarCodigoBarras').on('input', function () {
+            $(this).val($(this).val().replace(/'/g, '-'));
+        });
+
+        // Evento de clic en el botón de búsqueda
+        $("#btn-BuscarCodigoBarras").on('click', function () {
+            if ($('#BuscarCodigoBarras').val() != "") {
+                JQueryAjax_Normal('/Venta/ExisteVenta', { idVentas: $('#BuscarCodigoBarras').val() }, true, function (data) {
+                    if (data.existencia) {
+                        window.location.href = "/Venta/Devolucion?idVenta=" + $('#BuscarCodigoBarras').val();
+                    } else if (data.error != "") {
+                        swal("Error", "No se ha encontrado el producto", "error");
+                        $('#BuscarCodigoBarras').val(""); // Limpiar el campo de entrada
+                    }
+                }, function () {
+                    swal("Error", "Hubo un problema al buscar la venta.", "error");
+                });
+            } else {
+                $('#BuscarCodigoBarras').focus();
+            }
+        });
+
+        // Evento de cambio en el campo de entrada
+        $('#BuscarCodigoBarras').on('change', async function () {
+            JQueryAjax_Normal('/Venta/ExisteVenta', { idVentas: $(this).val() }, true, function (data) {
+                if (data.existencia) {
+                    window.location.href = "/Venta/Devolucion?idVenta=" + $('#BuscarCodigoBarras').val();
+                } else if (data.error != "") {
+                    swal("Error", data.error, "error");
+                }
+            }, function () {
+                swal("Error", "Hubo un problema al buscar la venta.", "error");
+            });
+        });
+
+        // Evento de tecla para Enter en el campo de entrada
+        $('#BuscarCodigoBarras').on('keypress', function (e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                if ($('#BuscarCodigoBarras').val() != "") {
+                    JQueryAjax_Normal('/Venta/ExisteVenta', { idVentas: $(this).val() }, true, function (data) {
+                        if (data.existencia) {
+                            window.location.href = "/Venta/Devolucion?idVenta=" + $('#BuscarCodigoBarras').val();
+                        } else if (data.error != "") {
+                            swal("Error", data.error, "error");
+                        }
+                    }, function () {
+                        swal("Error", "Hubo un problema al buscar la venta.", "error");
+                    });
+                }
+            }
+        });
+    </script>
+
+}
+
+

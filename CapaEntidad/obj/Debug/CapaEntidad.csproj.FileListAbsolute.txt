@@ -1,6 +1,24 @@
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.pdb
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.pdb
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -11,10 +11,8 @@ namespace CapaEntidad
         public int IdMarca { get; set; }
         public string Descripcion { get; set; }
         public string Activo { get; set; }
-        public int IdUsuario { get; set; }
+        public Usuario oUsuario { get; set; }
 
-        public string fechaCreaccion { get; set; }
-        public string fechaActualizacion { get; set; }
 
     }
 }

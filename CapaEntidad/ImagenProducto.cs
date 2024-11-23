@@ -9,7 +9,10 @@ namespace CapaEntidad
     public class ImagenProducto
     {
         public int IdImagenProducto { get; set; }
-        public Byte[] Imagen { get; set; }
+        public string Imagen { get; set; }
         public Producto oProducto { get; set; }
+        public Usuario oUsuario { get; set; }
+
+
     }
 }

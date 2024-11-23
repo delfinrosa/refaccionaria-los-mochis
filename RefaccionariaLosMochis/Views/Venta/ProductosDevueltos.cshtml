@@ -1,0 +1,93 @@
+﻿
+<br />
+<h2 class="m-1 text-center">Producto Devuelto</h2>
+<div style="position:absolute">
+    <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+    </div>
+    <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="display-8" style="display:inline-block">Busqueda</h5>
+        <div class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+            <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" />
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div id="filtrosProductosDevolucion" style="display:none">
+            <form>
+                <fieldset>
+                    <div class="row container-fluid pt-3">
+                        <div class="col-sm-6 ">
+                            <div class="row p-1">
+                                <div class="col-sm-1" style="text-align:right">
+                                    <input value="Filtro No Parte" class="form-control-sm" name="grupoFiltros" id="checkFiltroNoParte" type="checkbox" />
+                                </div>
+                                <label for="checkFiltroNoParte" class="col-sm-2 col-form-label col-form-label-sm">No Parte</label>
+                                <div class="col-sm-9">
+                                    <input id="txtFiltroNoParteWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar No parte en la Tabla...." />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 ">
+                            <div class="row p-1">
+                                <div class="col-sm-1" style="text-align:right">
+                                    <input value="Filtro Fecha" name="grupoFiltros" id="checkFiltroFecha" class="form-control-sm" type="checkbox" />
+                                </div>
+                                <label for="checkFiltroFecha" class="col-sm-2 col-form-label col-form-label-sm">Fecha</label>
+                                <div class="col-sm-9">
+                                    <input id="txtFiltroFechaWhere" type="date" class="form-control form-control-sm" disabled placeholder="Buscar Fecha en la Tabla...." />
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-sm-12" style="text-align:right">
+                                    <buton id="btn-buscarTabla" class="btn btn-sm btn-info"><a href="#tabla" class="text-decoration-none text-white"><i class="fas fa-search m-auto me-2"></i>Aplicar</a></buton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <table id="tabla" class="table table-sm table-striped display cell-border" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    No Parte
+                </th>
+                <th>
+                    Marca
+                </th>
+                <th>
+                    Motivo
+                </th>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Cantidad
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
+                    <div class="row justify-content-center">
+                        <div id="paginadoTabla">
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+@section Scripts {
+
+    <script src="/js/Venta/ProductosDevueltos.js"></script>
+}

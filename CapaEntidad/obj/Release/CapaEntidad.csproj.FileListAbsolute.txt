@@ -1,0 +1,18 @@
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.pdb
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.dll
+C:\Users\Luis\Desktop\Refaccionaria(LosMochis)\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\bin\Release\CapaEntidad.pdb
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\CapaEntidad\obj\Release\CapaEntidad.pdb

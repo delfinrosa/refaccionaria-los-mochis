@@ -1,143 +1,162 @@
 ﻿using CapaEntidad;
-using CapaNegocio;
+using CapaDatos;
 using RefaccionariaLosMochis.Permisos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RefaccionariaLosMochis.Controllers
 {
+    [Authorize]
+
     public class MarcaController : Controller
     {
-        #region Marca
-        // Marca
-
         [PermisosRol("I")]
         public ActionResult Marca()
         {
+            //Usuario usuario = HttpContext.Session.GetObject<Usuario>("Usuario");
+
+            //if (usuario != null)
+            //{
+            //    // Agregar cookies primero
+            //    Response.Cookies.Append("tipo", usuario.Tipo.ToString());
+            //    Response.Cookies.Append("idUsuario", usuario.IdUsuario.ToString());
+
+            //    // Establecer ViewBag.tipo
+            //    ViewBag.tipo = usuario.Tipo;
+            //}
+            //else
+            //{
+            //    // Manejo de sesión expirada o sin usuario
+            //    return RedirectToAction("Index", "Acceso");
+            //}
+
             return View();
         }
-
-        [HttpGet]
-        // Listar General (TABLA)
-        public JsonResult ListarMarcas()
-        {
-            List<Marca> oLista = new List<Marca>();
-            oLista = new CN_Marca().Listar();
-            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
-        }
-
         [HttpPost]
         // Guardar
         public JsonResult GuardarMarca(Marca objeto)
         {
             object resultado;
             string mensaje = string.Empty;
-            objeto.IdUsuario = Convert.ToInt32(Request.Cookies["idUsuario"]?.Value);
+            objeto.oUsuario.IdUsuario = Convert.ToInt32(Request.Cookies["idUsuario"]?.ToString());
             Marca objDevolucion = null;
-
             if (objeto.IdMarca == 0)
             {
-                resultado = new CN_Marca().Registrar(objeto, out mensaje);
+                resultado = new CD_Marca().Registrar(objeto, out mensaje);
             }
             else
             {
-                resultado = new CN_Marca().Editar(objeto, out mensaje);
+                resultado = new CD_Marca().Editar(objeto, out mensaje);
             }
-            return Json(new { resultado = resultado, mensaje = mensaje, objDevolucion = objDevolucion }, JsonRequestBehavior.AllowGet);
+            return Json(new { resultado = resultado, mensaje = mensaje, objDevolucion = objDevolucion });
+            //Stimulsoft.Report.StiReport rpt = new  Stimulsoft.Report.StiReport();
+            //rpt.Load("ruta|byte[]");
+            //rpt.DataSources[0]. coneccion
+            //rpt.DataSources[0].Parameters["strTicket"] = 
+            //rpt.Render()
+            //rpt.Print
+            //    rpt.ExportDocument(Stimulsoft.Report.StiExportFormat.ExcelXml,)
         }
-
         [HttpPost]
         // Eliminar
         public JsonResult EliminarMarca(int id)
         {
             bool respuesta = false;
             string mensaje = string.Empty;
-            respuesta = new CN_Marca().Eliminar(id, out mensaje);
-            return Json(new { resultado = respuesta, mensaje = mensaje }, JsonRequestBehavior.AllowGet);
+            respuesta = new CD_Marca().Eliminar(id, out mensaje);
+            return Json(new { resultado = respuesta, mensaje = mensaje });
         }
-
-        // PRUEBA DE EDITAR NUEVO
+        //Resultado un solo objeto apartir de un nombre 
         [HttpPost]
-        // Busqueda Filtro Marca Por Nombre  
-        // Resultado un solo objeto
-        public JsonResult BusquedaFiltroMarca(string nombre)
+        public JsonResult bucarMarcaPorNombre(string nombre)
         {
             Marca oLista = new Marca();
             if (nombre != null || nombre != "")
             {
-                oLista = new CN_Marca().BusquedaFiltroMarca(nombre);
+                oLista = new CD_Marca().bucarMarcaPorNombre(nombre);
             }
-            return Json(new { Activo = oLista.Activo, Descripcion = oLista.Descripcion, IdMarca = oLista.IdMarca }, JsonRequestBehavior.AllowGet);
+            return Json(new { Activo = oLista.Activo, Descripcion = oLista.Descripcion, IdMarca = oLista.IdMarca });
         }
-
-        // ListarMarcas
+        //Resultado un solo objeto apartir de un id 
         [HttpPost]
-        // Busqueda Filtro Marca Por ID  
-        // Resultado un objeto
-        public JsonResult BuscarPorId(int Id)
+        public JsonResult ListarPorIdMarca(int Id)
         {
-            Marca oMarca = new Marca();
+            Marca oLinea = new Marca();
             if (Id != null)
             {
-                oMarca = new CN_Marca().BuscarPorId(Id);
+                oLinea = new CD_Marca().BuscarPorId(Id);
             }
-            return Json(new { Lista = oMarca }, JsonRequestBehavior.AllowGet);
+            return Json(new { Lista = oLinea });
         }
-
-        // UltimoRegistro
+        //Resultado un objeto que es el ultimo modificado 
         [HttpPost]
-        // Busqueda el ultimo modificado 
-        // Resultado un objeto
         public JsonResult UltimoRegistroMarca()
         {
             Marca oMarca = new Marca();
-            oMarca = new CN_Marca().UltimoRegistroMarca();
-            return Json(new { Lista = oMarca }, JsonRequestBehavior.AllowGet);
+            oMarca = new CD_Marca().UltimoRegistro();
+            return Json(new { Lista = oMarca });
         }
-
-        [HttpPost]
-        // Contar registros para auto completado
-        public JsonResult COUNT_PruebasAutoCompletadoMarca(string nombre)
+        /************BUSCADOR************/
+        //Resultado un entero que es la cantidad de elementos que contienen el string que entro
+        public JsonResult CountBuscador(string nombre)
         {
-            int registros = 0;
-            registros = new CN_Marca().COUNT_PruebasAutoCompletadoMarca(nombre);
-            return Json(new { registros = registros }, JsonRequestBehavior.AllowGet);
+            int registros =  new CD_Marca().CountBuscador(nombre);
+            return Json(new { registros = registros });
         }
-
-        // Paginado
-        public JsonResult PaginacionPRUEBA(string nombre, int pagina)
+        //Resultado una lista de objetos que contienen el string que entro
+        public JsonResult elementosPaginacionBuscador(string nombre, int pagina, int siguientes)
         {
             List<string> lista = new List<string>();
             if (nombre != null || nombre != "")
             {
-                lista = new CN_Marca().PaginacionPRUEBAMarca(nombre, pagina);
+                lista = new CD_Marca().elementosPaginacionBuscador(nombre, pagina, siguientes);
             }
-            return Json(new { Lista = lista }, JsonRequestBehavior.AllowGet);
+            return Json(new { Lista = lista });
         }
-
-        // PRUEBA PAGINADO TABLA
+        /************TABLA************/
         [HttpPost]
-        public JsonResult COUNT_TablaMarca()
+        public JsonResult CountTabla()
         {
             int registros = 0;
-            registros = new CN_Marca().COUNT_TablaMarca();
-            return Json(new { registros = registros }, JsonRequestBehavior.AllowGet);
-        }
+            registros = new CD_Marca().CountTabla();
+            return Json(new { registros = registros });
 
+        }
         [HttpPost]
-        public JsonResult ListarPruebaMarca(string strpagina)
+
+        public JsonResult ListarMarcaTabla(string strpagina, string tipoOrden, int siguientes)
         {
             int pagina = Convert.ToInt32(strpagina);
             List<Marca> oLista = new List<Marca>();
-            oLista = new CN_Marca().ListarPruebaMarca(pagina);
-            return Json(new { data = oLista }, JsonRequestBehavior.AllowGet);
+            oLista = new CD_Marca().ListarMarcaTabla(pagina, tipoOrden, siguientes);
+                return Json(new { data = oLista });
         }
+        /************TABLA CON WHERE************/
+        public JsonResult ListarMarcaTablaWhere(string strpagina, string tipoOrden, int siguientes, string where)
+        {
+            int pagina = Convert.ToInt32(strpagina);
+            List<Marca> oLista = new List<Marca>();
+            oLista = new CD_Marca().ListarMarcaTablaWhere(pagina, tipoOrden, siguientes, where);
+            return Json(new { data = oLista });
+        }
+        public JsonResult countTablaWhere(string where)
+        {
+            int registros = 0;
+            registros = new CD_Marca().countTablaWhere(where);
+            return Json(new { registros = registros });
 
-        // PRUEBA PAGINADO TABLA FIN
-        #endregion
+        }
+        [HttpPost]
+        public JsonResult tamaño()
+        {
+            var campos = new Recursos().Tamaño("tMarcas");
+            return Json(new { campos = campos } );
 
+        }
     }
 }

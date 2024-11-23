@@ -1,0 +1,618 @@
+﻿
+@{
+    ViewBag.Title = "Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<link href="~/css/CssGeneral/General.css" rel="stylesheet" />
+
+
+<div class="card-header" style="margin-top:15px;">
+    <h2 class="display-4">Producto</h2>
+</div>
+<div class="card" style="margin-bottom:10px;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-auto">
+                <div id="buscador">
+                    <div class="input-group rounded-2 bg-primary">
+                        <input id="txtBusquedaProducto" type="text" class="form-control form-control-sm" placeholder="Buscar Producto" autocomplete="off">
+                        <button id="btn-BuscarBuscador" class="btn btn-sm" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div id="BusquedaProducto" style="position:absolute">
+                        <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+                        </div>
+                        <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-auto ">
+                <div>
+                    <button id="btn-Nuevo" type="button" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nuevo</button>
+                    <button id="btn-Eliminar" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Eliminar</button>
+                    <span id="modo" class="animacion-editar rounded-2 fw-bold" style="display: none;"> Editando <i id="icono-modo" class="fas fa-edit"></i> </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tabDatosGenerales-tab" data-bs-toggle="tab" data-bs-target="#tabDatosGenerales" type="button" role="tab" aria-controls="tabDatosGenerales" aria-selected="true">
+            Datos Generales
+            <span id="SpantabDatosGenerales" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosInventario-tab" data-bs-toggle="tab" data-bs-target="#tabDatosInventario" type="button" role="tab" aria-controls="tabDatosInventario" aria-selected="false">
+            Datos Inventario
+            <span id="SpantabDatosInventario" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosUbicacion-tab" data-bs-toggle="tab" data-bs-target="#tabDatosUbicacion" type="button" role="tab" aria-controls="tabDatosUbicacion" aria-selected="false">
+            Datos Ubicacion
+            <span id="SpantabDatosUbicacion" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosProveedores-tab" data-bs-toggle="tab" data-bs-target="#tabDatosProveedores" type="button" role="tab" aria-controls="tabDatosProveedores" aria-selected="false">
+            Datos Proveedores
+            <span id="SpantabDatosProveedores" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabImagenes-tab" data-bs-toggle="tab" data-bs-target="#tabImagenes" type="button" role="tab" aria-controls="tabImagenes" aria-selected="false">
+            Imagenes
+            <span id="SpantabDatosImagenes" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active container-fluid" id="tabDatosGenerales" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+                <div class="col-sm-6 ">
+
+                    <div class="row p-1">
+                        <label for="txtRegistroNoParte" class="col-sm-2 col-form-label col-form-label-sm">No. Parte</label>
+                        <div class="col-sm-10">
+                            <input id="txtRegistroNoParte" name="NoParte" class=" form-control form-control-sm" type="text" placeholder="No. Parte" data-requerido="No. Parte" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroid" class="col-sm-2 col-form-label col-form-label-sm" hidden>Identificador</label>
+                        <div class="col-sm-10">
+                            <input hidden id="txtRegistroid" class=" form-control form-control-sm" type="number" value="0" placeholder="AutoNumerico" disabled>
+                        </div>
+                    </div>
+
+                    <div class="row p-1" id="BuscadorLinea">
+
+                        <label for="txtBusquedaLinea" class="col-sm-2 col-form-label col-form-label-sm">Linea</label>
+                        <div class="col-sm-10 rounded-2 ">
+                            <input id="txtBusquedaLinea" type="text" class=" form-control" placeholder="Linea..." autocomplete="off" data-requerido="Linea" data-idlinea="0">
+
+                            <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+                            </div>
+                            <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row p-1" id="BuscadorMarca">
+                        <label for="txtRegistroMarca" class="col-sm-2 col-form-label col-form-label-sm">Marca</label>
+                        <div class="col-sm-10 rounded-2 ">
+                            <input id="txtBusquedaMarca" type="text" class="form-control" placeholder="Marca..." autocomplete="off" data-requerido="Marca" data-idmarca="0">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroNombre" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroNombre" autocomplete="off" data-requerido="Nombre" name="Descripcion" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="row p-1">
+                        <label for="txtRegistroDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripcion</label>
+                        <div class="col-sm-10">
+                            <textarea id="txtRegistroDescripcion" class=" form-control form-control-sm" type="text" style="height: 80px; " data-requerido="Descripcion" name="Valor" autocomplete="off"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <div class="tab-pane  container-fluid" id="tabDatosInventario" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroPrecio" class="col-sm-2 col-form-label col-form-label-sm">Precio</label>
+                        <div class="col-sm-10">
+                            <input id="txtRegistroPrecio" class=" form-control form-control-sm" type="number" placeholder="Precio" data-requerido="Precio" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroMinimo" class="col-sm-2 col-form-label col-form-label-sm">Minimo</label>
+                        <div class="col-sm-10">
+                            <input id="txtRegistroMinimo" class=" form-control form-control-sm" type="number" placeholder="Minimo" data-requerido="Minimo" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="cboactivo" class="col-sm-2 col-form-label col-form-label-sm">Activo</label>
+                        <div class="col-sm-10">
+                            <select class=" form-select" id="cboactivo" data-requerido="Activo">
+                                <option value="A">Activo</option>
+                                <option value="D">Desactivo</option>
+                                <option value="O">Oculto</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroMaximo" class="col-sm-2 col-form-label col-form-label-sm">Maximo</label>
+                        <div class="col-sm-10">
+                            <input id="txtRegistroMaximo" class=" form-control form-control-sm" type="number" placeholder="Maximo" data-requerido="Maximo" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroCodigoBarra" class="col-sm-2 col-form-label col-form-label-sm">Codigo De Barra</label>
+                        <div class="col-sm-10">
+                            <input id="txtRegistroCodigoBarra" name="CodigoBarras" class=" form-control form-control-sm" type="text" placeholder="Codigo de Barras" data-requerido="Codigo de Barras" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 ">
+                    @*<div class="row p-1">
+                            <label for="txtRegistroNoParte" class="col-sm-2 col-form-label col-form-label-sm">No. Parte</label>
+                            <div class="col-sm-10">
+                                <input id="txtRegistroNoParte" name="NoParte" class=" form-control form-control-sm" type="text" placeholder="No. Parte" data-requerido="No. Parte" autocomplete="off">
+                            </div>
+                        </div>*@
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <div class="tab-pane  container-fluid" id="tabImagenes" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+
+                <div class="col-sm-6  ">
+                    <h3 class="text-center">Nuevas Imagenes </h3>
+                    <hr />
+                    <div class="row p-1">
+
+                        @using (Html.BeginForm("GuardarProductoImagenes", "Producto", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <div class="mb-2">
+                                <div id="imageContainer" class="d-flex flex-wrap justify-content-start"></div>
+                            </div>
+                            <div class="mb-2">
+                                <input class="form-control" type="file" id="fileProducto" accept="image/png,image/jpg,image/jpeg" multiple onchange="mostrarImagen(this)" />
+                            </div>
+                             <button id="GuardarIMG" type="button" class="btn btn-primary">Guardar IMG</button>
+ 
+@*                             <button type="submit" class="btn btn-primary">Guardar IMG</button>
+ *@
+                        }
+                    </div>
+                </div>
+                <div class="col-sm-6  ">
+                    <h3 class="text-center">Imagenes Existentes</h3>
+                    <hr />
+                    <div id="galeriaIMGExistente">
+
+                        <div class="row p-1">
+                            <div class="mb-2">
+                                <div id="imageContainerExistente" class="d-flex flex-wrap justify-content-start"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+
+
+    <div class="tab-pane  container-fluid" id="tabDatosUbicacion" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <div class="row p-1">
+                        <label for="inputAlmacen" class="col-sm-2 col-form-label col-form-label-sm">Almacen</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="inputAlmacen" class="form-control form-control-sm ubicacion" placeholder="Seleccione un Almacén" autocomplete="off">
+                            <div id="listaAlmacenes" class="lista-opciones"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 ">
+                    <div class="row p-1">
+                        <label for="inputRack" class="col-sm-2 col-form-label col-form-label-sm">Rack</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="inputRack" class="form-control form-control-sm ubicacion" placeholder="Seleccione un Rack" autocomplete="off">
+                            <div id="listaRacks" class="lista-opciones"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 ">
+                    <div class="row p-1">
+                        <label for="inputSeccion" class="col-sm-2 col-form-label col-form-label-sm">Seccion</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="inputSeccion" class="form-control form-control-sm ubicacion" placeholder="Seleccione una Sección" autocomplete="off">
+                            <div id="listaSecciones" class="lista-opciones"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </fieldset>
+    </div>
+
+    <div class="tab-pane  container-fluid" id="tabDatosProveedores" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div id="ControlesProveedores">
+
+                <div class="row ControlesDeProveedores">
+                    <div class="col-sm-4 ">
+                        <div class="row p-1 d-flex align-items-center m-auto">
+                            <label for="txtRegistroProveedor" class="col-sm-2 col-form-label col-form-label-sm">Proveedor</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="txtRegistroProveedor" class="form-control form-control-sm BuscadorProveedor" placeholder="Seleccione un Proveedor" name="RFCProveedor" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 ">
+                        <div class="row p-1 m-auto">
+                            <label for="txtRegistroPrecio" class="col-sm-2 col-form-label col-form-label-sm">Precio</label>
+                            <div class="col-sm-10">
+                                <input type="number" id="txtRegistroProveedorPrecio" class="form-control form-control-sm" placeholder="Precio $$$" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 ">
+                        <div class="row p-1 m-auto">
+                            <label for="txtRegistroReferencia" class="col-sm-2 col-form-label col-form-label-sm">Referencia</label>
+                            <div class="col-sm-10">
+                                <textarea id="txtRegistroReferencia" class=" form-control form-control-sm" type="text" style="height: 80px; " autocomplete="off"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="container">
+                <h2>Productos Proveedores</h2>
+                <div id="productosProveedoresContainer" class="row">
+                    <!-- Aquí se insertarán los productos proveedores -->
+                </div>
+            </div>
+            @*<div class="d-flex justify-content-center">
+                    <button id="AgregarProveedores" class="btn btn-success">Agregar proveedor <i class="fas fa-user-plus"></i></button>
+                </div>*@
+            <div class="d-flex justify-content-center">
+                <button id="btn-GuardarProductoProveedor" class="btn btn-success">Agregar <i class="fas fa-user-plus"></i></button>
+            </div>
+
+
+
+        </fieldset>
+    </div>
+
+
+</div>
+<div style="text-align:right; margin-top:10px;">
+    <button id="btn-Guardar" type="button" class="btn btn-success btn-sm x-2"><i class="fas fa-play"></i> Guardar</button>
+    <button disabled id="btn-Cancelar" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-times"></i> Cancelar</button>
+</div>
+<div id="mensajeError" class="alert alert-danger" role="alert" style="display: none;">
+</div>
+<div class="card-header" style="margin-top:15px;">
+    <div>
+        <h2 class="display-6">
+            Listado de Producto
+            <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm mx-1"><i class="fas fa-sync"></i> </button>
+        </h2>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="display-8" style="display:inline-block">Busqueda</h5>
+        <div class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+            <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" />
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div id="filtrosProductos" style="display:none">
+            <fieldset>
+                <div class="row container-fluid pt-3">
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro ID" class="form-control-sm" name="grupoFiltros" id="checkFiltroId" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroId" class="col-sm-2 col-form-label col-form-label-sm">NoParte</label>
+                            <div class="col-sm-9">
+                                <input id="txtFiltroIDWhere" type="text" class="form-control form-control-sm busqueda" disabled placeholder="Buscar NoParte en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Codigo de Barras" class="form-control-sm" name="grupoFiltros" id="checkFiltroCodigoBarras" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroCodigoBarras" class="col-sm-2 col-form-label col-form-label-sm">Codigo de Barras</label>
+                            <div class="col-sm-9">
+                                <input id="txtFiltroCodigoBarrasWhere" type="text" class="form-control form-control-sm busqueda" disabled placeholder="Buscar CodigoBarras en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Marca" class="form-control-sm" name="grupoFiltros" id="checkFiltroMarca" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroMarca" class="col-sm-2 col-form-label col-form-label-sm">Marca</label>
+                            <div class="col-sm-9" id="contenedorFiltroMarca">
+                                <input id="txtFiltroMarcaWhere" type="text" class="form-control form-control-sm " disabled placeholder="Buscar Marca en la Tabla...." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Nombre" name="grupoFiltros" id="checkFiltroDescripcion" class="form-control-sm" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+                            <div class="col-sm-9">
+                                <input id="txtFiltroDescripcionWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar Nombre en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Linea" name="grupoFiltros" id="checkFiltroLinea" class="form-control-sm" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroLinea" class="col-sm-2 col-form-label col-form-label-sm">Linea</label>
+                            <div class="col-sm-9" id="contenedorFiltroLinea">
+                                <input id="txtFiltroLineaWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar Linea en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-12" style="text-align:right">
+                                <buton id="btn-buscarTabla" class="btn btn-sm btn-info"><a href="#tabla" class="text-decoration-none text-white"><i class="fas fa-search m-auto me-2"></i>Aplicar</a></buton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <table id="tabla" class="table table-sm table-striped display cell-border" style="width:100%">
+        <thead>
+            <tr>
+                <th id="tablaId">
+                    <div class="icono-texto-container">
+                        <i id="iconoI" class="fas fa-sort-numeric-down fa-1x m-1"></i>
+                        No. Parte
+                    </div>
+                </th>
+                <th id="tablaNombre">
+                    <div class="icono-texto-container">
+                        <i id="iconoN" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Nombre
+                    </div>
+                </th>
+                <th id="tablaLinea">
+                    <div class="icono-texto-container">
+                        <i id="iconoL" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Linea
+                    </div>
+                </th>
+                <th id="tablaMarca">
+                    <div class="icono-texto-container">
+                        <i id="iconoM" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Marca
+                    </div>
+                </th>
+                <th>Precio</th>
+                <th>Imagenes</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <div class="row py-2">
+        <div class="d-flex justify-content-center m-auto col-5 mx-5">
+            <div id="paginadoTabla"></div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header bg-dark text-white">
+                <h5 class="modal-title" id="exampleModalLabel">Imagenes</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="galeriaIMG">
+                    <div id="mostrarGrande">
+                        <div id="SeleccionarImagen" class="w-auto rounded-3 d-flex justify-content-center align-items-center">
+                            <span class="h3 text-white">
+                                Seleccione una imagen
+                                <i class="fas fa-images fa-1x m-1"></i>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="contenedor-imagenes" class="row">
+
+                </div>
+                <div class="w-auto ">
+                    <button id="btn-borrarIMG" class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash"></i>
+                        Borrar IMG
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Botón para abrir el modal -->
+<button type="button" id="BtnExportarExcel" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#campoModal">
+    Seleccionar Campos
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="campoModal" tabindex="-1" aria-labelledby="campoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="campoModalLabel">Selecciona los campos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="campoForm">
+                    <div class="row">
+                        <div class="col-md-6" id="ColumnasTablaProductos">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="P.(NOMBRE DE LA COL)" id="(NOMBRE DE LA COL)" >
+                                <label class="form-check-label" for="(NOMBRE DE LA COL)">(NOMBRE DE LA COL)</label>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="M.Descripcion" id="IdMarca">
+                                <label class="form-check-label" for="IdMarca">Marca</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="L.Descripcion" id="IdLinea">
+                                <label class="form-check-label" for="IdLinea">Linea</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="A.Ubicacion" id="AlmacenId">
+                                <label class="form-check-label" for="AlmacenId">Almacen</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="R.Ubicacion" id="RackId">
+                                <label class="form-check-label" for="RackId">Rack</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="S.Ubicacion" id="SeccionId">
+                                <label class="form-check-label" for="SeccionId">Seccion</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="SP.CantidadDisponible" id="CantidadDisponible">
+                                <label class="form-check-label" for="CantidadDisponible">Cantidad Disponible</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <hr />
+                <h2>Condicion</h2>
+                <div class="row my-2">
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" value="ExcelDescripcion" id="ExcelDescripcion">
+                        <label class="form-check-label" for="ExcelDescripcion">Descripcion</label>
+                    </div>
+                    <div class="col-6">
+                        <input id="txtExcelDescripcion" type="text" class="form-control form-control-sm" disabled placeholder="Descripcion" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" value="ExcelMarca" id="ExcelMarca">
+                        <label class="form-check-label" for="ExcelMarca">Marca</label>
+                    </div>
+                    <div class="col-6">
+                        <input id="txtExcelMarca" type="text" class="form-control form-control-sm" disabled placeholder="Marca" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" value="ExcelLinea" id="ExcelLinea">
+                        <label class="form-check-label" for="ExcelLinea">Linea</label>
+                    </div>
+                    <div class="col-6">
+                        <input id="txtExcelLinea" type="text" class="form-control form-control-sm" disabled placeholder="Linea" />
+                    </div>
+                </div>
+                <div class="row my-2">
+                    <div class="col-6">
+                        <input class="form-check-input" type="checkbox" value="ExcelRack" id="ExcelRack">
+                        <label class="form-check-label" for="ExcelRack">Rack</label>
+                    </div>
+                    <div class="col-6">
+                        <input id="txtExcelRack" type="text" class="form-control form-control-sm" disabled placeholder="Rack" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="exportBtn">Exportar a Excel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@* 
+<div>
+    <button class="btn btn-success">
+        <a class="text-decoration-none text-white " href="@Url.Action("FaltaDescripcion","Producto")">
+            Falta Descipcion
+        </a>
+    </button>
+</div> *@
+@section Scripts {
+    <script src="~/js/General/ExportarExcel.js"></script>
+    <script src="~/js/Producto/ProductoJS.js"></script>
+}

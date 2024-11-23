@@ -1,0 +1,170 @@
+﻿@page "/venta/Devolucion"
+@{
+    ViewBag.Title = "Ticket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var carrito = ViewBag.Carrito as List<(int IdProducto, string CodigoBarras, string NoParte, string MarcaDescripcion, int Cantidad, decimal Precio, string IdVentasProducto, string Estatus, bool RequiereFactura)>;
+    var idVenta = ViewBag.ID;
+
+}
+<style>
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+    }
+    table th, table td {
+        text-align: center; 
+        padding: 12px;
+        border: 1px solid #dee2e6;
+    }
+    table thead th {
+        background-color: #f8f9fa;
+        color: #495057;
+        border-bottom: 2px solid #dee2e6;
+    }
+    table tbody tr:hover {
+        background-color: #e9ecef; 
+    }
+    .bg-rojo {
+        background-color: #f8d7da;
+        color: #721c24; 
+    }
+    .bg-rojo:hover {
+        background-color: #f5c6cb; 
+    }
+    .bg-verde {
+        background-color: #d4edda; /* Color de fondo verde claro */
+        color: #155724; /* Color de texto verde oscuro */
+    }
+    .bg-verde:hover {
+        background-color: #c3e6cb; /* Color de fondo verde más fuerte al pasar el mouse */
+    }
+
+    .bg-gris {
+        background-color: #f8f9fa; /* Color de fondo gris claro */
+        color: #343a40; /* Color de texto gris oscuro */
+    }
+    .bg-gris:hover {
+        background-color: #e2e6ea; /* Color de fondo gris más oscuro al pasar el mouse */
+    }
+
+</style>
+
+<link href="~/css/CssGeneral/General.css" rel="stylesheet" />
+<link href="~/css/CssGeneral/ScanerDevolucion.css" rel="stylesheet" />
+
+<input id="ID" data-id="@idVenta" type="hidden" />
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary text-white me-1 w-100" id="btn-BuscarCodigoBarras" type="button" ">
+                <i class="fas fa-barcode fa-5x"></i>
+            </button>
+            <input type="text" id="BuscarCodigoBarras" class="col-12 my-3" />
+        </div>
+        <div class="col-6 d-flex justify-content-center align-items-center flex-column">
+            <button type="button" class="btn btn-primary mt-3" id="btnAgregarProducto">
+                Buscar Producto
+            </button>
+            <div id="carrito-items"></div>
+
+        </div>
+    </div>
+            @if (carrito != null && carrito.Count > 0)
+            {
+        <table class="">
+            <thead>
+                <tr>
+                    <th>No Parte</th>
+                    <th>Marca</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                        @foreach (var item in carrito)
+                        {
+                    <tr data-Estatus="@item.Estatus" data-ID="@item.IdVentasProducto" data-CodigoBarras="@item.CodigoBarras" data-idproducto="@item.IdProducto">
+                        <td>@item.NoParte</td>
+                        <td>@item.MarcaDescripcion</td>
+                        <td>@item.Cantidad</td>
+                        <td>$@item.Precio.ToString("F2")</td>
+
+                    </tr>
+                        }
+            </tbody>
+        </table>
+            }
+            else
+            {
+        <p>No se encontraron artículos en el carrito.</p>
+            }
+
+            @if (ViewBag.Error != null)
+            {
+        <div class="alert alert-danger mt-3">
+                    @ViewBag.Error
+        </div>
+            }
+</div>
+<!-- Modal -->
+<div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="miModalLabel">Motivo de la devolucion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="form-check-label" for="DevolucionCantidad">
+                                Cantidad
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" class="form-control" id="DevolucionCantidad" placeholder="Cantidad a devolver">
+                        </div>
+                    </div>
+
+                    <h5 class="modal-title" id="productoDevolver" data-id="0"></h5>
+                    <div class="form-check">
+                        <input type="radio" name="razon" value="no lo necesito" id="noNecesito" checked >
+                        <label class="form-check-label" for="noNecesito">
+                            No la necesito
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="razon" value="pieza equivocada" id="piezaEquivocada">
+                        <label class="form-check-label" for="piezaEquivocada">
+                            Pieza equivocada
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="razon" value="garantia" id="garantia">
+                        <label class="form-check-label" for="garantia">
+                            Garantia
+                        </label>
+                    </div>
+                </div>
+                <textarea id="motivoTextarea" class="form-control" rows="4" disabled></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="Delvolucion">Enviar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="/js/Venta/Devolucion.js"></script>
+}

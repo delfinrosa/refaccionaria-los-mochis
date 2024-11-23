@@ -1,0 +1,460 @@
+﻿
+@{
+    ViewBag.Title = "Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<link href="~/css/CssGeneral/General.css" rel="stylesheet" />
+
+
+<div class="card-header" style="margin-top:15px;">
+    <h2 class="display-4">Cliente</h2>
+</div>
+<div class="card" style="margin-bottom:10px;">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-auto">
+                <div id="buscador">
+                    <div class="input-group rounded-2 bg-primary">
+                        <input id="txtBusquedaCliente" type="text" class="form-control form-control-sm" placeholder="Buscar Cliente" autocomplete="off">
+                        <button id="btn-BuscarBuscador" class="btn btn-sm" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div id="BusquedaCliente" style="position:absolute">
+                        <div id="botonesPaginado" class="autocomplete-options" style="display: none;">
+                        </div>
+                        <div id="opcionesLista" class="autocomplete-options" style="display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-auto ">
+                <div>
+                    <button id="btn-Nuevo" type="button" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Nuevo</button>
+                    <button id="btn-Eliminar" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Eliminar</button>
+                    <span id="modo" class="animacion-editar rounded-2 fw-bold" style="display: none;"> Editando <i id="icono-modo" class="fas fa-edit"></i> </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tabDatosGenerales-tab" data-bs-toggle="tab" data-bs-target="#tabDatosGenerales" type="button" role="tab" aria-controls="tabDatosGenerales" aria-selected="true">
+            Datos Generales
+            <span id="SpantabDatosGenerales" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosDireccion-tab" data-bs-toggle="tab" data-bs-target="#tabDatosDireccion" type="button" role="tab" aria-controls="tabDatosDireccion" aria-selected="false">
+            Datos de Direccion
+            <span id="SpantabDatosDireccion" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosContacto-tab" data-bs-toggle="tab" data-bs-target="#tabDatosContacto" type="button" role="tab" aria-controls="tabDatosContacto" aria-selected="false">
+            Datos de Contacto
+            <span id="SpantabDatosContacto" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tabDatosPago-tab" data-bs-toggle="tab" data-bs-target="#tabDatosPago" type="button" role="tab" aria-controls="tabDatosPago" aria-selected="false">
+            Datos de Pago
+            <span id="SpantabDatosPago" class="badge rounded-5 bg-danger"></span>
+        </button>
+    </li>
+</ul>
+
+<div class="tab-content">
+
+    <div class="tab-pane active container-fluid" id="tabDatosGenerales" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+
+                <div class="col-sm-6 ">
+
+                    <div class="row p-1">
+                        <label for="txtRegistroRFC" class="col-sm-2 col-form-label col-form-label-sm">RFC</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroRFC" name="RFC" autocomplete="off" data-requerido="RFC" />
+                        </div>
+                    </div>
+
+
+                    <div class="row p-1">
+                        <label for="cboEstatus" class="col-sm-2 col-form-label col-form-label-sm">Estatus</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm" id="cboEstatus" data-requerido="Estatus">
+                                <option value="A">Activo</option>
+                                <option value="D">Desactivo</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row p-1">
+                        <label for="txtRegistroComentario" class="col-sm-2 col-form-label col-form-label-sm">Comentario</label>
+                        <div class="col-sm-10">
+                            <textarea class=" form-control" id="txtRegistroComentario" name="Comentarios" autocomplete="off"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-6 ">
+
+                    <div class="row p-1">
+                        <label for="txtRegistroRazonSocial" class="col-sm-2 col-form-label col-form-label-sm">Razon Social</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroRazonSocial" name="RazonSocial" autocomplete="off" data-requerido="Razon Social" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCorreo" class="col-sm-2 col-form-label col-form-label-sm">Correo</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="email" id="txtRegistroCorreo" name="Correo" autocomplete="off" data-requerido="Correo" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="            hbr" class="col-sm-2 col-form-label col-form-label-sm">Nombre</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroNombreCorto" name="NombreCorto" autocomplete="off" data-requerido="Nombre" />
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+    <div class="tab-pane  container-fluid" id="tabDatosDireccion" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+
+
+                <div class="col-sm-6 ">
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCalle" class="col-sm-2 col-form-label col-form-label-sm">Calle</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroCalle" name="Calle" autocomplete="off" data-requerido="Calle" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroColonia" class="col-sm-2 col-form-label col-form-label-sm">Colonia</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroColonia" name="Colonia" autocomplete="off" data-requerido="Colonia" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroNumeroInterior" class="col-sm-2 col-form-label col-form-label-sm">Numero Interior</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroNumeroInterior" name="NumeroInterior" autocomplete="off" data-requerido="Numero Interior" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroNumeroExterior" class="col-sm-2 col-form-label col-form-label-sm">Numero Exterior</label>
+
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroNumeroExterior" name="NumeroExterior" autocomplete="off" data-requerido="Numero Exterior" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroCiudad" class="col-sm-2 col-form-label col-form-label-sm">Ciudad</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroCiudad" name="Ciudad" autocomplete="off" data-requerido="Ciudad" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroEstado" class="col-sm-2 col-form-label col-form-label-sm">Estado</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroEstado" name="Estado" autocomplete="off" data-requerido="Estado" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroPais" class="col-sm-2 col-form-label col-form-label-sm">Pais</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroPais" name="Pais" autocomplete="off" data-requerido="Pais" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCodigoPostal" class="col-sm-2 col-form-label col-form-label-sm">Codigo Postal</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroCodigoPostal" name="CodigoPostal" autocomplete="off" data-requerido="Codigo Postal" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="tab-pane  container-fluid" id="tabDatosContacto" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+
+
+                <div class="col-sm-6 ">
+                    <div class="row p-1">
+                        <label for="txtRegistroTelefono" class="col-sm-2 col-form-label col-form-label-sm">Telefono</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroTelefono" name="Telefono" autocomplete="off" data-requerido="Telefono" />
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <label for="cboCredito" class="col-sm-2 col-form-label col-form-label-sm">Credito</label>
+                        <div class="col-sm-10">
+                            <select class="form-select form-select-sm" id="cboCredito" data-requerido="Credito">
+                                <option value="S">Si</option>
+                                <option value="N">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 ">
+
+
+                    <div class="row p-1">
+                        <label for="txtRegistroLimiteCredito" class="col-sm-2 col-form-label col-form-label-sm">Limite de Credito</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroLimiteCredito" name="LimiteCredito" autocomplete="off" data-requerido="Limite Credito" />
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <label for="txtRegistroDiasCredito" class="col-sm-2 col-form-label col-form-label-sm">Dias de Credito</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="number" id="txtRegistroDiasCredito" name="DiasCredito" autocomplete="off" data-requerido="Dias de Credito" />
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="tab-pane  container-fluid" id="tabDatosPago" role="tabpanel" aria-labelledby="home-tab">
+        <fieldset>
+            <div class="row">
+
+                <div class="col-sm-6 ">
+
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCFDIFormaPagoDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripcion Forma Pago</label>
+                        <div class="col-sm-10" id="BuscadorCFDIFormaPagoDescripcion">
+                            <input class=" form-control" type="text" id="txtRegistroCFDIFormaPagoDescripcion" name="Descripcion4" autocomplete="off" data-requerido="CFDI Forma Pago Descripcion" data-id="" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCFDIRegimenFiscalDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripcion Regimen Fiscal</label>
+                        <div class="col-sm-10" id="BuscadorCFDIRegimenFiscalDescripcion">
+                            <input class=" form-control" type="text" id="txtRegistroCFDIRegimenFiscalDescripcion" name="Descripcion5" autocomplete="off" data-requerido="CFDI RegimenFiscal Descripcion"  />
+                        </div>
+                    </div>
+                    <div class="row p-1">
+                        <label for="txtRegistroCuentaPago" class="col-sm-2 col-form-label col-form-label-sm">Cuenta de Pago</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroCuentaPago" name="CuentaPago" autocomplete="off" data-requerido="CuentaPago" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCuentaOrdenante" class="col-sm-2 col-form-label col-form-label-sm">Cuenta Ordenante</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroCuentaOrdenante" name="CuentaOrdenante" autocomplete="off" data-requerido="Cuenta Ordenante" />
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-6 ">
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCFDIUsoDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripcion Uso</label>
+                        <div class="col-sm-10" id="BuscadorCFDIUsoDescripcion">
+                            <input class=" form-control" type="text" id="txtRegistroCFDIUsoDescripcion" name="Descripcion2" autocomplete="off" data-requerido="CFDI Uso" data-id="" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroCFDIMetodoPagoDescripcion" class="col-sm-2 col-form-label col-form-label-sm">Descripcion Metodo de Pago</label>
+                        <div class="col-sm-10" id="BuscadorCFDIMetodoPagoDescripcion">
+                            <input class=" form-control" type="text" id="txtRegistroCFDIMetodoPagoDescripcion" name="Descripcion3" autocomplete="off" data-requerido="CFDIMetodoPago Descripcion" data-id="" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroRFCBanco" class="col-sm-2 col-form-label col-form-label-sm">RFC Banco</label>
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroRFCBanco" name="RFCBanco" autocomplete="off" data-requerido="RFC Banco" />
+                        </div>
+                    </div>
+
+                    <div class="row p-1">
+                        <label for="txtRegistroNombreBanco" class="col-sm-2 col-form-label col-form-label-sm">Nombre Banco</label>
+
+                        <div class="col-sm-10">
+                            <input class=" form-control" type="text" id="txtRegistroNombreBanco" name="NombreBanco" autocomplete="off" data-requerido="Nombre de el Banco" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+
+</div>
+<div style="text-align:right; margin-top:10px;">
+    <button id="btn-Guardar" type="button" class="btn btn-success btn-sm x-2"><i class="fas fa-play"></i> Guardar</button>
+    <button disabled id="btn-Cancelar" type="button" class="btn btn-secondary btn-sm"><i class="fas fa-times"></i> Cancelar</button>
+</div>
+<div id="mensajeError" class="alert alert-danger" role="alert" style="display: none;">
+</div>
+<div class="card-header" style="margin-top:15px;">
+    <div>
+        <h2 class="display-6">
+            Listado de Cliente
+            <button id="btn-Actualizar" type="button" class="btn btn-primary btn-sm mx-1"><i class="fas fa-sync"></i> </button>
+        </h2>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5 class="display-8" style="display:inline-block">Busqueda</h5>
+        <div class="form-check form-switch" style="display:inline-flex; margin-left:5px;">
+            <input id="checkFiltros" class="form-check-input" type="checkbox" style="cursor:pointer" />
+        </div>
+    </div>
+    <div class="card-body p-0">
+        <div id="filtrosClientes" style="display:none">
+            <fieldset>
+                <div class="row container-fluid pt-3">
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro RFC" class="form-control-sm" name="grupoFiltros" id="checkFiltroId" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroId" class="col-sm-2 col-form-label col-form-label-sm">RFC</label>
+                            <div class="col-sm-9">
+                                <input id="txtFiltroIDWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar RFC en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Razon Social" class="form-control-sm" name="grupoFiltros" id="checkFiltroRazonSocial" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroRazonSocial" class="col-sm-2 col-form-label col-form-label-sm">Razon Social</label>
+                            <div class="col-sm-9" >
+                                <input id="txtFiltroRazonSocialWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar Razon Social en la Tabla...." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Telefono" name="grupoFiltros" id="checkFiltroTelefono" class="form-control-sm" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroTelefono" class="col-sm-2 col-form-label col-form-label-sm">Telefono</label>
+                            <div class="col-sm-9">
+                                <input id="txtFiltroTelefonoWhere" type="number" class="form-control form-control-sm" disabled placeholder="Buscar Telefono en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-1" style="text-align:right">
+                                <input value="Filtro Correo" name="grupoFiltros" id="checkFiltroCorreo" class="form-control-sm" type="checkbox" />
+                            </div>
+                            <label for="checkFiltroCorreo" class="col-sm-2 col-form-label col-form-label-sm">Correo</label>
+                            <div class="col-sm-9" >
+                                <input id="txtFiltroCorreoWhere" type="text" class="form-control form-control-sm" disabled placeholder="Buscar Correo en la Tabla...." />
+                            </div>
+                        </div>
+                        <div class="row p-1">
+                            <div class="col-sm-12" style="text-align:right">
+                                <buton id="btn-buscarTabla" class="btn btn-sm btn-info"><a href="#tabla" class="text-decoration-none text-white"><i class="fas fa-search m-auto me-2"></i>Aplicar</a></buton>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <table id="tabla" class="table table-sm table-striped display cell-border" style="width:100%">
+        <thead>
+            <tr>
+                <th id="tablaId">
+                    <div class="icono-texto-container">
+                        <i id="iconoI" class="fas fa-sort-numeric-down fa-1x m-1"></i>
+                        RFC
+                    </div>
+                </th>
+                <th id="tablaNombre">
+                    <div class="icono-texto-container">
+                        <i id="iconoN" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Razon Social
+                    </div>
+                </th>
+                <th id="tablaLinea">
+                    <div class="icono-texto-container">
+                        <i id="iconoL" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Correo
+                    </div>
+                </th>
+                <th id="tablaMarca">
+                    <div class="icono-texto-container">
+                        <i id="iconoM" class="fas fa-sort-alpha-down fa-1x m-1"></i>
+                        Telefono
+                    </div>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+
+    </table>
+
+    <div class="row py-2">
+        <div class="d-flex justify-content-center m-auto col-5 mx-5">
+            <div id="paginadoTabla"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+
+    <script src="~/js/Cliente/Cliente.js"></script>
+}
+
+

@@ -1,0 +1,45 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.qr-code {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    z-index: 10;
+    margin: auto;
+}
+
+.qr-code img {
+    width: auto;
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.borde {
+    border: 5px solid red;
+}
+
+#logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+}

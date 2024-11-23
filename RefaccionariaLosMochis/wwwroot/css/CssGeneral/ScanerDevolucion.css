@@ -1,0 +1,18 @@
+﻿:root {
+    --primary-color: #0d6efd; /* Este es el color de 'bg-primary', cámbialo si es necesario */
+}
+
+@keyframes expandir-encoger {
+    0%, 100% {
+        box-shadow: 0px 0px 0px 0px var(--primary-color);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 5px var(--primary-color);
+    }
+}
+
+#BuscarCodigoBarras:focus {
+    border: 3px solid var(--primary-color);
+    animation: expandir-encoger 6s infinite ease-in-out;
+}
