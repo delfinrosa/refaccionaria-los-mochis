@@ -8,12 +8,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Loggin</title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/sweetalert.css" />
     <link rel="stylesheet" href="~/css/jquery-ui.css" />
     <link rel="stylesheet" href="~/css/estilo.css" />
     <link rel="stylesheet" href="~/css/CssLogin/Login.css" />
+    <link rel="icon" href="@Url.Content("~/imagenes/icono.ico")" type="image/x-icon" />
+
 </head>
 <body class="bg-login ">
     <div class="container-fluid">
@@ -54,8 +56,13 @@
 
 
                     <button type="submit" class="btn btn-primary my-3 col-12 fw-medium">Ingresar</button>
-                    <div class="d-flex justify-content-center">
-                        <a href="@Url.Action("OlvideMiContraseña","Acceso")" class="text-center text-decoration-none" style="color: rgb(76, 255, 0);">Olvidé mi contraseña</a>
+                    <div class="row">
+                        <div class="col-6 d-flex justify-content-center">
+                            <a href="@Url.Action("OlvideMiContraseña","Acceso")" class="text-center text-decoration-none" style="color: rgb(76, 255, 0);">Olvidé mi contraseña</a>
+                        </div>
+                        <div class="col-6 d-flex justify-content-center">
+                            <a href="@Url.Action("NuevaContraseña","Acceso")" class="text-center text-decoration-none" style="color: rgb(76, 255, 0);">Cambiar contraseña</a>
+                        </div>
                     </div>
 
                 </form>

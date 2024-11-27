@@ -125,3 +125,4 @@ C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\Refaccionar
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\Std.UriTemplate.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\MailKit.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\MimeKit.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\obj\Release\net8.0\RefaccionariaLosMochis.sourcelink.json

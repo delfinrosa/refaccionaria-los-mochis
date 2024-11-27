@@ -31,6 +31,10 @@ namespace RefaccionariaLosMochis.Controllers
         {
             return View();
         }
+        public IActionResult NuevaContraseña()
+        {
+            return View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Index(string correo, string clave)
@@ -123,6 +127,40 @@ namespace RefaccionariaLosMochis.Controllers
 
                     // Redirigir al Index de Acceso
                     TempData["SuccessMessage"] = "Se ha enviado la nueva contraseña a su correo.";
+                    return RedirectToAction("Index", "Acceso");
+                }
+                else
+                {
+                    // Mostrar el error del proceso en ViewBag
+                    ViewBag.ErrorMessage = mensajeError;
+                    return View();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Captura de cualquier excepción inesperada
+                ViewBag.ErrorMessage = $"Ha ocurrido un error durante la verificación. Por favor, intente nuevamente. Error específico: {ex.Message}";
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> NuevaContraseña(string clave, string usuario,string clavenueva,string clavenuevaconfirmada)
+        {
+            try
+            {
+                if (clavenueva != clavenuevaconfirmada)
+                {
+                    ViewBag.ErrorMessage = $"La nueva conseña no es igual";
+                    return View();
+                }
+
+                string mensajeError = string.Empty;
+                bool resultado = new CD_Usuario().CambiarContraseña(clave, usuario, clavenueva, out mensajeError);
+
+                if (resultado)
+                {
+
                     return RedirectToAction("Index", "Acceso");
                 }
                 else

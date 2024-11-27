@@ -1,98 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\",
+  "WorkspaceRootPath": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\refaccionarialosmochis\\refaccionarialosmochis\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\net core\\refaccionarialosmochis\\refaccionarialosmochis\\wwwroot\\js\\reportes\\graficosjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\wwwroot\\js\\reportes\\graficosjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\capadatos\\cd_reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\cd_reportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\cfdiusocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\cfdiusocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\net core\\refaccionarialosmochis\\refaccionarialosmochis\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\reportescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\almacencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\almacencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\net core\\refaccionarialosmochis\\refaccionarialosmochis\\views\\acceso\\olvidemicontrase\u00F1a.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\acceso\\olvidemicontrase\u00F1a.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\net core\\refaccionarialosmochis\\refaccionarialosmochis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\controllers\\mantenedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\controllers\\mantenedorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\capadatos\\cd_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\cd_compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\capadatos\\cd_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{474144E1-B455-42DC-BAE5-8801473125F8}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\cd_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\permisos\\usuariosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\permisos\\usuariosingleton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\scripts\\producto\\productojs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\scripts\\producto\\productojs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\permisos\\permisosrolattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\permisos\\permisosrolattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\scripts\\venta\\cajajs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\scripts\\venta\\cajajs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\views\\venta\\ticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\venta\\ticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\scripts\\general\\plugin_impresora_termica.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\scripts\\general\\plugin_impresora_termica.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\scripts\\almacenes\\almacenesjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\scripts\\almacenes\\almacenesjs.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\refaccionarialosmochis\\views\\almacen\\almacenes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5F2E7C51-C622-4456-A09F-5E95EE06A18B}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\almacen\\almacenes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|c:\\users\\delfi\\onedrive\\escritorio\\refaccionaria(losmochis)\\net core\\refaccionarialosmochis\\refaccionarialosmochis\\views\\acceso\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8FD2B46F-C7AE-4DD3-9DDA-E8B5BCD39CFF}|RefaccionariaLosMochis\\RefaccionariaLosMochis.csproj|solutionrelative:refaccionarialosmochis\\views\\acceso\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 318,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,281 +58,76 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ComprasController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ComprasController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\ComprasController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ComprasController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\ComprasController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ReportesController.cs",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ReportesController.cs",
+              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\ReportesController.cs",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ReportesController.cs",
+              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\ReportesController.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAmwLwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T19:09:29.347Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T17:39:24.085Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CD_Reportes.cs",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\CapaDatos\\CD_Reportes.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\CD_Reportes.cs",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\CapaDatos\\CD_Reportes.cs",
+              "RelativeToolTip": "CapaDatos\\CD_Reportes.cs",
+              "ViewState": "AgIAAHYCAAAAAAAAAAAmwIECAABoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T19:09:20.403Z"
+              "WhenOpened": "2024-11-26T17:36:23.06Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CFDIUsoController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\CFDIUsoController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\CFDIUsoController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\CFDIUsoController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\CFDIUsoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T19:09:18.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AlmacenController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\AlmacenController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\AlmacenController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\AlmacenController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\AlmacenController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T22:38:44.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CD_Compra.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\CapaDatos\\CD_Compra.cs",
-              "RelativeDocumentMoniker": "CapaDatos\\CD_Compra.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\CapaDatos\\CD_Compra.cs",
-              "RelativeToolTip": "CapaDatos\\CD_Compra.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-14T02:17:19.868Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ProductoJS.js",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Producto\\ProductoJS.js",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Scripts\\Producto\\ProductoJS.js",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Producto\\ProductoJS.js*",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Scripts\\Producto\\ProductoJS.js*",
-              "ViewState": "AgIAAA0FAAAAAAAAAAAjwBIFAAAmAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "GraficosJS.js",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Reportes\\GraficosJS.js",
+              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\wwwroot\\js\\Reportes\\GraficosJS.js",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\js\\Reportes\\GraficosJS.js",
+              "RelativeToolTip": "RefaccionariaLosMochis\\wwwroot\\js\\Reportes\\GraficosJS.js",
+              "ViewState": "AgIAANgBAAAAAAAAAAAmwN8BAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-09T23:29:46.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductoController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ProductoController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\ProductoController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\ProductoController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\ProductoController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAHAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T22:47:04.349Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MantenedorController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\MantenedorController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\MantenedorController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\MantenedorController.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\MantenedorController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T22:42:57.223Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-09T17:17:33.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VentaController.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\VentaController.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Controllers\\VentaController.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Controllers\\VentaController.cs*",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Controllers\\VentaController.cs*",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T17:59:32.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CD_Producto.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\CapaDatos\\CD_Producto.cs",
-              "RelativeDocumentMoniker": "CapaDatos\\CD_Producto.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\CapaDatos\\CD_Producto.cs",
-              "RelativeToolTip": "CapaDatos\\CD_Producto.cs",
-              "ViewState": "AgIAAMUBAAAAAAAAAAAIwN0BAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T18:18:01.313Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UsuarioSingleton.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Permisos\\UsuarioSingleton.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Permisos\\UsuarioSingleton.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Permisos\\UsuarioSingleton.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Permisos\\UsuarioSingleton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T22:26:48.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Web.config",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Web.config",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Web.config",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Web.config",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAABdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-08T21:50:07.665Z",
+              "WhenOpened": "2024-11-25T18:21:07.928Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Web.config",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Web.config",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Web.config",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-10-08T21:50:04.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:18:08.103Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "BundleConfig.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\BundleConfig.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\App_Start\\BundleConfig.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\BundleConfig.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\App_Start\\BundleConfig.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:18:02.73Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PermisosRolAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Permisos\\PermisosRolAttribute.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Permisos\\PermisosRolAttribute.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Permisos\\PermisosRolAttribute.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Permisos\\PermisosRolAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T22:26:45.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FilterConfig.cs",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\FilterConfig.cs",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\App_Start\\FilterConfig.cs",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\App_Start\\FilterConfig.cs",
-              "RelativeToolTip": "RefaccionariaLosMochis\\App_Start\\FilterConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T19:18:05.904Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Ticket.cshtml",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Venta\\Ticket.cshtml",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Venta\\Ticket.cshtml",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Venta\\Ticket.cshtml",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Venta\\Ticket.cshtml",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAowPAAAAAnAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "OlvideMiContrase\u00F1a.cshtml",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Acceso\\OlvideMiContrase\u00F1a.cshtml",
+              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Acceso\\OlvideMiContrase\u00F1a.cshtml",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Acceso\\OlvideMiContrase\u00F1a.cshtml",
+              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Acceso\\OlvideMiContrase\u00F1a.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-07T22:13:58.796Z"
+              "WhenOpened": "2024-11-25T17:37:07.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "plugin_impresora_termica.js",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\General\\plugin_impresora_termica.js",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Scripts\\General\\plugin_impresora_termica.js",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\General\\plugin_impresora_termica.js",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Scripts\\General\\plugin_impresora_termica.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACcCAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-07T22:10:56.632Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CajaJS.js",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Venta\\CajaJS.js",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Scripts\\Venta\\CajaJS.js",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Venta\\CajaJS.js",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Scripts\\Venta\\CajaJS.js",
-              "ViewState": "AgIAAF4AAAAAAAAAAADwv2wAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-07T17:58:37.398Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AlmacenesJS.js",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Almacenes\\AlmacenesJS.js",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Scripts\\Almacenes\\AlmacenesJS.js",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Scripts\\Almacenes\\AlmacenesJS.js",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Scripts\\Almacenes\\AlmacenesJS.js",
-              "ViewState": "AgIAAMoAAAAAAAAAAAAuwO0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-04T22:40:59.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Almacenes.cshtml",
-              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Almacen\\Almacenes.cshtml",
-              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Almacen\\Almacenes.cshtml",
-              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Almacen\\Almacenes.cshtml",
-              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Almacen\\Almacenes.cshtml",
-              "ViewState": "AgIAADgAAAAAAAAAAAAowEEAAABEAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Acceso\\Index.cshtml",
+              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Acceso\\Index.cshtml",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Acceso\\Index.cshtml",
+              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Acceso\\Index.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-04T22:40:33.949Z"
+              "WhenOpened": "2024-11-25T17:37:01.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "RefaccionariaLosMochis\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-25T17:34:27.018Z"
             }
           ]
         }

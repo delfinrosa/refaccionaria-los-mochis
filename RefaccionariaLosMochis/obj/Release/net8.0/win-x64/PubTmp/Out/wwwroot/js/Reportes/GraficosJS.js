@@ -366,7 +366,6 @@ function ObtenerTopProductos() {
             if (myBarChartTopProductos ) {
                 myBarChartTopProductos.destroy();
             }
-            console.log(data)
             if (data.data && data.data.length > 0) {
 
                 const etiquetas = data.data.map(item => item.noParte); // Usar "noParte" tal como está en el JSON
@@ -453,6 +452,114 @@ $("#SelectCase").change(function () {
         $("#anioSelectProductosvendidos").removeClass("d-none");
     }
     ObtenerTopProductos();
+
+});
+
+$("#anioSelectProductosComprados, #mesSelectProductosComprados, #dateSelectProductosComprados").change(function () {
+    ObtenerTopProductosComprado();
+});
+function ObtenerTopProductosComprado() {
+    const caso = $("#SelectCaseComprados").val();
+    const anio = $("#anioSelectProductosComprados").val();
+    const mes = $("#mesSelectProductosComprados").val();
+    const fecha = $("#dateSelectProductosComprados").val();
+
+    JQueryAjax_Normal(
+        '/Reportes/ObtenerTopProductosCompra',
+        { caso: caso, anio: anio || "", mes: mes || "", fecha: fecha || "" },
+        false,
+        function (data) {
+            console.log(data)
+            // Destruir gráfico existente si existe
+            if (myBarChartTopProductos ) {
+                myBarChartTopProductos.destroy();
+            }
+            if (data.data && data.data.length > 0) {
+
+                const etiquetas = data.data.map(item => item.noParte); // Usar "noParte" tal como está en el JSON
+                const valores = data.data.map(item => item.totalProductosComprados); // Usar "totalProductosVendidos" tal como está en el JSON
+
+                const ctx = document.getElementById('myBarChartTopProductosComprados').getContext('2d');
+
+                // Crear gráfico de barras
+                myBarChartTopProductos = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: etiquetas,
+                        datasets: [
+                            {
+                                label: 'Total Productos Comprados',
+                                data: valores,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top'
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (tooltipItem) {
+                                        return `Total Comprado: ${tooltipItem.raw}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'No. Parte'
+                                }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Cantidad Comprada'
+                                }
+                            }
+                        }
+                    }
+                });
+            } else {
+            //    swal("No se encontraron datos", "No se encontraron datos para los criterios seleccionados.", "info");
+            }
+        },
+        function (error) {
+            swal("Error al obtener datos", error, "error");
+        }
+    );
+}
+
+
+$("#SelectCaseComprados").change(function () {
+    const selectedValue = $(this).val();
+
+    // Ocultar todos los campos al inicio
+    $("#anioSelectProductosComprados").addClass("d-none");
+    $("#mesSelectProductosComprados").addClass("d-none");
+    $("#dateSelectProductosComprados").addClass("d-none");
+
+    // Mostrar los campos según la selección
+    if (selectedValue === "2") {
+        $("#dateSelectProductosComprados").removeClass("d-none");
+        var fechaActual = new Date().toISOString().split('T')[0];
+        $("#dateSelectProductosComprados").val(fechaActual);
+    } else if (selectedValue === "3") {
+        $("#anioSelectProductosComprados").removeClass("d-none");
+        $("#mesSelectProductosComprados").removeClass("d-none");
+    } else if (selectedValue === "4") {
+        $("#anioSelectProductosComprados").removeClass("d-none");
+    }
+    ObtenerTopProductosComprado();
 
 });
 $("#anioSelectProductosvendidos, #mesSelectProductosvendidos, #dateSelectProductosvendidos").change(function () {

@@ -185,6 +185,60 @@ namespace RefaccionariaLosMochis.Controllers
                 return Json(new { mensaje = "Error al realizar la búsqueda", detalle = ex.Message });
             }
         }
+        [HttpPost]
+        public JsonResult ObtenerTopProductosCompra(int caso, string anio, string mes, string fecha)
+        {
+            try
+            {
+                List<string> noParte = new List<string>();
+                List<int> totalProductosComprados = new List<int>();
+                string mensaje = string.Empty;
+
+                switch (caso)
+                {
+                    case 1:
+                        // Obtener datos históricos de compras
+                        (noParte, totalProductosComprados) = new CD_Reportes().ObtenerTopProductosHistoricosCompra(out mensaje);
+                        break;
+
+                    case 2:
+                        // Obtener datos por día de compras
+                        (noParte, totalProductosComprados) = new CD_Reportes().ObtenerTopProductosPorDiCompra(fecha, out mensaje);
+                        break;
+
+                    case 3:
+                        // Obtener datos por mes de compras
+                        (noParte, totalProductosComprados) = new CD_Reportes().ObtenerTopProductosPorMesCompra(anio, mes, out mensaje);
+                        break;
+
+                    case 4:
+                        // Obtener datos por año de compras
+                        (noParte, totalProductosComprados) = new CD_Reportes().ObtenerTopProductosPorAnioCompra(anio, out mensaje);
+                        break;
+
+                    default:
+                        return Json(new { mensaje = "Caso no reconocido. Verifica la información enviada." });
+                }
+
+                if (noParte == null || noParte.Count == 0)
+                {
+                    return Json(new { mensaje = "No se encontraron registros para los criterios seleccionados." });
+                }
+
+                // Construcción de la respuesta con los datos obtenidos
+                var data = noParte.Select((parte, index) => new
+                {
+                    NoParte = parte,
+                    TotalProductosComprados = totalProductosComprados[index],
+                }).ToList();
+
+                return Json(new { data = data, mensaje = mensaje });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { mensaje = "Error al realizar la búsqueda", detalle = ex.Message });
+            }
+        }
 
 
     }

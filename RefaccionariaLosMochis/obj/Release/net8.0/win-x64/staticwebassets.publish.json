@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "14EomuCvp5x/woV1mubMdCDUwZpI5fJMS6GLCnbk1k8=",
+  "Hash": "0KHxgIFoi6MaiGxp+qJrexg/aU3EZZQT+fRNTI/XAAU=",
   "Source": "RefaccionariaLosMochis",
   "BasePath": "_content/RefaccionariaLosMochis",
   "Mode": "Default",
@@ -4651,6 +4651,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\icono.ico",
+      "SourceId": "RefaccionariaLosMochis",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\",
+      "BasePath": "_content/RefaccionariaLosMochis",
+      "RelativePath": "Imagenes/icono.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagenes\\icono.ico"
     },
     {
       "Identity": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\LOGO-Musculoso-Circular-PNG.png",

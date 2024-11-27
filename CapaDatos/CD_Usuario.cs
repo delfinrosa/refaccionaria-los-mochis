@@ -605,6 +605,80 @@ SELECT SCOPE_IDENTITY();"; // Esta línea obtiene el último ID generado
 
             return resultado;
         }
+        public bool CambiarContraseña(string clave, string usuario, string clavenueva, out string mensaje)
+        {
+            bool resultado = false;
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection oconexion = new SqlConnection(Conexion.cn))
+                {
+                    oconexion.Open();
+
+                    // 1. Verificar si el usuario y la contraseña actual existen (ahora comprobamos ambos en el WHERE)
+                    string queryVerificacion = "SELECT IdUsuario, Contraseña FROM tUsuarios WHERE Nombre = @Nombre AND Contraseña = @Contraseña";
+                    int idUsuario = 0;
+                    string contraseñaActual = string.Empty;
+
+                    using (SqlCommand cmdVerificacion = new SqlCommand(queryVerificacion, oconexion))
+                    {
+                        cmdVerificacion.Parameters.AddWithValue("@Nombre", usuario);
+                        // Ciframos la contraseña ingresada para compararla con la almacenada
+                        string contraseñaCifrada = new Recursos().ConvertirSha256(clave);
+                        cmdVerificacion.Parameters.AddWithValue("@Contraseña", contraseñaCifrada);
+
+                        using (SqlDataReader reader = cmdVerificacion.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idUsuario = reader.GetInt32(0);  // Obtener IdUsuario
+                                contraseñaActual = reader.GetString(1);  // Obtener la contraseña almacenada
+                            }
+                        }
+                    }
+
+                    // 2. Verificar que el usuario existe y que la contraseña coincida
+                    if (idUsuario > 0)
+                    {
+
+                        // 3. Si la contraseña es correcta, actualizar la contraseña
+                        string nuevaContraseñaCifrada = new Recursos().ConvertirSha256(clavenueva); // Cifrar la nueva contraseña
+                        string queryActualizar = "UPDATE tUsuarios SET Contraseña = @Contraseña, FechaUltimoCambio = GETDATE() WHERE IdUsuario = @IdUsuario";
+
+                        using (SqlCommand cmdActualizar = new SqlCommand(queryActualizar, oconexion))
+                        {
+                            cmdActualizar.Parameters.AddWithValue("@Contraseña", nuevaContraseñaCifrada);
+                            cmdActualizar.Parameters.AddWithValue("@IdUsuario", idUsuario);
+
+                            int filasAfectadas = cmdActualizar.ExecuteNonQuery();
+
+                            if (filasAfectadas > 0)
+                            {
+                                resultado = true;
+                            }
+                            else
+                            {
+                                mensaje = "No se pudo actualizar la contraseña.";
+                                resultado = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        mensaje = "El usuario o la contraseña proporcionados no son correctos.";
+                        resultado = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = $"Error: {ex.Message}";
+                resultado = false;
+            }
+
+            return resultado;
+        }
 
         public string Orden(string tipoOrden)
         {

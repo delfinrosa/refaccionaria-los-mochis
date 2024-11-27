@@ -431,3 +431,4 @@ C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\Refaccionar
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\win-x64\Std.UriTemplate.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\win-x64\MailKit.dll
 C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\bin\Release\net8.0\win-x64\MimeKit.dll
+C:\Users\delfi\OneDrive\Escritorio\Refaccionaria(LosMochis)\NET CORE\RefaccionariaLosMochis\RefaccionariaLosMochis\obj\Release\net8.0\win-x64\RefaccionariaLosMochis.sourcelink.json

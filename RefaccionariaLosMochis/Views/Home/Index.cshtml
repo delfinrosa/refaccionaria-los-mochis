@@ -137,6 +137,7 @@
                 <span><i class="fas fa-cart-shopping"></i> 10 productos mas vendidos</span>
                 <div class="row">
                     <select id="SelectCase" class="form-control form-control-sm m-2 " style="width: auto;">
+                        <option value="0">-Seleccione una opcion-</option>
                         <option value="1">Históricos</option>
                         <option value="2">Por dia</option>
                         <option value="3">Por Mes</option>
@@ -170,6 +171,54 @@
             </div>
             <div class="card-footer d-flex justify-content-center">
                 <a class="text-center text-primary text-decoration-none" href="@Url.Action("ProductosVendidos","Venta")">
+                    Otros productos ...
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xl-6">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="fas fa-cart-shopping"></i> 10 productos mas comrpados</span>
+                <div class="row">
+                    <select id="SelectCaseComprados" class="form-control form-control-sm m-2 " style="width: auto;">
+                        <option value="0">-Seleccione una opcion-</option>
+                        <option value="1">Históricos</option>
+                        <option value="2">Por dia</option>
+                        <option value="3">Por Mes</option>
+                        <option value="4">Por Año</option>
+                    </select>
+                    <select id="anioSelectProductosComprados" class="form-control form-control-sm d-none m-2 " style="width: auto;">
+                        @for (int year = 2024; year <= DateTime.Now.Year; year++)
+                        {
+                            <option value="@year">@year</option>
+                        }
+                    </select>
+                    <select id="mesSelectProductosComprados" class="form-control form-control-sm d-none m-2 " style="width: auto;">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                    <input type="date" id="dateSelectProductosComprados" class="form-control form-control-sm d-none m-2 " style="width: auto;" />
+                </div>
+            </div>
+            <div class="card-body">
+                <canvas id="myBarChartTopProductosComprados" width="721" height="288" style="display: block; width: 721px; height: 288px;" class="chartjs-render-monitor"></canvas>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+                <a class="text-center text-primary text-decoration-none" href="@Url.Action("ProductosComprados","Compras")">
                     Otros productos ...
                 </a>
             </div>

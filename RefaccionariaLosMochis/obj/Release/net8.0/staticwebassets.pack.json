@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\Imagenes\\LOGO-Musculoso-Circular-PNG.png"
     },
     {
+      "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\icono.ico",
+      "PackagePath": "staticwebassets\\Imagenes\\icono.ico"
+    },
+    {
       "Id": "C:\\Users\\delfi\\OneDrive\\Escritorio\\Refaccionaria(LosMochis)\\NET CORE\\RefaccionariaLosMochis\\RefaccionariaLosMochis\\wwwroot\\Imagenes\\user.webp",
       "PackagePath": "staticwebassets\\Imagenes\\user.webp"
     },

@@ -490,6 +490,209 @@ namespace CapaDatos
             return (noParte, totalProductosVendidos);
         }
 
+        public (List<string> NoParte, List<int> TotalProductosComprados) ObtenerTopProductosPorDiCompra(string fecha, out string mensaje)
+        {
+            List<string> noParte = new List<string>();
+            List<int> totalProductosComprados = new List<int>();
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = @"
+            SELECT TOP 10 
+                p.NoParte,
+                SUM(dtl.Cantidad) AS TotalProductosComprados
+            FROM 
+                tCompras c
+            JOIN 
+                tComprasDtl dtl ON c.CompraId = dtl.CompraId
+            JOIN 
+                tProductos p ON p.IdProducto = dtl.ProductoProveedorId
+            WHERE 
+                CONVERT(DATE, c.Fecha) = CONVERT(DATE, @Fecha)
+            GROUP BY 
+                p.NoParte
+            ORDER BY 
+                TotalProductosComprados DESC;";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Fecha", fecha);
+
+                        conexion.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                noParte.Add(reader["NoParte"].ToString());
+                                totalProductosComprados.Add(Convert.ToInt32(reader["TotalProductosComprados"]));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+
+            return (noParte, totalProductosComprados);
+        }
+        public (List<string> NoParte, List<int> TotalProductosComprados) ObtenerTopProductosHistoricosCompra(out string mensaje)
+        {
+            List<string> noParte = new List<string>();
+            List<int> totalProductosComprados = new List<int>();
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = @"
+            SELECT TOP 10 
+                p.NoParte,
+                SUM(cd.Cantidad) AS TotalProductosComprados
+            FROM 
+                tCompras c
+            JOIN 
+                tComprasDtl cd ON c.CompraId = cd.CompraId
+            JOIN 
+                tProductos p ON p.IdProducto = cd.ProductoProveedorId
+            GROUP BY 
+                p.NoParte
+            ORDER BY 
+                TotalProductosComprados DESC;";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        conexion.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                noParte.Add(reader["NoParte"].ToString());
+                                totalProductosComprados.Add(Convert.ToInt32(reader["TotalProductosComprados"]));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+
+            return (noParte, totalProductosComprados);
+        }
+        public (List<string> NoParte, List<int> TotalProductosComprados) ObtenerTopProductosPorAnioCompra(string anio, out string mensaje)
+        {
+            List<string> noParte = new List<string>();
+            List<int> totalProductosComprados = new List<int>();
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = @"
+            SELECT TOP 10 
+                p.NoParte,
+                SUM(cd.Cantidad) AS TotalProductosComprados
+            FROM 
+                tCompras c
+            JOIN 
+                tComprasDtl cd ON c.CompraId = cd.CompraId
+            JOIN 
+                tProductos p ON p.IdProducto = cd.ProductoProveedorId
+            WHERE 
+                DATEPART(YEAR, c.Fecha) = @Anio
+            GROUP BY 
+                p.NoParte
+            ORDER BY 
+                TotalProductosComprados DESC;";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Anio", anio);
+
+                        conexion.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                noParte.Add(reader["NoParte"].ToString());
+                                totalProductosComprados.Add(Convert.ToInt32(reader["TotalProductosComprados"]));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+
+            return (noParte, totalProductosComprados);
+        }
+        public (List<string> NoParte, List<int> TotalProductosComprados) ObtenerTopProductosPorMesCompra(string anio, string mes, out string mensaje)
+        {
+            List<string> noParte = new List<string>();
+            List<int> totalProductosComprados = new List<int>();
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cn))
+                {
+                    string query = @"
+            SELECT TOP 10 
+                p.NoParte,
+                SUM(cd.Cantidad) AS TotalProductosComprados
+            FROM 
+                tCompras c
+            JOIN 
+                tComprasDtl cd ON c.CompraId = cd.CompraId
+            JOIN 
+                tProductos p ON p.IdProducto = cd.ProductoProveedorId
+            WHERE 
+                DATEPART(YEAR, c.Fecha) = @Anio
+                AND DATEPART(MONTH, c.Fecha) = @Mes
+            GROUP BY 
+                p.NoParte
+            ORDER BY 
+                TotalProductosComprados DESC;";
+
+                    using (SqlCommand cmd = new SqlCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@Anio", anio);
+                        cmd.Parameters.AddWithValue("@Mes", mes);
+
+                        conexion.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                noParte.Add(reader["NoParte"].ToString());
+                                totalProductosComprados.Add(Convert.ToInt32(reader["TotalProductosComprados"]));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+            }
+
+            return (noParte, totalProductosComprados);
+        }
+
 
     }
 }

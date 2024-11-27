@@ -7,26 +7,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Olvido contraseña </title>
     <link rel="stylesheet" href="~/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/sweetalert.css" />
     <link rel="stylesheet" href="~/css/jquery-ui.css" />
     <link rel="stylesheet" href="~/css/estilo.css" />
     <link rel="stylesheet" href="~/css/CssLogin/Login.css" />
+    <link rel="icon" href="@Url.Content("~/imagenes/icono.ico")" type="image/x-icon" />
+
 </head>
 <body class="bg-login ">
     <div class="container-fluid">
 
-        <div class="row d-flex justify-content-center align-items-center  ">
+        <div class="row d-flex justify-content-center align-items-center min-vh-100">
 
-
-            <div class="col-6  mt-3 mb-5 ">
-
-
-                @*<form action="" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">*@
+            <div class="col-6 mt-3 mb-5">
                 <form action="@Url.Action("OlvideMiContraseña","Acceso")" class="bg-formulario w-100 rounded-4" style="padding:10px" method="post">
-
-
+                     <h1 class="text-white text-center">Olvide Mi Contraseña</h1>
                     <div class="form-group">
                         <label class="text-white fw-bold my-3 h5">Usuario:</label>
                         <input class="form-control mb-1" type="text" name="Usuario" />
@@ -36,13 +33,11 @@
                         <input class="form-control mb-1" type="text" name="correo" />
                     </div>
 
-
-                    
-
-                    <button type="submit" class="btn btn-primary my-3 col-12 fw-medium">Ingresar</button>
+                    <button type="submit" class="btn btn-primary my-3 col-12 fw-medium">Enviar</button>
+                    <div class="d-flex justify-content-center">
+                        <a href="@Url.Action("Index","Acceso")" class="text-center text-decoration-none" style="color: rgb(76, 255, 0);">Acceso</a>
+                    </div>
                 </form>
-
-
                 @if (ViewBag.ErrorMessage != null)
                 {
                     <div class="alert alert-danger" role="alert">
@@ -50,6 +45,7 @@
                     </div>
                 }
             </div>
+        </div>
 
 
 
@@ -129,7 +125,6 @@
                     </use>
                 </g>
             </svg>
-        </div>
     </div>
 
 
